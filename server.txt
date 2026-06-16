@@ -1,0 +1,50 @@
+(camera) orin@ubuntu:~/BoxFly$ python server.py
+
+==================================================
+Server Started - Console Output will be logged to log/server_console.txt
+==================================================
+
+Server listening on 10.113.163.114:9000
+Waiting for drones to connect... (Gradio UI is starting)
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/logging/config.py", line 544, in configure
+    formatters[name] = self.configure_formatter(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/logging/config.py", line 656, in configure_formatter
+    result = self.configure_custom(config)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/logging/config.py", line 475, in configure_custom
+    result = c(**kwargs)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/uvicorn/logging.py", line 42, in __init__
+    self.use_colors = sys.stdout.isatty()
+AttributeError: 'ServerLogger' object has no attribute 'isatty'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/orin/BoxFly/server.py", line 849, in <module>
+    main()
+  File "/home/orin/BoxFly/server.py", line 836, in main
+    ui.launch()
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2760, in launch
+    ) = http_server.start_server(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/http_server.py", line 143, in start_server
+    config = uvicorn.Config(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/uvicorn/config.py", line 280, in __init__
+    self.configure_logging()
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/uvicorn/config.py", line 372, in configure_logging
+    logging.config.dictConfig(self.log_config)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/logging/config.py", line 811, in dictConfig
+    dictConfigClass(config).configure()
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/logging/config.py", line 547, in configure
+    raise ValueError('Unable to configure '
+ValueError: Unable to configure formatter 'default'
+

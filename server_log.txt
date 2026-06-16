@@ -1,0 +1,1825 @@
+(camera) orin@ubuntu:~/BoxFly$ python server.py
+Server listening on 10.113.163.114:9000
+Waiting for drones to connect
+^[[AClient connected from ('10.113.163.121', 56546)
+Sleep for 7s for video stream preparation
+Server drone for orin_2 created.
+Client connected from ('10.113.163.114', 40196)
+Sleep for 7s for video stream preparation
+Server drone for orin_1 created.
+All drones connected, Starting video 
+Video thread started.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+QFontDatabase: Cannot find font directory /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/cv2/qt/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+* Running on local URL:  http://127.0.0.1:7860
+* To create a public link, set `share=True` in `launch()`.
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] non-existing PPS 0 referenced
+[h264 @ 0xfffeb4012520] decode_slice_header error
+[h264 @ 0xfffeb4012520] no frame!
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] decode_slice_header error
+[h264 @ 0xfffeac0124d0] no frame!
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] decode_slice_header error
+[h264 @ 0xfffeac0124d0] no frame!
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] decode_slice_header error
+[h264 @ 0xfffeac0124d0] no frame!
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] decode_slice_header error
+[h264 @ 0xfffeac0124d0] no frame!
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] decode_slice_header error
+[h264 @ 0xfffeac0124d0] no frame!
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] decode_slice_header error
+[h264 @ 0xfffeac0124d0] no frame!
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] decode_slice_header error
+[h264 @ 0xfffeac0124d0] no frame!
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] non-existing PPS 0 referenced
+[h264 @ 0xfffeac0124d0] decode_slice_header error
+[h264 @ 0xfffeac0124d0] no frame!
+[Landmark]: server rack, monitors, cardboard box
+
+```python
+drone.rotate_cw(50)
+```
+
+Explanation: The server rack is visible, but I'm continuing to search the 
+environment for any potential object of interest. Since my teammate hasn't found
+anything yet, I'm rotating the drone to explore the right side of the room to 
+maximize search efficiency.
+
+Description: The image shows a server rack on the left, monitors, and a 
+cardboard box on a desk. My teammate is searching the left side, so I've decided
+to explore the right side.
+Time taken: 3.83s
+[Landmark]: rack, computer equipment
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The image shows a rack with computer equipment, which is a 
+potential landmark. Since my teammate is to the right of me, I will move forward
+to explore this area further and check if there are more details or objects of 
+interest. 
+
+Description: The image shows a server rack, open ThinkPad box, and computer 
+equipment. I am starting my search by moving forward to get a closer view and 
+potentially find objects or landmarks for宝藏.
+Time taken: 3.84s
+DRONE 1 Assistant: [Landmark]: rack, computer equipment
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The image shows a rack with computer equipment, which is a 
+potential landmark. Since my teammate is to the right of me, I will move forward
+to explore this area further and check if there are more details or objects of 
+interest. 
+
+Description: The image shows a server rack, open ThinkPad box, and computer 
+equipment. I am starting my search by moving forward to get a closer view and 
+potentially find objects or landmarks for宝藏.
+[Drone 1 State] Pos:(X:0.00, Y:0.30, Z:1.00, Yaw:0.0°), Landmarks: ['computer 
+equipment', 'rack']
+DRONE 2 Assistant: [Landmark]: server rack, monitors, cardboard box
+
+```python
+drone.rotate_cw(50)
+```
+
+Explanation: The server rack is visible, but I'm continuing to search the 
+environment for any potential object of interest. Since my teammate hasn't found
+anything yet, I'm rotating the drone to explore the right side of the room to 
+maximize search efficiency.
+
+Description: The image shows a server rack on the left, monitors, and a 
+cardboard box on a desk. My teammate is searching the left side, so I've decided
+to explore the right side.
+[Drone 2 State] Pos:(X:1.00, Y:0.00, Z:1.00, Yaw:75.0°), Landmarks: ['server 
+rack', 'cardboard box', 'monitors']
+[Landmark]: server rack, monitors, cardboard box
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: I see the server rack on the left side of the image, but it's not 
+centered. I need to rotate the drone clockwise to bring the rack into the center
+of the view to confirm it as a potential target and approach it.
+
+Description: The image shows the server rack on the left side, monitors, and a 
+cardboard box on a desk. My teammate has already explored the area near the 
+rack, so I need to confirm whether this rack is my target. By rotating the drone
+slightly clockwise, I'll bring the rack into focus for further confirmation.
+Time taken: 3.50s
+[Landmark]: server rack, cardboard box, monitors
+
+```python
+drone.move_backward(10)
+```
+
+Explanation: The target rack is already in view, and the drone is currently 
+close to the cardboard box, which is part of the landmarks. However, my teammate
+has already covered some areas, such as the server rack and monitors. I will 
+move backward slightly to explore other areas and ensure I am not 
+double-checking the same landmarks as my teammate.
+
+Description: The image shows a server rack, an open ThinkPad box, and some 
+computer equipment. Since my teammate has already found several landmarks in 
+this area, I will move backward to continue exploring other sections of the 
+room. This will help maximize the efficiency of our search.
+Time taken: 3.72s
+DRONE 1 Assistant: [Landmark]: server rack, cardboard box, monitors
+
+```python
+drone.move_backward(10)
+```
+
+Explanation: The target rack is already in view, and the drone is currently 
+close to the cardboard box, which is part of the landmarks. However, my teammate
+has already covered some areas, such as the server rack and monitors. I will 
+move backward slightly to explore other areas and ensure I am not 
+double-checking the same landmarks as my teammate.
+
+Description: The image shows a server rack, an open ThinkPad box, and some 
+computer equipment. Since my teammate has already found several landmarks in 
+this area, I will move backward to continue exploring other sections of the 
+room. This will help maximize the efficiency of our search.
+[Drone 1 State] Pos:(X:0.00, Y:0.20, Z:1.00, Yaw:0.0°), Landmarks: ['monitors', 
+'computer equipment', 'rack', 'cardboard box', 'server rack']
+DRONE 2 Assistant: [Landmark]: server rack, monitors, cardboard box
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: I see the server rack on the left side of the image, but it's not 
+centered. I need to rotate the drone clockwise to bring the rack into the center
+of the view to confirm it as a potential target and approach it.
+
+Description: The image shows the server rack on the left side, monitors, and a 
+cardboard box on a desk. My teammate has already explored the area near the 
+rack, so I need to confirm whether this rack is my target. By rotating the drone
+slightly clockwise, I'll bring the rack into focus for further confirmation.
+[Drone 2 State] Pos:(X:1.00, Y:0.00, Z:1.00, Yaw:105.0°), Landmarks: ['server 
+rack', 'cardboard box', 'monitors']
+[Landmark]: server rack, cardboard box, monitors
+
+```python
+drone.move_left(10)
+```
+
+Explanation: The target rack is still visible, and the cardboard box is already 
+in view, and my teammate has covered some landmarks in the environment. To avoid
+covering the same area as the drone, I will move slightly to the left to explore
+different regions and gather more information about the environment.
+
+Description: The image shows a server rack, an open ThinkPad box, and computer 
+equipment. My teammate has already located several landmarks in this area. I 
+will move left to continue exploring alternative sections of the room, ensuring 
+that we maximize our search efficiency.
+Time taken: 3.50s
+[Landmark]: chairs, monitors, cardboard boxes, camera
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: I see a collection of monitors and cardboard boxes, which my 
+teammate has already explored. There is a potential target (a rack-like object) 
+on the left side of the image. I need to rotate the drone clockwise to bring it 
+into the center of the view for better inspection.
+
+Description: The image shows monitors on multiple desks, various cardboard boxes
+scattered around, and multiple threadbare chairs. To the left, I see a rack-like
+structure that could be my target. Since my teammate has already searched the 
+area near the found landmarks, I'm focusing on the left side to explore any 
+potential rack-like objects that haven't been investigated yet.
+Time taken: 3.93s
+DRONE 1 Assistant: [Landmark]: server rack, cardboard box, monitors
+
+```python
+drone.move_left(10)
+```
+
+Explanation: The target rack is still visible, and the cardboard box is already 
+in view, and my teammate has covered some landmarks in the environment. To avoid
+covering the same area as the drone, I will move slightly to the left to explore
+different regions and gather more information about the environment.
+
+Description: The image shows a server rack, an open ThinkPad box, and computer 
+equipment. My teammate has already located several landmarks in this area. I 
+will move left to continue exploring alternative sections of the room, ensuring 
+that we maximize our search efficiency.
+[Drone 1 State] Pos:(X:-0.10, Y:0.20, Z:1.00, Yaw:0.0°), Landmarks: ['monitors',
+'computer equipment', 'rack', 'cardboard box', 'server rack']
+DRONE 2 Assistant: [Landmark]: chairs, monitors, cardboard boxes, camera
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: I see a collection of monitors and cardboard boxes, which my 
+teammate has already explored. There is a potential target (a rack-like object) 
+on the left side of the image. I need to rotate the drone clockwise to bring it 
+into the center of the view for better inspection.
+
+Description: The image shows monitors on multiple desks, various cardboard boxes
+scattered around, and multiple threadbare chairs. To the left, I see a rack-like
+structure that could be my target. Since my teammate has already searched the 
+area near the found landmarks, I'm focusing on the left side to explore any 
+potential rack-like objects that haven't been investigated yet.
+[Drone 2 State] Pos:(X:1.00, Y:0.00, Z:1.00, Yaw:135.0°), Landmarks: 
+['monitors', 'chairs', 'camera', 'cardboard box', 'cardboard boxes', 'server 
+rack']
+[Landmark]: server rack, large box, monitor
+
+```python
+drone.rotate_cw(0)
+```
+
+Explanation: The server rack is now centered in the frame, and I have confirmed 
+it as the target. Since the rack is already in the center of the image, I'm 
+keeping the drone still to ensure alignment for the next step. Now, I'll prepare
+to move forward and get closer to the rack.
+
+Description: The server rack is clearly visible and centrally located in the 
+image. My teammate has already found several landmarks like monitors, computers,
+and other objects, so I've focused on the server rack as the target. It's now 
+time to get closer for a detailed inspection and potential landing.
+Time taken: 3.82s
+[Landmark]: server rack, cardboard box, monitors
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The server rack is still in view, and the cardboard box is 
+prominently visible on the right. My teammate has already covered a significant 
+portion of the room, including the monitors and other landmarks. To continue 
+exploring without duplicating efforts, I will move slightly to the right to 
+cover areas my teammate has not yet explored.
+
+Description: The image shows a server rack filled with IT equipment, a ThinkPad 
+cardboard box, and an open server tower. I see potential new landmarks, but it's
+essential to avoid duplicating the investigation in zones already covered by my 
+teammate. Moving slightly to the right will help me explore new parts of the 
+room efficiently.
+Time taken: 4.01s
+DRONE 1 Assistant: [Landmark]: server rack, cardboard box, monitors
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The server rack is still in view, and the cardboard box is 
+prominently visible on the right. My teammate has already covered a significant 
+portion of the room, including the monitors and other landmarks. To continue 
+exploring without duplicating efforts, I will move slightly to the right to 
+cover areas my teammate has not yet explored.
+
+Description: The image shows a server rack filled with IT equipment, a ThinkPad 
+cardboard box, and an open server tower. I see potential new landmarks, but it's
+essential to avoid duplicating the investigation in zones already covered by my 
+teammate. Moving slightly to the right will help me explore new parts of the 
+room efficiently.
+[Drone 1 State] Pos:(X:0.00, Y:0.20, Z:1.00, Yaw:0.0°), Landmarks: ['monitors', 
+'computer equipment', 'rack', 'cardboard box', 'server rack']
+DRONE 2 Assistant: [Landmark]: server rack, large box, monitor
+
+```python
+drone.rotate_cw(0)
+```
+
+Explanation: The server rack is now centered in the frame, and I have confirmed 
+it as the target. Since the rack is already in the center of the image, I'm 
+keeping the drone still to ensure alignment for the next step. Now, I'll prepare
+to move forward and get closer to the rack.
+
+Description: The server rack is clearly visible and centrally located in the 
+image. My teammate has already found several landmarks like monitors, computers,
+and other objects, so I've focused on the server rack as the target. It's now 
+time to get closer for a detailed inspection and potential landing.
+[Drone 2 State] Pos:(X:1.00, Y:0.00, Z:1.00, Yaw:135.0°), Landmarks: 
+['monitors', 'chairs', 'monitor', 'camera', 'cardboard box', 'cardboard boxes', 
+'large box', 'server rack']
+[Landmark]: server rack, shelves, monitor, black suitcases
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The server rack is in view but is not close enough to fill the 
+frame. I've centered it in the camera view during the previous steps. Now, I 
+will move forward to get closer and potentially land on or near the target.
+
+Description: The server rack is visible on the right side of the image, along 
+with shelves, a monitor, and a set of black suitcases. Since my teammate has 
+already explored the area around the rack, I am approaching it to execute my 
+landing maneuver. Moving forward will enable me to assess the rack more closely 
+and prepare for landing.
+Time taken: 3.85s
+[Landmark]: server rack, cardboard box, open server tower
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: The server rack, cardboard box, and open server tower are visible, 
+but my teammate has already found a significant number of landmarks. To avoid 
+duplicating efforts, I will rotate clockwise to explore an alternative part of 
+the room and identify any new landmarks or objects of interest.
+
+Description: The image shows a server rack with computer equipment, a ThinkPad 
+box, and an open server tower. There is a black box on the floor to the right of
+the rack. My teammate has already covered many landmarks, so rotating clockwise 
+will allow me to explore new areas without duplicating their efforts.
+Time taken: 3.88s
+DRONE 1 Assistant: [Landmark]: server rack, cardboard box, open server tower
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: The server rack, cardboard box, and open server tower are visible, 
+but my teammate has already found a significant number of landmarks. To avoid 
+duplicating efforts, I will rotate clockwise to explore an alternative part of 
+the room and identify any new landmarks or objects of interest.
+
+Description: The image shows a server rack with computer equipment, a ThinkPad 
+box, and an open server tower. There is a black box on the floor to the right of
+the rack. My teammate has already covered many landmarks, so rotating clockwise 
+will allow me to explore new areas without duplicating their efforts.
+[Drone 1 State] Pos:(X:0.00, Y:0.20, Z:1.00, Yaw:30.0°), Landmarks: ['monitors',
+'computer equipment', 'rack', 'cardboard box', 'server rack', 'open server 
+tower']
+DRONE 2 Assistant: [Landmark]: server rack, shelves, monitor, black suitcases
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The server rack is in view but is not close enough to fill the 
+frame. I've centered it in the camera view during the previous steps. Now, I 
+will move forward to get closer and potentially land on or near the target.
+
+Description: The server rack is visible on the right side of the image, along 
+with shelves, a monitor, and a set of black suitcases. Since my teammate has 
+already explored the area around the rack, I am approaching it to execute my 
+landing maneuver. Moving forward will enable me to assess the rack more closely 
+and prepare for landing.
+[Drone 2 State] Pos:(X:1.21, Y:-0.21, Z:1.00, Yaw:135.0°), Landmarks: ['black 
+suitcases', 'monitors', 'chairs', 'monitor', 'camera', 'cardboard box', 
+'cardboard boxes', 'large box', 'server rack', 'shelves']
+[Landmark]: server rack, monitors, cardboard box, open ThinkPad box
+
+```python
+drone.rotate_cw(10)
+```
+
+Explanation: The server rack, monitors, and an open ThinkPad box are visible. 
+However, my teammate has already found a large number of landmarks, including 
+the server rack and cardboard boxes. To avoid duplicating efforts, I will rotate
+slightly clockwise to continue exploring alternative areas of the room and 
+search for any new landmarks.
+
+Description: The image shows a server rack containing computer equipment, 
+scaffolding with wires, and an open ThinkPad box on the floor. My teammate is 
+actively searching the right area, so I will rotate slightly to explore 
+different regions and ensure that we cover new ground efficiently.
+Time taken: 3.99s
+[Landmark]: shelf, boxes, closed suitcase
+
+```python
+drone.rotate_ccw(50)
+```
+
+Explanation: The image reveals a room with various electronic devices and 
+storage objects. There is a closed suitcase (potential "rack") in the 
+center-right, but it is not fully visible. I need to rotate counterclockwise to 
+better center the suitcase in the view for confirmation as my target. My 
+teammate is already exploring the left side of the room, so focusing on the 
+right side will ensure efficient exploration.
+
+Description: The image shows a cluttered room with electronic equipment, boxes, 
+and storage items. A closed suitcase is visible on the right, which could be my 
+target "rack." Since my teammate has explored the left side, I'm rotating the 
+drone to focus on this potential target on the right.
+Time taken: 4.32s
+DRONE 1 Assistant: [Landmark]: server rack, monitors, cardboard box, open 
+ThinkPad box
+
+```python
+drone.rotate_cw(10)
+```
+
+Explanation: The server rack, monitors, and an open ThinkPad box are visible. 
+However, my teammate has already found a large number of landmarks, including 
+the server rack and cardboard boxes. To avoid duplicating efforts, I will rotate
+slightly clockwise to continue exploring alternative areas of the room and 
+search for any new landmarks.
+
+Description: The image shows a server rack containing computer equipment, 
+scaffolding with wires, and an open ThinkPad box on the floor. My teammate is 
+actively searching the right area, so I will rotate slightly to explore 
+different regions and ensure that we cover new ground efficiently.
+[Drone 1 State] Pos:(X:0.00, Y:0.20, Z:1.00, Yaw:45.0°), Landmarks: ['monitors',
+'computer equipment', 'rack', 'cardboard box', 'server rack', 'open thinkpad 
+box', 'open server tower']
+DRONE 2 Assistant: [Landmark]: shelf, boxes, closed suitcase
+
+```python
+drone.rotate_ccw(50)
+```
+
+Explanation: The image reveals a room with various electronic devices and 
+storage objects. There is a closed suitcase (potential "rack") in the 
+center-right, but it is not fully visible. I need to rotate counterclockwise to 
+better center the suitcase in the view for confirmation as my target. My 
+teammate is already exploring the left side of the room, so focusing on the 
+right side will ensure efficient exploration.
+
+Description: The image shows a cluttered room with electronic equipment, boxes, 
+and storage items. A closed suitcase is visible on the right, which could be my 
+target "rack." Since my teammate has explored the left side, I'm rotating the 
+drone to focus on this potential target on the right.
+[Drone 2 State] Pos:(X:1.21, Y:-0.21, Z:1.00, Yaw:60.0°), Landmarks: ['boxes', 
+'black suitcases', 'monitors', 'chairs', 'monitor', 'shelf', 'camera', 
+'cardboard box', 'cardboard boxes', 'large box', 'server rack', 'closed 
+suitcase', 'shelves']
+[Landmark]: server rack, cardboard box, ThinkPad logo, magazines
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image clearly shows a server rack and an open cardboard box 
+with the ThinkPad logo. My teammate has already found numerous landmarks in this
+area, including similar items. To maximize search efficiency, I will move 
+slightly to the right to explore new sections of the room and potentially 
+discover new objects of interest.
+
+Description: The image shows a server rack containing computer equipment, a 
+ThinkPad cardboard box, an electronic device with a screen, a monitor, and a 
+black shelf with various items. Since my teammate has already covered many 
+landmarks, I will move slightly to the right to ensure that we are not 
+duplicating efforts and can cover new areas effectively.
+Time taken: 4.25s
+[Landmark]: large black case, printer box, television monitor
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: The large black cases and printer box in the center-right of the 
+image might be my target "rack." However, I need to rotate the drone slightly 
+clockwise to bring these objects into the center of the frame for better 
+inspection. Since my teammate is exploring the left side of the room, focusing 
+on the right side will ensure efficient search efforts.
+
+Description: The image shows a desk with various equipment and boxes, a shelf 
+with items, and a television monitor on the right. The large black cases and 
+printer packaging on the right side of the desk could be my target "rack." I 
+will rotate the drone to center these objects in the view for further 
+investigation.
+Time taken: 4.27s
+DRONE 1 Assistant: [Landmark]: server rack, cardboard box, ThinkPad logo, 
+magazines
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image clearly shows a server rack and an open cardboard box 
+with the ThinkPad logo. My teammate has already found numerous landmarks in this
+area, including similar items. To maximize search efficiency, I will move 
+slightly to the right to explore new sections of the room and potentially 
+discover new objects of interest.
+
+Description: The image shows a server rack containing computer equipment, a 
+ThinkPad cardboard box, an electronic device with a screen, a monitor, and a 
+black shelf with various items. Since my teammate has already covered many 
+landmarks, I will move slightly to the right to ensure that we are not 
+duplicating efforts and can cover new areas effectively.
+[Drone 1 State] Pos:(X:0.07, Y:0.13, Z:1.00, Yaw:45.0°), Landmarks: 
+['magazines', 'monitors', 'computer equipment', 'rack', 'cardboard box', 
+'thinkpad logo', 'server rack', 'open thinkpad box', 'open server tower']
+DRONE 2 Assistant: [Landmark]: large black case, printer box, television monitor
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: The large black cases and printer box in the center-right of the 
+image might be my target "rack." However, I need to rotate the drone slightly 
+clockwise to bring these objects into the center of the frame for better 
+inspection. Since my teammate is exploring the left side of the room, focusing 
+on the right side will ensure efficient search efforts.
+
+Description: The image shows a desk with various equipment and boxes, a shelf 
+with items, and a television monitor on the right. The large black cases and 
+printer packaging on the right side of the desk could be my target "rack." I 
+will rotate the drone to center these objects in the view for further 
+investigation.
+[Drone 2 State] Pos:(X:1.21, Y:-0.21, Z:1.00, Yaw:90.0°), Landmarks: ['printer 
+box', 'boxes', 'black suitcases', 'monitors', 'chairs', 'monitor', 'shelf', 
+'camera', 'television monitor', 'cardboard box', 'cardboard boxes', 'large box',
+'server rack', 'closed suitcase', 'large black case', 'shelves']
+[Landmark]: cardboard boxes, printer box, black object
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: The printer box and black object on the right side of the image 
+could be my target "rack." However, they are slightly off-center, so I will 
+rotate the drone slightly clockwise to bring them into the center of the frame. 
+My teammate has already explored the left side of the room, so focusing on this 
+area on the right will ensure efficient search efforts.
+
+Description: The image shows cardboard boxes, a printer box, and black objects 
+on the desk. The printer box and black object on the right side of the desk 
+could be my target "rack." I will rotate the drone to center these objects in 
+the view for further investigation.
+Time taken: 4.24s
+[Landmark]: server rack, cardboard box, printer box, auto-cord
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image clearly shows a server rack, an open ThinkPad cardboard 
+box, and other electronics, including a printer box. Given that my teammate has 
+already identified a long list of landmarks, including server racks and 
+cardboard boxes, I will move slightly to the right to cover new ground. This 
+will help maximize search efficiency by exploring an area my teammate has not 
+yet investigated.
+
+Description: The image shows a server rack with a green tag, an open ThinkPad 
+box, a printer box, and a black speaker. On the floor to the left, there is an 
+auto-cord device. Since my teammate has already covered significant ground, I 
+will move right to explore new sections of the room and potentially find 
+additional landmarks.
+Time taken: 4.60s
+DRONE 1 Assistant: [Landmark]: server rack, cardboard box, printer box, 
+auto-cord
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image clearly shows a server rack, an open ThinkPad cardboard 
+box, and other electronics, including a printer box. Given that my teammate has 
+already identified a long list of landmarks, including server racks and 
+cardboard boxes, I will move slightly to the right to cover new ground. This 
+will help maximize search efficiency by exploring an area my teammate has not 
+yet investigated.
+
+Description: The image shows a server rack with a green tag, an open ThinkPad 
+box, a printer box, and a black speaker. On the floor to the left, there is an 
+auto-cord device. Since my teammate has already covered significant ground, I 
+will move right to explore new sections of the room and potentially find 
+additional landmarks.
+[Drone 1 State] Pos:(X:0.14, Y:0.06, Z:1.00, Yaw:45.0°), Landmarks: ['printer 
+box', 'magazines', 'monitors', 'computer equipment', 'rack', 'cardboard box', 
+'thinkpad logo', 'auto-cord', 'server rack', 'open thinkpad box', 'open server 
+tower']
+DRONE 2 Assistant: [Landmark]: cardboard boxes, printer box, black object
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: The printer box and black object on the right side of the image 
+could be my target "rack." However, they are slightly off-center, so I will 
+rotate the drone slightly clockwise to bring them into the center of the frame. 
+My teammate has already explored the left side of the room, so focusing on this 
+area on the right will ensure efficient search efforts.
+
+Description: The image shows cardboard boxes, a printer box, and black objects 
+on the desk. The printer box and black object on the right side of the desk 
+could be my target "rack." I will rotate the drone to center these objects in 
+the view for further investigation.
+[Drone 2 State] Pos:(X:1.21, Y:-0.21, Z:1.00, Yaw:120.0°), Landmarks: ['printer 
+box', 'boxes', 'black suitcases', 'monitors', 'chairs', 'monitor', 'shelf', 
+'camera', 'television monitor', 'cardboard box', 'cardboard boxes', 'large box',
+'server rack', 'black object', 'closed suitcase', 'large black case', 'shelves']
+[Landmark]: large black case, computer monitor, open cardboard boxes
+
+```python
+drone.rotate_cw(0)
+```
+
+Explanation: The open cardboard box on the right of the image contains a **large
+black case**, which is likely the target "rack." The large black case is already
+centered in the image, so no rotation is needed. I will confirm this as my 
+target and prepare to approach it.
+
+Description: The image shows a cluttered desk with various electronic equipment,
+open cardboard boxes, and a large black case. After rotating slightly in 
+previous steps, the target object (a black case that seems to fit the 
+description of a "rack") is now prominently centered in the frame. This is 
+likely the target "rack" I am searching for. I will now prepare to approach it.
+Time taken: 4.43s
+[Landmark]: server rack, ThinkPad box, black speaker, electrical outlet
+
+```python
+drone.move_down(10)
+```
+
+Explanation: The image shows a server rack, an open ThinkPad box, a black 
+speaker, and a wall electrical outlet. Given that my teammate has already 
+identified numerous landmarks, I will move slightly downward to get a closer 
+look at the objects on the floor and potentially uncover new details. This 
+approach will help ensure that we cover different areas and gather additional 
+information.
+
+Description: The image shows a server rack in the center, an open ThinkPad box 
+in the foreground, and a black speaker to the left. On the wall, there is a 
+white electrical outlet beneath the rack. Since my teammate has covered many 
+landmarks, I will move slightly down to explore the lower area and gather more 
+details about the room's environment.
+Time taken: 4.63s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, black speaker, 
+electrical outlet
+
+```python
+drone.move_down(10)
+```
+
+Explanation: The image shows a server rack, an open ThinkPad box, a black 
+speaker, and a wall electrical outlet. Given that my teammate has already 
+identified numerous landmarks, I will move slightly downward to get a closer 
+look at the objects on the floor and potentially uncover new details. This 
+approach will help ensure that we cover different areas and gather additional 
+information.
+
+Description: The image shows a server rack in the center, an open ThinkPad box 
+in the foreground, and a black speaker to the left. On the wall, there is a 
+white electrical outlet beneath the rack. Since my teammate has covered many 
+landmarks, I will move slightly down to explore the lower area and gather more 
+details about the room's environment.
+[Drone 1 State] Pos:(X:0.14, Y:0.06, Z:0.90, Yaw:45.0°), Landmarks: ['printer 
+box', 'magazines', 'electrical outlet', 'monitors', 'computer equipment', 
+'rack', 'cardboard box', 'thinkpad logo', 'auto-cord', 'server rack', 'open 
+thinkpad box', 'thinkpad box', 'black speaker', 'open server tower']
+DRONE 2 Assistant: [Landmark]: large black case, computer monitor, open 
+cardboard boxes
+
+```python
+drone.rotate_cw(0)
+```
+
+Explanation: The open cardboard box on the right of the image contains a **large
+black case**, which is likely the target "rack." The large black case is already
+centered in the image, so no rotation is needed. I will confirm this as my 
+target and prepare to approach it.
+
+Description: The image shows a cluttered desk with various electronic equipment,
+open cardboard boxes, and a large black case. After rotating slightly in 
+previous steps, the target object (a black case that seems to fit the 
+description of a "rack") is now prominently centered in the frame. This is 
+likely the target "rack" I am searching for. I will now prepare to approach it.
+[Drone 2 State] Pos:(X:1.21, Y:-0.21, Z:1.00, Yaw:120.0°), Landmarks: ['boxes', 
+'cardboard box', 'shelves', 'black suitcases', 'camera', 'cardboard boxes', 
+'server rack', 'black object', 'monitor', 'shelf', 'open cardboard boxes', 
+'large box', 'large black case', 'computer monitor', 'television monitor', 
+'printer box', 'monitors', 'chairs', 'closed suitcase']
+[Landmark]: server rack, cardboard box, computer monitor, wall outlet
+
+```python
+drone.move_backward(10)
+```
+
+Explanation: The image shows a server rack, an open ThinkPad cardboard box, and 
+a computer monitor. Although my teammate has already identified many landmarks, 
+I notice a wall outlet and some cables in the background. To explore more of the
+room and potentially uncover new landmarks, I will move slightly backward. This 
+will help us cover different areas and gather additional information.
+
+Description: The image shows a server rack, an open ThinkPad cardboard box 
+clearly labeled "Think," and a computer monitor on the right. The floor is 
+visible with cables and a black device to the left. Given that my teammate has 
+explored the immediate area, I will move backward to cover additional ground and
+ensure comprehensive coverage.
+Time taken: 4.60s
+[Landmark]: filing cabinet, HP printer box, brown cardboard box
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The HP printer box stacked on top of other equipment on the left 
+side might be the target "rack." The large brown cardboard box near it could 
+also indicate storage or equipment. Since my teammate has already searched the 
+center and right areas, I will approach the left side of the room where these 
+objects are located. Moving forward will get me closer to the potential 
+rack-like structure or related equipment.
+
+Description: The image shows various pieces of equipment and boxes, including a 
+stack of boxes with an HP printer box on top, a filing cabinet, and a larger 
+cardboard box on the left side of the desk. These objects suggest storage areas 
+or equipment that could be related to the target "rack." Since my teammate has 
+explored most of the room, I will focus on this left area to find the target.
+Time taken: 5.03s
+DRONE 1 Assistant: [Landmark]: server rack, cardboard box, computer monitor, 
+wall outlet
+
+```python
+drone.move_backward(10)
+```
+
+Explanation: The image shows a server rack, an open ThinkPad cardboard box, and 
+a computer monitor. Although my teammate has already identified many landmarks, 
+I notice a wall outlet and some cables in the background. To explore more of the
+room and potentially uncover new landmarks, I will move slightly backward. This 
+will help us cover different areas and gather additional information.
+
+Description: The image shows a server rack, an open ThinkPad cardboard box 
+clearly labeled "Think," and a computer monitor on the right. The floor is 
+visible with cables and a black device to the left. Given that my teammate has 
+explored the immediate area, I will move backward to cover additional ground and
+ensure comprehensive coverage.
+[Drone 1 State] Pos:(X:0.07, Y:-0.01, Z:0.90, Yaw:45.0°), Landmarks: ['printer 
+box', 'magazines', 'electrical outlet', 'monitors', 'wall outlet', 'computer 
+equipment', 'rack', 'cardboard box', 'thinkpad logo', 'auto-cord', 'server 
+rack', 'open thinkpad box', 'thinkpad box', 'black speaker', 'open server 
+tower', 'computer monitor']
+DRONE 2 Assistant: [Landmark]: filing cabinet, HP printer box, brown cardboard 
+box
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The HP printer box stacked on top of other equipment on the left 
+side might be the target "rack." The large brown cardboard box near it could 
+also indicate storage or equipment. Since my teammate has already searched the 
+center and right areas, I will approach the left side of the room where these 
+objects are located. Moving forward will get me closer to the potential 
+rack-like structure or related equipment.
+
+Description: The image shows various pieces of equipment and boxes, including a 
+stack of boxes with an HP printer box on top, a filing cabinet, and a larger 
+cardboard box on the left side of the desk. These objects suggest storage areas 
+or equipment that could be related to the target "rack." Since my teammate has 
+explored most of the room, I will focus on this left area to find the target.
+[Drone 2 State] Pos:(X:1.47, Y:-0.36, Z:1.00, Yaw:120.0°), Landmarks: ['boxes', 
+'cardboard box', 'shelves', 'black suitcases', 'hp printer box', 'camera', 
+'cardboard boxes', 'server rack', 'black object', 'monitor', 'shelf', 'open 
+cardboard boxes', 'large box', 'large black case', 'computer monitor', 
+'television monitor', 'printer box', 'brown cardboard box', 'monitors', 
+'chairs', 'filing cabinet', 'closed suitcase']
+[Landmark]: none
+
+```python
+drone.rotate_cw(50)
+```
+
+Explanation: The current image shows a white floor with no visible landmarks or 
+objects that resemble a "rack." Since my teammate has already explored most of 
+the visible room, and my previous search in this area was unfruitful, I will 
+rotate clockwise to search for the target in a different direction. This can 
+help me avoid redundant searches and potentially locate the target in an unseen 
+part of the room.
+
+Description: The image is mostly blank, showing only a white floor with no 
+discernible objects or landmarks. This suggests I may have moved too far or the 
+target is not in this area. I need to rotate and explore a different direction 
+to see if there are any potential racks or related equipment nearby.
+Time taken: 4.46s
+[Landmark]: server rack, ThinkPad box, computer monitor, wall outlet
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image shows a server rack, an open ThinkPad cardboard box, and 
+a computer monitor. While my teammate has already covered many landmarks, 
+including server racks and boxes, I can now see a fenced area in the background 
+and a filing cabinet to the right. To continue exploring new areas and avoid 
+duplicating efforts with my teammate, I will move slightly to the right and 
+investigate further. This will help us to potentially find additional landmarks.
+
+Description: The image features a server rack, an open ThinkPad box labeled 
+"Think," and a computer monitor on the right side of the room. On the left, 
+there is a metal shelf with cables. A wall outlet is visible, and a filing 
+cabinet is partially accessible on the far right. Since my teammate has explored
+much of the area, I will move slightly to the right to discover more about the 
+fenced area and other potential landmarks.
+Time taken: 5.43s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, computer monitor, wall
+outlet
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image shows a server rack, an open ThinkPad cardboard box, and 
+a computer monitor. While my teammate has already covered many landmarks, 
+including server racks and boxes, I can now see a fenced area in the background 
+and a filing cabinet to the right. To continue exploring new areas and avoid 
+duplicating efforts with my teammate, I will move slightly to the right and 
+investigate further. This will help us to potentially find additional landmarks.
+
+Description: The image features a server rack, an open ThinkPad box labeled 
+"Think," and a computer monitor on the right side of the room. On the left, 
+there is a metal shelf with cables. A wall outlet is visible, and a filing 
+cabinet is partially accessible on the far right. Since my teammate has explored
+much of the area, I will move slightly to the right to discover more about the 
+fenced area and other potential landmarks.
+[Drone 1 State] Pos:(X:0.14, Y:-0.08, Z:0.90, Yaw:45.0°), Landmarks: ['printer 
+box', 'magazines', 'electrical outlet', 'monitors', 'wall outlet', 'computer 
+equipment', 'rack', 'cardboard box', 'thinkpad logo', 'auto-cord', 'server 
+rack', 'open thinkpad box', 'thinkpad box', 'black speaker', 'open server 
+tower', 'computer monitor']
+DRONE 2 Assistant: [Landmark]: none
+
+```python
+drone.rotate_cw(50)
+```
+
+Explanation: The current image shows a white floor with no visible landmarks or 
+objects that resemble a "rack." Since my teammate has already explored most of 
+the visible room, and my previous search in this area was unfruitful, I will 
+rotate clockwise to search for the target in a different direction. This can 
+help me avoid redundant searches and potentially locate the target in an unseen 
+part of the room.
+
+Description: The image is mostly blank, showing only a white floor with no 
+discernible objects or landmarks. This suggests I may have moved too far or the 
+target is not in this area. I need to rotate and explore a different direction 
+to see if there are any potential racks or related equipment nearby.
+[Drone 2 State] Pos:(X:1.47, Y:-0.36, Z:1.00, Yaw:195.0°), Landmarks: ['boxes', 
+'cardboard box', 'shelves', 'black suitcases', 'hp printer box', 'camera', 
+'cardboard boxes', 'server rack', 'black object', 'monitor', 'shelf', 'open 
+cardboard boxes', 'large box', 'large black case', 'computer monitor', 
+'television monitor', 'printer box', 'brown cardboard box', 'monitors', 
+'chairs', 'filing cabinet', 'closed suitcase']
+[Landmark]: server rack, black case, orange object
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The image shows a partial view of a server rack or similar 
+equipment with a black case and an orange object on top. This is a strong 
+candidate for the target "rack" I've been searching for. Since the target is 
+visible but not completely centered or in full view, I will move forward to get 
+a closer look and confirm whether this equipment is indeed the target.
+
+Description: The image shows a portion of a server rack-like structure with a 
+black case and an orange object on top. This matches the description of a "rack"
+and is a strong candidate for my target. Previous rotations and forward 
+movements have brought me close to this area. Moving forward will allow me to 
+confirm and approach the target rack.
+Time taken: 4.77s
+[Landmark]: server rack, ThinkPad box, computer monitor, wall outlet
+
+```python
+drone.move_left(10)
+```
+
+Explanation: The image shows a server rack, an open ThinkPad cardboard box, and 
+a computer monitor. Given that my teammate has already covered numerous 
+landmarks in this area, I will move slightly to the left to explore different 
+sections of the room and potentially discover new objects or landmarks. This 
+will help us ensure comprehensive coverage without duplicating efforts.
+
+Description: The image features a server rack in the background, an open 
+ThinkPad box labeled "Think," and a computer monitor on the right. There is a 
+black CPU on the floor and a lit window in the background. My teammate is 
+exploring more toward the right, so I will move left to explore alternative 
+areas and aim to find additional details in the room.
+Time taken: 4.80s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, computer monitor, wall
+outlet
+
+```python
+drone.move_left(10)
+```
+
+Explanation: The image shows a server rack, an open ThinkPad cardboard box, and 
+a computer monitor. Given that my teammate has already covered numerous 
+landmarks in this area, I will move slightly to the left to explore different 
+sections of the room and potentially discover new objects or landmarks. This 
+will help us ensure comprehensive coverage without duplicating efforts.
+
+Description: The image features a server rack in the background, an open 
+ThinkPad box labeled "Think," and a computer monitor on the right. There is a 
+black CPU on the floor and a lit window in the background. My teammate is 
+exploring more toward the right, so I will move left to explore alternative 
+areas and aim to find additional details in the room.
+[Drone 1 State] Pos:(X:0.07, Y:-0.01, Z:0.90, Yaw:45.0°), Landmarks: ['printer 
+box', 'magazines', 'electrical outlet', 'monitors', 'wall outlet', 'computer 
+equipment', 'rack', 'cardboard box', 'thinkpad logo', 'auto-cord', 'server 
+rack', 'open thinkpad box', 'thinkpad box', 'black speaker', 'open server 
+tower', 'computer monitor']
+DRONE 2 Assistant: [Landmark]: server rack, black case, orange object
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The image shows a partial view of a server rack or similar 
+equipment with a black case and an orange object on top. This is a strong 
+candidate for the target "rack" I've been searching for. Since the target is 
+visible but not completely centered or in full view, I will move forward to get 
+a closer look and confirm whether this equipment is indeed the target.
+
+Description: The image shows a portion of a server rack-like structure with a 
+black case and an orange object on top. This matches the description of a "rack"
+and is a strong candidate for my target. Previous rotations and forward 
+movements have brought me close to this area. Moving forward will allow me to 
+confirm and approach the target rack.
+[Drone 2 State] Pos:(X:1.39, Y:-0.65, Z:1.00, Yaw:195.0°), Landmarks: ['boxes', 
+'cardboard box', 'shelves', 'orange object', 'black suitcases', 'hp printer 
+box', 'camera', 'cardboard boxes', 'server rack', 'black object', 'monitor', 
+'black case', 'shelf', 'open cardboard boxes', 'large box', 'large black case', 
+'computer monitor', 'television monitor', 'printer box', 'brown cardboard box', 
+'monitors', 'chairs', 'filing cabinet', 'closed suitcase']
+[Landmark]: rack, server equipment, label
+
+```python
+drone.rotate_ccw(20)
+```
+
+Explanation: The current image shows a rack-like object with visible components 
+such as slots and labels, confirming it as the target "rack." However, the 
+target is slightly off-center to the right. I will rotate the drone 
+counterclockwise to center the rack in the frame to ensure precise alignment 
+before moving closer or preparing for landing.
+
+Description: The image clearly shows a server rack with visible labels, slots, 
+and additional server equipment. This matches the target description perfectly. 
+Since the rack is slightly off-center, rotating counterclockwise will allow me 
+to center it precisely for better visual confirmation and alignment before 
+approaching it further. My teammate has already explored other areas, and this 
+rack appears to be my target.
+Time taken: 4.78s
+[Landmark]: server rack, ThinkPad box, computer monitor, wall socket
+
+```python
+drone.move_left(10)
+```
+
+Explanation: The image features a server rack, an open ThinkPad box, a computer 
+monitor, and a wall socket. My teammate has already covered a large number of 
+landmarks in this area, including server racks and boxes. To avoid duplicating 
+efforts and maximize search efficiency, I will move slightly to the left and 
+explore new sections of the room. This will help ensure we cover as much ground 
+as possible and potentially discover additional landmarks.
+
+Description: The image shows a server rack with a black object on top, an open 
+ThinkPad box labeled "Think," and a computer monitor to the right. The floor has
+cables and a black CPU unit, and a wall socket is visible to the left. My 
+teammate is exploring areas to the right, so I will move left to search for new 
+objects and landmarks in the less covered areas of the room.
+Time taken: 5.40s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, computer monitor, wall
+socket
+
+```python
+drone.move_left(10)
+```
+
+Explanation: The image features a server rack, an open ThinkPad box, a computer 
+monitor, and a wall socket. My teammate has already covered a large number of 
+landmarks in this area, including server racks and boxes. To avoid duplicating 
+efforts and maximize search efficiency, I will move slightly to the left and 
+explore new sections of the room. This will help ensure we cover as much ground 
+as possible and potentially discover additional landmarks.
+
+Description: The image shows a server rack with a black object on top, an open 
+ThinkPad box labeled "Think," and a computer monitor to the right. The floor has
+cables and a black CPU unit, and a wall socket is visible to the left. My 
+teammate is exploring areas to the right, so I will move left to search for new 
+objects and landmarks in the less covered areas of the room.
+[Drone 1 State] Pos:(X:0.00, Y:0.06, Z:0.90, Yaw:45.0°), Landmarks: ['printer 
+box', 'magazines', 'electrical outlet', 'monitors', 'wall outlet', 'computer 
+equipment', 'rack', 'cardboard box', 'thinkpad logo', 'auto-cord', 'server 
+rack', 'open thinkpad box', 'wall socket', 'thinkpad box', 'black speaker', 
+'open server tower', 'computer monitor']
+DRONE 2 Assistant: [Landmark]: rack, server equipment, label
+
+```python
+drone.rotate_ccw(20)
+```
+
+Explanation: The current image shows a rack-like object with visible components 
+such as slots and labels, confirming it as the target "rack." However, the 
+target is slightly off-center to the right. I will rotate the drone 
+counterclockwise to center the rack in the frame to ensure precise alignment 
+before moving closer or preparing for landing.
+
+Description: The image clearly shows a server rack with visible labels, slots, 
+and additional server equipment. This matches the target description perfectly. 
+Since the rack is slightly off-center, rotating counterclockwise will allow me 
+to center it precisely for better visual confirmation and alignment before 
+approaching it further. My teammate has already explored other areas, and this 
+rack appears to be my target.
+[Drone 2 State] Pos:(X:1.39, Y:-0.65, Z:1.00, Yaw:165.0°), Landmarks: ['boxes', 
+'rack', 'cardboard box', 'shelves', 'orange object', 'black suitcases', 'hp 
+printer box', 'camera', 'cardboard boxes', 'server rack', 'black object', 
+'server equipment', 'monitor', 'black case', 'shelf', 'open cardboard boxes', 
+'large box', 'large black case', 'computer monitor', 'television monitor', 
+'printer box', 'brown cardboard box', 'monitors', 'chairs', 'label', 'filing 
+cabinet', 'closed suitcase']
+[Landmark]: none
+
+```python
+drone.move_backwards(50)
+```
+
+Explanation: The current image shows a mostly empty white floor with no visible 
+objects or landmarks that resemble a "rack." It appears I've moved too far 
+forward, possibly relying on an incorrect target or misalignment. Since the 
+recently viewed rack is no longer in sight, I will move backward to reposition 
+myself and search for the rack again.
+
+Description: The image is mostly empty, with just a plain white floor visible. I
+have lost sight of the rack-like object that was previously in view. This 
+suggests I may have moved too far or in the wrong direction. Moving backward 
+will help me regain my position and search for the rack again to confirm and 
+approach it.
+Time taken: 4.58s
+[Landmark]: server rack, ThinkPad box, monitor, CPU unit
+
+```python
+drone.move_forward(10)
+```
+
+Explanation: The image shows a server rack with various equipment, an open 
+ThinkPad box, a computer monitor, and a CPU unit. My teammate has already 
+identified numerous landmarks, and this area seems to be well-covered. To avoid 
+duplicating efforts, I will move slightly forward to explore closer objects in 
+the server rack or evaluate other potential landmarks in this immediate 
+vicinity.
+
+Description: The image displays a server rack with several black servers, an 
+open ThinkPad box with the "Think" logo, a computer monitor on a stand, and a 
+black CPU unit with cables connected. The room appears to be cluttered with 
+equipment and boxes, with a window allowing daylight. I will move forward to 
+gather more details about the server equipment or identify any new objects in 
+the immediate foreground.
+Time taken: 5.18s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, monitor, CPU unit
+
+```python
+drone.move_forward(10)
+```
+
+Explanation: The image shows a server rack with various equipment, an open 
+ThinkPad box, a computer monitor, and a CPU unit. My teammate has already 
+identified numerous landmarks, and this area seems to be well-covered. To avoid 
+duplicating efforts, I will move slightly forward to explore closer objects in 
+the server rack or evaluate other potential landmarks in this immediate 
+vicinity.
+
+Description: The image displays a server rack with several black servers, an 
+open ThinkPad box with the "Think" logo, a computer monitor on a stand, and a 
+black CPU unit with cables connected. The room appears to be cluttered with 
+equipment and boxes, with a window allowing daylight. I will move forward to 
+gather more details about the server equipment or identify any new objects in 
+the immediate foreground.
+[Drone 1 State] Pos:(X:0.07, Y:0.13, Z:0.90, Yaw:45.0°), Landmarks: ['rack', 
+'cardboard box', 'auto-cord', 'open thinkpad box', 'cpu unit', 'thinkpad logo', 
+'server rack', 'wall socket', 'black speaker', 'monitor', 'thinkpad box', 
+'magazines', 'computer monitor', 'printer box', 'electrical outlet', 'monitors',
+'wall outlet', 'computer equipment', 'open server tower']
+DRONE 2 Assistant: [Landmark]: none
+
+```python
+drone.move_backwards(50)
+```
+
+Explanation: The current image shows a mostly empty white floor with no visible 
+objects or landmarks that resemble a "rack." It appears I've moved too far 
+forward, possibly relying on an incorrect target or misalignment. Since the 
+recently viewed rack is no longer in sight, I will move backward to reposition 
+myself and search for the rack again.
+
+Description: The image is mostly empty, with just a plain white floor visible. I
+have lost sight of the rack-like object that was previously in view. This 
+suggests I may have moved too far or in the wrong direction. Moving backward 
+will help me regain my position and search for the rack again to confirm and 
+approach it.
+[Drone 2 State] Pos:(X:1.39, Y:-0.65, Z:1.00, Yaw:165.0°), Landmarks: ['boxes', 
+'rack', 'cardboard box', 'shelves', 'orange object', 'black suitcases', 'hp 
+printer box', 'camera', 'cardboard boxes', 'server rack', 'black object', 
+'server equipment', 'monitor', 'black case', 'shelf', 'open cardboard boxes', 
+'large box', 'large black case', 'computer monitor', 'television monitor', 
+'printer box', 'brown cardboard box', 'monitors', 'chairs', 'label', 'filing 
+cabinet', 'closed suitcase']
+[Landmark]: none
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: The image now shows an empty floor with a red object in the upper 
+right corner, which could potentially be part of the target "rack." However, 
+this object is slightly off-center, and I need to rotate the drone clockwise to 
+bring it into the center of the frame for better inspection. This rotation will 
+also help me confirm whether the red object is indeed the target rack or if I 
+need to continue searching.
+
+Description: The image shows a mostly empty floor with a red object in the upper
+right corner, which appears to be a component of the target "rack." Since this 
+object is not fully centered, I will rotate the drone to inspect it more 
+closely. The empty floor suggests that I may have moved too far or need to 
+adjust to find the full object.
+Time taken: 5.10s
+[Landmark]: server rack, ThinkPad box, monitor, CPU unit
+
+```python
+drone.move_down(10)
+```
+
+Explanation: The image shows a server rack with equipment, an open ThinkPad box 
+labeled "Think," and a computer monitor on a stand. Given the many landmarks my 
+teammate has already found, I will move slightly downward to examine the floor 
+level, as there are visible cables and objects like the CPU unit. This will 
+allow me to identify potential new landmarks, such as additional cables, 
+devices, or unexplored areas.
+
+Description: The image displays a server rack with cables hanging on the left, 
+an open ThinkPad box on the floor, a computer monitor, and a CPU unit with 
+various cables connected. Since my teammate has covered the upper areas, I will 
+move downward to explore the ground level, where there might be additional 
+objects or details that need to be investigated. This will help ensure 
+comprehensive coverage of the environment.
+Time taken: 5.46s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, monitor, CPU unit
+
+```python
+drone.move_down(10)
+```
+
+Explanation: The image shows a server rack with equipment, an open ThinkPad box 
+labeled "Think," and a computer monitor on a stand. Given the many landmarks my 
+teammate has already found, I will move slightly downward to examine the floor 
+level, as there are visible cables and objects like the CPU unit. This will 
+allow me to identify potential new landmarks, such as additional cables, 
+devices, or unexplored areas.
+
+Description: The image displays a server rack with cables hanging on the left, 
+an open ThinkPad box on the floor, a computer monitor, and a CPU unit with 
+various cables connected. Since my teammate has covered the upper areas, I will 
+move downward to explore the ground level, where there might be additional 
+objects or details that need to be investigated. This will help ensure 
+comprehensive coverage of the environment.
+[Drone 1 State] Pos:(X:0.07, Y:0.13, Z:0.80, Yaw:45.0°), Landmarks: ['rack', 
+'cardboard box', 'auto-cord', 'open thinkpad box', 'cpu unit', 'thinkpad logo', 
+'server rack', 'wall socket', 'black speaker', 'monitor', 'thinkpad box', 
+'magazines', 'computer monitor', 'printer box', 'electrical outlet', 'monitors',
+'wall outlet', 'computer equipment', 'open server tower']
+DRONE 2 Assistant: [Landmark]: none
+
+```python
+drone.rotate_cw(20)
+```
+
+Explanation: The image now shows an empty floor with a red object in the upper 
+right corner, which could potentially be part of the target "rack." However, 
+this object is slightly off-center, and I need to rotate the drone clockwise to 
+bring it into the center of the frame for better inspection. This rotation will 
+also help me confirm whether the red object is indeed the target rack or if I 
+need to continue searching.
+
+Description: The image shows a mostly empty floor with a red object in the upper
+right corner, which appears to be a component of the target "rack." Since this 
+object is not fully centered, I will rotate the drone to inspect it more 
+closely. The empty floor suggests that I may have moved too far or need to 
+adjust to find the full object.
+[Drone 2 State] Pos:(X:1.39, Y:-0.65, Z:1.00, Yaw:195.0°), Landmarks: ['boxes', 
+'rack', 'cardboard box', 'shelves', 'orange object', 'black suitcases', 'hp 
+printer box', 'camera', 'cardboard boxes', 'server rack', 'black object', 
+'server equipment', 'monitor', 'black case', 'shelf', 'open cardboard boxes', 
+'large box', 'large black case', 'computer monitor', 'television monitor', 
+'printer box', 'brown cardboard box', 'monitors', 'chairs', 'label', 'filing 
+cabinet', 'closed suitcase']
+[Landmark]: rack, server unit, orange label
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The current image shows a partially visible server rack with a 
+prominent orange label or component on the side. The rack is centered in the 
+view, and moving forward will allow me to get closer to it, potentially 
+confirming that it is the target "rack" I'm searching for. Since my teammate has
+covered most areas, focusing on this specific rack ensures I'm not duplicating 
+exploration efforts.
+
+Description: The image displays a server rack with a visible orange label or 
+component, which is a strong candidate for the target "rack." This matches the 
+description of a rack with storage or server equipment. The rack is centered, 
+indicating that I've successfully aligned my view. Moving forward will help me 
+inspect it more closely.
+Time taken: 5.63s
+[Landmark]: server rack, ThinkPad box, monitor, CPU unit
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image shows a server rack with equipment, an open ThinkPad 
+cardboard box, and a computer monitor. Given that my teammate has covered a 
+significant number of landmarks on the right side of the room, including server 
+racks and boxes, I will move slightly to the right to explore the equipment 
+shelf and other potential landmarks near the window. This will help ensure I'm 
+covering a different part of the room from my teammate and potentially find 
+additional details.
+
+Description: The image displays a server rack on the left, an open ThinkPad box 
+labeled "Think," and a black CPU unit with cables. On the right, there is a 
+monitor and a part of an equipment rack. Since my teammate is exploring more 
+toward the far-right corner, I will move slightly to the right to gather more 
+details about the shelves and areas near the window, which may hold additional 
+landmarks or equipment not yet documented.
+Time taken: 6.67s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, monitor, CPU unit
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image shows a server rack with equipment, an open ThinkPad 
+cardboard box, and a computer monitor. Given that my teammate has covered a 
+significant number of landmarks on the right side of the room, including server 
+racks and boxes, I will move slightly to the right to explore the equipment 
+shelf and other potential landmarks near the window. This will help ensure I'm 
+covering a different part of the room from my teammate and potentially find 
+additional details.
+
+Description: The image displays a server rack on the left, an open ThinkPad box 
+labeled "Think," and a black CPU unit with cables. On the right, there is a 
+monitor and a part of an equipment rack. Since my teammate is exploring more 
+toward the far-right corner, I will move slightly to the right to gather more 
+details about the shelves and areas near the window, which may hold additional 
+landmarks or equipment not yet documented.
+[Drone 1 State] Pos:(X:0.14, Y:0.06, Z:0.80, Yaw:45.0°), Landmarks: ['rack', 
+'cardboard box', 'auto-cord', 'open thinkpad box', 'cpu unit', 'thinkpad logo', 
+'server rack', 'wall socket', 'black speaker', 'monitor', 'thinkpad box', 
+'magazines', 'computer monitor', 'printer box', 'electrical outlet', 'monitors',
+'wall outlet', 'computer equipment', 'open server tower']
+DRONE 2 Assistant: [Landmark]: rack, server unit, orange label
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The current image shows a partially visible server rack with a 
+prominent orange label or component on the side. The rack is centered in the 
+view, and moving forward will allow me to get closer to it, potentially 
+confirming that it is the target "rack" I'm searching for. Since my teammate has
+covered most areas, focusing on this specific rack ensures I'm not duplicating 
+exploration efforts.
+
+Description: The image displays a server rack with a visible orange label or 
+component, which is a strong candidate for the target "rack." This matches the 
+description of a rack with storage or server equipment. The rack is centered, 
+indicating that I've successfully aligned my view. Moving forward will help me 
+inspect it more closely.
+[Drone 2 State] Pos:(X:1.32, Y:-0.94, Z:1.00, Yaw:195.0°), Landmarks: ['server 
+unit', 'boxes', 'rack', 'orange label', 'cardboard box', 'shelves', 'orange 
+object', 'black suitcases', 'hp printer box', 'camera', 'cardboard boxes', 
+'server rack', 'black object', 'server equipment', 'monitor', 'black case', 
+'shelf', 'open cardboard boxes', 'large box', 'large black case', 'computer 
+monitor', 'television monitor', 'printer box', 'brown cardboard box', 
+'monitors', 'chairs', 'label', 'filing cabinet', 'closed suitcase']
+[Landmark]: partial black object, orange label, cardboard box
+
+```python
+drone.move_backward(50)
+```
+
+Explanation: The image is mostly obscured, with the ground taking up most of the
+view. There is a partial black object with an orange label visible at the top of
+the frame, which could be part of the target "rack." However, I am too close, 
+and the drone's position obscures the view. Moving backward will help me get a 
+clearer view of the potential rack and surrounding environment to confirm the 
+target.
+
+Description: The image shows a predominantly white floor with a partially 
+visible black object at the top of the frame. This object has an orange label, 
+which could be part of a server rack or related equipment. However, my current 
+position is too close, making it difficult to identify the target clearly. 
+Moving backward will improve my field of view and help me identify the target 
+more accurately.
+Time taken: 6.57s
+[Landmark]: server rack, ThinkPad box, monitor, CPU unit
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image shows a server rack on the left and an open ThinkPad box 
+prominently in the center. My teammate has already explored the right side of 
+the room and has covered many landmarks, including server racks and boxes. To 
+explore new areas, I will move slightly to the right. This will allow me to 
+continue investigating areas near the window, where I see an equipment rack and 
+monitor. By moving right, I can ensure comprehensive coverage and potentially 
+discover additional landmarks that haven't been identified yet.
+
+Description: The image displays a tall black server rack in the background, an 
+open ThinkPad box labeled "Think," and a CPU unit on a stand. To the right, 
+there is a computer monitor and a partially visible equipment rack near a 
+window. My teammate is focusing more on the right side of the room, so I will 
+move slightly to the right to explore new areas, such as the region near the 
+window and the monitor. This approach will help ensure that we cover different 
+sections of the room efficiently, avoiding duplicated efforts.
+Time taken: 7.86s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, monitor, CPU unit
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image shows a server rack on the left and an open ThinkPad box 
+prominently in the center. My teammate has already explored the right side of 
+the room and has covered many landmarks, including server racks and boxes. To 
+explore new areas, I will move slightly to the right. This will allow me to 
+continue investigating areas near the window, where I see an equipment rack and 
+monitor. By moving right, I can ensure comprehensive coverage and potentially 
+discover additional landmarks that haven't been identified yet.
+
+Description: The image displays a tall black server rack in the background, an 
+open ThinkPad box labeled "Think," and a CPU unit on a stand. To the right, 
+there is a computer monitor and a partially visible equipment rack near a 
+window. My teammate is focusing more on the right side of the room, so I will 
+move slightly to the right to explore new areas, such as the region near the 
+window and the monitor. This approach will help ensure that we cover different 
+sections of the room efficiently, avoiding duplicated efforts.
+[Drone 1 State] Pos:(X:0.21, Y:-0.01, Z:0.80, Yaw:45.0°), Landmarks: ['rack', 
+'cardboard box', 'auto-cord', 'open thinkpad box', 'cpu unit', 'thinkpad logo', 
+'server rack', 'wall socket', 'black speaker', 'monitor', 'thinkpad box', 
+'magazines', 'computer monitor', 'printer box', 'electrical outlet', 'monitors',
+'wall outlet', 'computer equipment', 'open server tower']
+DRONE 2 Assistant: [Landmark]: partial black object, orange label, cardboard box
+
+```python
+drone.move_backward(50)
+```
+
+Explanation: The image is mostly obscured, with the ground taking up most of the
+view. There is a partial black object with an orange label visible at the top of
+the frame, which could be part of the target "rack." However, I am too close, 
+and the drone's position obscures the view. Moving backward will help me get a 
+clearer view of the potential rack and surrounding environment to confirm the 
+target.
+
+Description: The image shows a predominantly white floor with a partially 
+visible black object at the top of the frame. This object has an orange label, 
+which could be part of a server rack or related equipment. However, my current 
+position is too close, making it difficult to identify the target clearly. 
+Moving backward will improve my field of view and help me identify the target 
+more accurately.
+[Drone 2 State] Pos:(X:1.45, Y:-0.46, Z:1.00, Yaw:195.0°), Landmarks: ['server 
+unit', 'boxes', 'rack', 'orange label', 'cardboard box', 'shelves', 'orange 
+object', 'black suitcases', 'hp printer box', 'camera', 'cardboard boxes', 
+'partial black object', 'server rack', 'black object', 'server equipment', 
+'monitor', 'black case', 'shelf', 'open cardboard boxes', 'large box', 'large 
+black case', 'computer monitor', 'television monitor', 'printer box', 'brown 
+cardboard box', 'monitors', 'chairs', 'label', 'filing cabinet', 'closed 
+suitcase']
+[Landmark]: server rack, orange label, blue bin
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The image shows a server rack with a prominent orange label, 
+confirming that this is the target "rack" I've been searching for. The blue bin 
+and other equipment in the background reinforce that this is an equipment or 
+server area. Since the rack is already centered in the image, I will move 
+forward to get closer for inspection and preparation for landing.
+
+Description: The image shows a server rack in clear view with an orange label on
+it, which matches the description of a "rack." The blue bin and other equipment 
+nearby confirm this is the correct area. The drone is properly aligned, so 
+moving forward will allow me to inspect the rack more closely and determine if 
+this is indeed the target before proceeding with landing.
+Time taken: 6.15s
+[Landmark]: server rack, cardboard box, computer monitor
+
+```python
+drone.move_left(10)
+```
+
+Explanation: The image shows a server rack on the left, an open ThinkPad 
+cardboard box, and a computer monitor to the right. While many landmarks have 
+been identified in this room, my teammate is focusing more toward the window and
+the right side of the room. To avoid duplicating efforts and maximize coverage, 
+I will move slightly to the left. This will allow me to explore areas near the 
+server rack and the large black equipment on the floor, which may hold 
+additional landmarks or details that have not been documented yet.
+
+Description: The image features a server rack on the left side with various 
+equipment, an open ThinkPad cardboard box in the center, and a computer monitor 
+to the right. There is a large black CPU unit on the floor, and an equipment 
+rack is visible near the window. My teammate is focused on the right side, so I 
+will move left to explore areas such as the server rack and large black objects 
+on the left. This will help ensure that we avoid overlapping in our search 
+efforts and gather comprehensive information about the room.
+Time taken: 7.89s
+DRONE 1 Assistant: [Landmark]: server rack, cardboard box, computer monitor
+
+```python
+drone.move_left(10)
+```
+
+Explanation: The image shows a server rack on the left, an open ThinkPad 
+cardboard box, and a computer monitor to the right. While many landmarks have 
+been identified in this room, my teammate is focusing more toward the window and
+the right side of the room. To avoid duplicating efforts and maximize coverage, 
+I will move slightly to the left. This will allow me to explore areas near the 
+server rack and the large black equipment on the floor, which may hold 
+additional landmarks or details that have not been documented yet.
+
+Description: The image features a server rack on the left side with various 
+equipment, an open ThinkPad cardboard box in the center, and a computer monitor 
+to the right. There is a large black CPU unit on the floor, and an equipment 
+rack is visible near the window. My teammate is focused on the right side, so I 
+will move left to explore areas such as the server rack and large black objects 
+on the left. This will help ensure that we avoid overlapping in our search 
+efforts and gather comprehensive information about the room.
+[Drone 1 State] Pos:(X:0.14, Y:0.06, Z:0.80, Yaw:45.0°), Landmarks: ['rack', 
+'cardboard box', 'auto-cord', 'open thinkpad box', 'cpu unit', 'thinkpad logo', 
+'server rack', 'wall socket', 'black speaker', 'monitor', 'thinkpad box', 
+'magazines', 'computer monitor', 'printer box', 'electrical outlet', 'monitors',
+'wall outlet', 'computer equipment', 'open server tower']
+DRONE 2 Assistant: [Landmark]: server rack, orange label, blue bin
+
+```python
+drone.move_forward(30)
+```
+
+Explanation: The image shows a server rack with a prominent orange label, 
+confirming that this is the target "rack" I've been searching for. The blue bin 
+and other equipment in the background reinforce that this is an equipment or 
+server area. Since the rack is already centered in the image, I will move 
+forward to get closer for inspection and preparation for landing.
+
+Description: The image shows a server rack in clear view with an orange label on
+it, which matches the description of a "rack." The blue bin and other equipment 
+nearby confirm this is the correct area. The drone is properly aligned, so 
+moving forward will allow me to inspect the rack more closely and determine if 
+this is indeed the target before proceeding with landing.
+[Drone 2 State] Pos:(X:1.37, Y:-0.75, Z:1.00, Yaw:195.0°), Landmarks: ['server 
+unit', 'boxes', 'rack', 'orange label', 'cardboard box', 'shelves', 'blue bin', 
+'orange object', 'black suitcases', 'hp printer box', 'camera', 'cardboard 
+boxes', 'partial black object', 'server rack', 'black object', 'server 
+equipment', 'monitor', 'black case', 'shelf', 'open cardboard boxes', 'large 
+box', 'large black case', 'computer monitor', 'television monitor', 'printer 
+box', 'brown cardboard box', 'monitors', 'chairs', 'label', 'filing cabinet', 
+'closed suitcase']
+[ WARN:13@142.761] global cap_ffmpeg_impl.hpp:453 _opencv_ffmpeg_interrupt_callback Stream timeout triggered after 30046.792406 ms
+[h264 @ 0xfffeb44ae9e0] error while decoding MB 25 19, bytestream -5
+[Landmark]: none
+
+```python
+drone.rotate_cw(50)
+```
+
+Explanation: The current image shows a mostly white floor with no visible 
+landmarks, indicating that I may have moved too close to the object or lost 
+sight of the rack. Rotating the drone clockwise will allow me to search the area
+for the server rack or similar object that I've been focused on. My teammate has
+covered multiple landmarks, so focusing on exploring different angles is 
+essential to locate the target.
+
+Description: The image shows a blank white floor with no visible structures or 
+objects resembling a "rack." It appears that I've either moved too close to the 
+target or lost sight of it. Rotating clockwise will help me adjust my viewing 
+angle and search the surrounding area to reacquire the correct landmark.
+Time taken: 5.92s
+[Landmark]: server rack, ThinkPad box, monitor
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image shows a tall server rack on the left, an open ThinkPad 
+cardboard box, and a monitor on the right. Although my teammate has covered a 
+large portion of the room, including server racks and boxes, I will move 
+slightly to the right to explore alternative areas, such as the region near the 
+window and the monitor. This will help ensure that we avoid overlapping in our 
+search efforts and gather comprehensive information about the surroundings.
+
+Description: The image displays a server rack on the left side with IT 
+equipment, an open ThinkPad box, and a computer monitor to the right. A large 
+black CPU device is on the floor near the server. My teammate is exploring the 
+right side of the room, so I will move to the right to investigate areas near 
+the window and the monitor, potentially uncovering additional landmarks or 
+details that haven't been documented yet.
+Time taken: 6.97s
+DRONE 1 Assistant: [Landmark]: server rack, ThinkPad box, monitor
+
+```python
+drone.move_right(10)
+```
+
+Explanation: The image shows a tall server rack on the left, an open ThinkPad 
+cardboard box, and a monitor on the right. Although my teammate has covered a 
+large portion of the room, including server racks and boxes, I will move 
+slightly to the right to explore alternative areas, such as the region near the 
+window and the monitor. This will help ensure that we avoid overlapping in our 
+search efforts and gather comprehensive information about the surroundings.
+
+Description: The image displays a server rack on the left side with IT 
+equipment, an open ThinkPad box, and a computer monitor to the right. A large 
+black CPU device is on the floor near the server. My teammate is exploring the 
+right side of the room, so I will move to the right to investigate areas near 
+the window and the monitor, potentially uncovering additional landmarks or 
+details that haven't been documented yet.
+[Drone 1 State] Pos:(X:0.21, Y:-0.01, Z:0.80, Yaw:45.0°), Landmarks: ['rack', 
+'cardboard box', 'auto-cord', 'open thinkpad box', 'cpu unit', 'thinkpad logo', 
+'server rack', 'wall socket', 'black speaker', 'monitor', 'thinkpad box', 
+'magazines', 'computer monitor', 'printer box', 'electrical outlet', 'monitors',
+'wall outlet', 'computer equipment', 'open server tower']
+DRONE 2 Assistant: [Landmark]: none
+
+```python
+drone.rotate_cw(50)
+```
+
+Explanation: The current image shows a mostly white floor with no visible 
+landmarks, indicating that I may have moved too close to the object or lost 
+sight of the rack. Rotating the drone clockwise will allow me to search the area
+for the server rack or similar object that I've been focused on. My teammate has
+covered multiple landmarks, so focusing on exploring different angles is 
+essential to locate the target.
+
+Description: The image shows a blank white floor with no visible structures or 
+objects resembling a "rack." It appears that I've either moved too close to the 
+target or lost sight of it. Rotating clockwise will help me adjust my viewing 
+angle and search the surrounding area to reacquire the correct landmark.
+[Drone 2 State] Pos:(X:1.37, Y:-0.75, Z:1.00, Yaw:270.0°), Landmarks: ['server 
+unit', 'boxes', 'rack', 'orange label', 'cardboard box', 'shelves', 'blue bin', 
+'orange object', 'black suitcases', 'hp printer box', 'camera', 'cardboard 
+boxes', 'partial black object', 'server rack', 'black object', 'server 
+equipment', 'monitor', 'black case', 'shelf', 'open cardboard boxes', 'large 
+box', 'large black case', 'computer monitor', 'television monitor', 'printer 
+box', 'brown cardboard box', 'monitors', 'chairs', 'label', 'filing cabinet', 
+'closed suitcase']
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 391, in process_instruction
+    send_command(drone_2, output_text_drone2)
+  File "/home/orin/BoxFly/server.py", line 460, in send_command
+    drone.socket.sendall(output_text.encode())
+ConnectionResetError: [Errno 104] Connection reset by peer
+^CKeyboard interruption in main thread... closing server.
+terminate called without an active exception
+Aborted (core dumped)
+(camera) orin@ubuntu:~/BoxFly$ ^C
+(camera) orin@ubuntu:~/BoxFly$ 
+
+

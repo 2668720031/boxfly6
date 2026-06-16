@@ -1,0 +1,486 @@
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Traceback (most recent call last):
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/queueing.py", line 785, in process_events
+    response = await route_utils.call_process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/route_utils.py", line 358, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 2172, in process_api
+    result = await self.call_function(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/blocks.py", line 1634, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+  File "/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/gradio/utils.py", line 1059, in wrapper
+    response = f(*args, **kwargs)
+  File "/home/orin/BoxFly/server.py", line 255, in process_instruction
+    last_image_drone2 = Image.fromarray(cv2.cvtColor(drone_2.current_image, cv2.COLOR_BGR2RGB))
+cv2.error: OpenCV(4.13.0) /io/opencv/modules/imgproc/src/color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+[ WARN:17@3565.469] global cap_ffmpeg_impl.hpp:453 _opencv_ffmpeg_interrupt_callback Stream timeout triggered after 30037.170372 ms
+[h264 @ 0xfffec80a2370] error while decoding MB 30 3, bytestream -5
+
