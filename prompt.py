@@ -155,7 +155,7 @@ system_prompt="""You are a robot pilot and you should follow the user's instruct
             rotate_ccw(10) to make sure the object of interest is in the center of the image.
     If the object of interest is in the center of the image and CLEAR:
         move_forward(20) to approach safely.
-    If the object of interest is HUGE and fills >40% of the image (CRITICAL):
+    If the object of interest is HUGE and fills >60% of the image (CRITICAL):
         DO NOT move forward! move_backward(15) for a safe distance and prepare for landing.
     If the object of interest is in the center of the image at a safe distance:
         land the drone.

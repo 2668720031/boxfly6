@@ -785,25 +785,28 @@ def handle_client_telemetry(drone_id, conn):
                             except ValueError:
                                 pass 
                     
-                    # 不再检查 'yaw'，仅检查 vgx, vgy, tof
-                    if all(k in state_dict for k in ('vgx', 'vgy', 'tof')):
-                        vx_m = state_dict['vgx'] / 10.0
-                        vy_m = state_dict['vgy'] / 10.0
+                    # ====== 直接使用底层 MVO (机器视觉里程计) 的绝对坐标 ======
+                    if all(k in state_dict for k in ('px', 'py', 'tof')):
+                        mvo_px = state_dict['px']
+                        mvo_py = state_dict['py']
                         tof = state_dict['tof'] 
                         
-                        current_time = time()
-                        dt = current_time - last_time
-                        last_time = current_time
-                        
                         state = drone_states[drone_id]
-                        # 直接使用 Server 端大模型推算的虚拟 yaw 进行积分映射
-                        yaw_rad = math.radians(state['yaw'])
                         
-                        # 【核心微积分方程】(对齐了大模型视角：前进=+Y)
-                        state['x'] += (vx_m * math.sin(yaw_rad) + vy_m * math.cos(yaw_rad)) * dt
-                        state['y'] += (vx_m * math.cos(yaw_rad) - vy_m * math.sin(yaw_rad)) * dt
+                        # 记录飞机在全局地图上的初始位置（为了兼容2号机初始在 X=1.0 的设定）
+                        if 'init_x' not in state:
+                            state['init_x'] = state['x']
+                            state['init_y'] = state['y']
                         
+                        # 【坐标系绝对映射】
+                        # Tello MVO 的 +X 是起飞时的正前方 (对应我们大模型全局地图的 +Y)
+                        # Tello MVO 的 +Y 是起飞时的正右方 (对应我们大模型全局地图的 +X)
+                        state['x'] = state['init_x'] + mvo_py
+                        state['y'] = state['init_y'] + mvo_px
+                        
+                        # Z 轴绝对高度依然用 ToF 红外测距
                         state['z'] = tof / 100.0
+                    # =============================================================
                         
         except Exception as e:
             print(f"Telemetry lost for Drone {drone_id}: {e}")

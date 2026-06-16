@@ -159,17 +159,21 @@ class TelloPy(BasicDrone):
         drone = sender
         if event is drone.EVENT_FLIGHT_DATA:
             try:
-                # 极其安全的方法：直接访问对象属性，即使获取失败也会返回默认值 0
-                vgx = getattr(data, 'north_speed', 0)
-                vgy = getattr(data, 'east_speed', 0)
-                tof_raw = getattr(data, 'height', 15)  # tellopy 的 height 通常是分米(dm)
+                # 1. 提取高度 ToF
+                tof_raw = getattr(data, 'height', 15)  
+                tof = tof_raw * 10  # 转换为 cm
                 
-                tof = tof_raw * 10  # 转为厘米发送给 Server
+                # 2. 【核心大招】直接提取底层 MVO 机器视觉里程计的绝对坐标！
+                # MVO 会在无人机起飞时将当前位置设为 (0,0)，并在飞行中极其精准地追踪位移
+                mvo = drone.log_data.mvo
+                px = getattr(mvo, 'pos_x', 0.0) # 绝对前向位移 (米)
+                py = getattr(mvo, 'pos_y', 0.0) # 绝对右向位移 (米)
                 
-                # 只要有一点点速度，就更新遥测字符串
-                self.telemetry_str = f"vgx:{vgx};vgy:{vgy};tof:{tof}"
+                # 发送绝对坐标，而不是速度
+                self.telemetry_str = f"px:{px:.3f};py:{py:.3f};tof:{tof}"
             except Exception as e:
                 self.telemetry_str = f"error:{e}"
+
 
     # video part
 
