@@ -1,310 +1,255 @@
 ========== NEW INSTRUCTION: black rack ==========
 
 ### Step 1
-[Landmark]: bookshelf, boxes, backpack
+[Landmark]: bookshelf, books
 
 ```python
-drone.rotate_cw(30)
+drone.move_forward(20)
 ```
 
-Intent: Searching for the target. My teammate is exploring the right side, so I will rotate the drone to search the left side to ensure full coverage.
+Intent: Approaching the target. The potential target (black rack) is in the center of the image, and it appears clear and unobstructed. Since the target does not fill more than 50% of the image, I am moving forward to get closer.
 
-Description: The image shows an indoor setting with a bookshelf filled with books, some boxes, and a red backpack. The books are in Chinese, and there is a floor cleaning device in the foreground. I am currently focused on finding a black rack as the target.
+Description: The image shows a bookshelf with numerous books stacked neatly on its shelves. The bookshelf appears to be constructed from a black material, matching the target description. There are no visible obstacles blocking the path.
 
 ### Step 2
-[Landmark]: bookshelf, open cardboard box, red bag
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is partially visible on the right side of the image. I am moving forward to get closer and confirm if it is the target.
-
-Description: The image shows a bookshelf, an open cardboard box, and a red bag. On the far right, there is a black rack partially visible. My teammate is searching in a different area, so I am focusing on this potential target to see if it matches the description.
-
-### Step 3
-[Landmark]: bookshelf, red bag, chair
-
-```python
-drone.move_left(20)
-```
-
-Intent: The black rack is not visible in this image. Given the current view, moving left is necessary to bypass the bookshelf and potentially reveal the target. The red bag on the floor may obstruct the path, so I will move left to adjust my position.
-
-Description: The image shows a bookshelf with Chinese books, a red bag on the floor, and part of a chair. The black rack is not visible, suggesting it might be located beyond the bookshelf. My teammate is exploring the right side, so I will move left to cover the left side of the environment.
-
-### Step 4
-[Landmark]: bookshelf, white wall, laptop
-
-```python
-drone.move_right(20)
-```
-
-Intent: The black rack is not visible in the current image, and the view is dominated by a bookshelf. Moving right is necessary to potentially reveal the target as it might be located to the right of the bookshelf.
-
-Description: The image shows a bookshelf filled with books, a white wall, and a laptop on a table. The current view does not include any black racks, and the chair partially obstructs the right side. Given my position and the teammate's exploration on the right, I will move right to explore the left side of the room where the target might be located.
-
-### Step 5
-[Landmark]: bookshelf, chair, white wall
-
-```python
-drone.rotate_ccw(120)
-```
-
-Intent: Despite not spotting the black rack in the current image, the system reminder suggests exploring entirely new areas as I might be stuck in a blind spot. Rotating counterclockwise by 120 degrees will help me access new sections of the room and potentially locate the target.
-
-Description: The image shows a bookshelf filled with books, a chair to the right, and a white wall occupying most of the view. My teammate has been checking nearby areas, but no black rack is visible. I will rotate counterclockwise to systematically cover different parts of the room.
-
-### Step 6
-[Landmark]: bookshelf, black chair, red bag
-
-```python
-drone.rotate_cw(30)
-```
-
-Intent: The black rack is not visible in the current image, which is dominated by a bookshelf. I am rotating clockwise to search for the target in adjacent areas, as my teammate has also been exploring different regions without success.
-
-Description: The image shows a bookshelf with many books in both English and Chinese, a red bag, and a black chair. The wall-mounted cabinet and a section of desk are also visible. Since the black rack is not in view, I will rotate clockwise slightly to access areas that might have been overlooked.
-
-### Step 7
-[Landmark]: laptop, television, cardboard boxes
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is not visible in the current image, but there is open space to move forward without obstructions. I am moving forward to check the area directly ahead, where the target might be located.
-
-Description: The image shows a desk area with a laptop, a large television mounted on the wall, and various cardboard boxes. On the right, there is an open shelving unit without any visible black rack. My teammate is in the process of bypassing obstacles, so I will proceed straight to check the area directly in front of me for the target.
-
-### Step 8
-[Landmark]: television, cardboard boxes, black metal rack
-
-```python
-drone.rotate_ccw(10)
-```
-
-Intent: A potential black rack is visible on the right side of the image, which could be the target. I will rotate counterclockwise slightly to center it in my view. If it is indeed the target, I will move forward to approach it.
-
-Description: The image shows a television mounted on the wall, several cardboard boxes, and a black metal rack on the right side. Based on the description, this black metal rack matches the attributes of the target (black and rack-like). My teammate is focused on a similar structure, so I will verify this potential target by rotating and centering it in my view before proceeding.
-
-### Step 9
-[Landmark]: television, cardboard boxes, shelving unit
-
-```python
-drone.move_right(20)
-```
-
-Intent: The black rack is not visible in this image, and the view is dominated by cardboard boxes and shelving units. I will move right to explore the area where my teammate identified a potential target, as the current image suggests it might be to the right.
-
-Description: The image shows a television mounted on the wall, several open cardboard boxes, and a shelving unit with boxes and bags. On the far right, there are indications of a possible black rack, but it is not clearly visible. My teammate has identified a potential target in that direction, so I will move right to align with their position and verify the target.
-
-### Step 10
-[Landmark]: television, cardboard boxes, shelves
-
-```python
-drone.rotate_cw(90)
-```
-
-Intent: Despite actively searching, my current view still does not show the target "black rack." The system reminder indicates I might be stuck in a blind spot. I will execute a large-angle clockwise rotation of 90 degrees to explore a different section of the room and potentially locate the target.
-
-Description: The image shows a television, an assortment of cardboard boxes, and shelves holding various items like a black bag and papers. This area is primarily cluttered with boxes and shelving, but no clear black rack is visible. I will rotate clockwise to systematically cover new areas and locate the target.
-
-### Step 11
-[Landmark]: cardboard boxes, shelving unit, stacked electronics
-
-```python
-drone.move_left(10)
-```
-
-Intent: The "black rack" does not appear to be visible in the current view. Instead, there are cardboard boxes and a shelving unit that could potentially obscure my view of the target. I will move left slightly to bypass these obstacles and attempt to get a clearer view toward the right side where the target might be located.
-
-Description: The image shows several cardboard boxes in the foreground, a shelving unit with stacked electronics, and a television mounted on the wall. On the far right, there is a shelving unit with some items on top, but no clear black rack is visible. My teammate has identified a potential target nearby, so I will move left to explore this area further.
-
-### Step 12
-[Landmark]: bookshelf, cardboard box, red bag
+[Landmark]: bookshelf, books
 
 ```python
 drone.rotate_cw(10)
 ```
 
-Intent: The "black rack" is not visible in the current image, which shows a bookshelf filled with books and a cardboard box in the foreground. I will rotate clockwise slightly to shift the view toward the right side of the room, potentially revealing the target.
+Intent: Centering and verifying the target. The potential target (black bookshelf) is off-center to the left. It is important to use a small rotation to ensure that the bookshelf is neither obstructed nor misidentified as a different object. I will rotate clockwise slightly to center it for a thorough inspection.
 
-Description: The image shows a bookshelf with various books and a large open cardboard box containing a green item. To the left, part of a green curtain is visible, and a red bag is at the bottom of the bookshelf. My teammate has identified a potential target on the right, so I will rotate my view slightly to search for it.
+Description: The image shows a bookshelf with numerous books, which matches the general style of a rack. However, the black material and structural design still need precise confirmation to ensure it is the correct target. No other objects in the vicinity suggest it is an incorrect target.
 
-### Step 13
-[Landmark]: bookshelf, cardboard box, red bag
+### Step 3
+[Landmark]: bookshelf, books
+
+```python
+drone.rotate_cw(10)
+```
+
+Intent: Confirming the target's alignment and attributes. The potential black rack (bookshelf) is slightly off-center and might include additional books on top not initially visible. Using a small rotation will help verify whether the entire structure, including additional contents or design elements, aligns with a black rack. 
+
+Description: The current image shows a bookshelf with books organized neatly on multiple shelves. Although visually it resembles a typical black rack, careful rotation is needed to verify the full structure and whether there are any distinct features or materials confirming it as the correct target.
+
+### Step 4
+[Landmark]: bookshelf, books
+
+```python
+drone.rotate_cw(10)
+```
+
+Intent: Ensuring the potential black rack is correctly centered and verified. The black structure in view appears to be a bookshelf filled with various books, which suggests it is not the target black rack. However, careful rotation is conducted to check the full structure and ensure there are no design elements or material nuances that confirm it as the target. 
+
+Description: The image shows a bookshelf filled with books, organized into three visible shelves. Despite the black color, the shelf structure and its content do not match the typical design of a black rack. To ensure precision, I will rotate slightly to inspect the full structure and verify the material and configuration before rejecting it as the target. If no rack features are found after rotation, I will navigate to a different area to continue searching.
+
+### Step 5
+[Landmark]: bookshelf, books, black bookshelf
+
+```python
+drone.rotate_ccw(120)
+```
+
+Intent: Exploring a new area to find the black rack. Despite the current view showing a black bookshelf filled with books, the styling and contents do not align with a typical black rack (industrial server or rack system). Given that the system has reminded us about potential blind spots after multiple searches, a large-angle rotation to new areas is warranted to ensure comprehensive coverage.
+
+Description: The image shows a black bookshelf with multiple shelves filled with books, primarily academic in nature. While the shelf is black and rectangular, it lacks industrial design features like open-grid structures, solid connection brackets, or large capacity typically associated with a rack system. To avoid misidentification, I will rotate counterclockwise significantly to explore other potential target locations.
+
+### Step 6
+[Landmark]: bookshelf, books
+
+```python
+drone.rotate_cw(10)
+```
+
+Intent: Centering and reevaluating the target. The current image shows a bookshelf with books neatly arranged on shelves. While the structure is primarily black, it does not match the typical design and features associated with a black rack (such as industrial brackets, connection points, or grid systems). A small clockwise rotation is executed to ensure no hidden details or additional attributes align the structure with the target description of a black rack.
+
+Description: The image reveals a bookshelf, filled with books, organized into multiple shelves. The shelf appears to be black and sturdy, but its purpose as a storage unit for books is clear. No industrial rack features are visible, and the color alone does not confirm it as the correct target. Further rotation is necessary to verify whether deeper evaluation reveals rack-like attributes or if this is merely a visually similar, yet functionally different object (bookshelf).
+
+### Step 7
+[Landmark]: cardboard boxes, black plastic packaging, shelf
+
+```python
+drone.rotate_cw(20)
+```
+
+Intent: Rotating slightly to explore and verify the target. The recent image shows a cluttered workspace with cardboard boxes, packaging materials, and a partially visible shelf. No clear black rack is immediately visible, but the industrial-looking shelving unit and overlapping cardboards raise suspicion about potential hidden structures. I will rotate clockwise to gain a better view of the area and check if the black rack is partially obscured.
+
+Description: The image displays a cluttered indoor setting, with large cardboard boxes and packaging materials spread across the floor. A black monitor and wall-mounted shelf are visible in the background, but the obstructed view makes it difficult to confirm their connection to the target. Given the complexity of overlapping objects, I will rotate the drone slightly to reveal more details and verify whether the shelf or other structural elements in the scene could potentially be the black rack.
+
+### Step 8
+[Landmark]: white shelving unit, boxes, black bag
 
 ```python
 drone.move_forward(20)
 ```
 
-Intent: The "black rack" is visible in the upper right portion of the image, but it is not in the center. I will move forward slightly to get closer and confirm if it matches the description of the target. The bookshelf and cardboard box obscure part of the view, but the black rack is now in sight, indicating that I am heading in the right direction.
+Intent: Approaching the potential target. The current image shows a white shelving unit with an open door and some items placed inside, such as boxes and a black bag. While the structure is not entirely black or consistent with typical rack designs, there are some rack-like characteristics (e.g., vertical grid patterns). It’s crucial to move forward and get a closer look to verify whether this structure is the black rack or another object entirely.
 
-Description: The image shows a bookshelf with various books, a cardboard box in the foreground, and a red bag below the shelf. To the far right, there is a partially visible black rack that aligns with the description of the target. My teammate has visually confirmed this as the target, so I will move forward to approach it.
+Description: The image displays a white shelving unit with some shelves open, revealing various items like boxes and a black bag. In the foreground, large cardboard boxes are visible, and the shelving unit appears to be mounted on the wall. The industrial design of some sections might suggest similarities to a black rack, but upon closer inspection, the unit seems to be designed for storage rather than rack purposes. I will move forward cautiously to confirm the structure’s material, design, and intended function before deciding whether it is the correct target.
 
-### Step 14
-[Landmark]: bookshelf, stacked electronics, red bag
+### Step 9
+[Landmark]: cardboard boxes, storage rack, open door
 
 ```python
-drone.rotate_ccw(10)
+drone.move_backward(20)
 ```
 
-Intent: The "black rack" is not visible in the current view, which is dominated by a bookshelf containing many books. I will rotate counterclockwise slightly to adjust my view and see if the black rack is located to the right, as my teammate is currently approaching one.
+Intent: Backing away to acquire a better overview. The current image shows a storage rack with boxes placed inside and an open door to the left. Although the rack appears to be black, its design is more indicative of a standard shelving unit rather than an industrial black rack with features like brackets or a grid system. Given the cluttered nature of the shelves, I will retreat slightly to gain a broader view, check for any obstructions, and determine whether there’s an area that might reveal the black rack systematically.
 
-Description: The image shows a white bookshelf filled with books and some stacked electronics on the bottom shelf. A red bag is partially visible, and the bookshelf appears to extend toward the right side of the image. My teammate has identified a potential target to the right, so I will rotate counterclockwise to match their view and locate the same black rack.
+Description: The image displays a white shelving unit with an array of cardboard boxes and black items placed on the shelves. The rack is open on the left side, revealing more boxes and materials within it. While the structure appears to be black-framed, there is no visible industrial design like metal brackets, grid patterns, or load-bearing systems, which are characteristic of a black rack. To avoid misidentifying this storage unit as the target, I will move backward to refine the positioning and search for any other potential target locations.
 
-### Step 15
-[Landmark]: bookshelf, white wall, stacked books
+### Step 10
+[Landmark]: open cabinet, boxes, black shelf
 
 ```python
 drone.rotate_cw(30)
 ```
 
-Intent: The image shows a white bookshelf filled with books, but no visible black rack. I am executing a clockwise rotation to explore a different angle and potentially locate the target. The current view is dominated by a single bookshelf, so rotating may help me access areas to the right where my teammate has reported a potential target.
+Intent: Searching for the black rack. Despite the cluttered environment with numerous cardboard boxes and shelving units, the mention of the "black shelf" confirms the presence of a potential target. Given that the drone is in a blind spot and the instructions suggest a large-angle rotation to explore new areas, rotating clockwise by 30 degrees will help uncover more of the room and potentially reveal the black rack.
 
-Description: The image displays a white bookshelf with numerous books of various sizes and colors. The top shelf has books related to machine learning, and lower shelves contain a mix of technical and programming books. A small plug socket and a power cable are visible on the wall to the right, but no black rack is visible. I will rotate clockwise to broaden my view and search for potential targets not currently in view.
+Description: The image shows a white shelving unit with open doors and compartments, containing cardboard boxes, a black bag, and other miscellaneous items. A large open box is in the foreground, obstructing the view slightly. While a black shelf is visible, its structure and alignment do not conclusively confirm that it is the black rack. A broader rotation is needed to uncover additional areas in the environment and ensure a thorough search for the correct target.
+
+### Step 11
+[Landmark]: white shelving unit, cardboard boxes, isolated black grid
+
+```python
+drone.move_right(20)
+```
+
+Intent: Bypassing obstacles to approach a potential target. The image shows a white shelving unit partially filled with cardboard boxes. While the focus is on the shelving unit, to the right there is an isolatable black grid structure that could be part of the black rack. To approach this structure without obstructing the clear view of the potential black rack, I will move to the right to avoid the cluttered shelving unit.
+
+Description: The image reveals a white shelving unit with multiple shelves holding various cardboard boxes and other small items. In the background, there is a distinct black grid structure visible to the right of the shelving unit, which is not part of the shelving itself. This black grid is simpler and more industrial in appearance compared to the white shelving, suggesting it may be part of the black rack being searched for. Moving to the right creates a path to bypass the clutter and approach the potential black rack(target) without obstruction.
+
+### Step 12
+[Landmark]: white shelving unit, cardboard box, black industrial bracket
+
+```python
+drone.rotate_cw(10)
+```
+
+Intent: Adjusting to better align with the target. The image shows a white shelving unit cluttered with cardboard boxes in the foreground, but to the right, there is a distinct black industrial bracket attached to the white shelving structure, which resembles part of an industrial rack. This black bracket may indicate the target black rack is partially obscured by the shelving unit. A small clockwise rotation is needed to center and verify whether the black bracket is connected to the shelving or is an independent part of the black rack.
+
+Description: The image reveals a white shelving unit filled with cardboard boxes in the foreground. On the right side of the shelving, there is a clearly visible black bracket attached to the shelving unit, which seems to be located beyond the boxes. This black bracket is a significant feature, resembling part of an industrial black rack. The bracket's presence suggests that the shelving may be covering part of the target black rack. A precise rotation is necessary to confirm whether this bracket is indeed part of the black rack or just attached to the shelving unit.
+
+### Step 13
+[Landmark]: open shelving unit, cardboard boxes, storage doors  
+
+```python
+drone.move_right(20)
+```
+
+Intent: Bypassing obstructions to approach the black rack. The image shows an open shelving unit cluttered with various cardboard boxes. While the shelving unit appears to be white, there are subtle black elements on the shelves that might indicate the target black rack is partially obstructed by the boxes. By moving to the right, I aim to bypass the cluttered shelving to search for a clearer view of the black rack (potentially visible beyond the shelving unit or to the right).
+
+Description: The image displays a white shelving unit with multiple open compartments holding boxes and miscellaneous items. On the right side of the shelving unit, a door is visible, partially open. This open area might provide access to the target black rack. Moving to the right will help navigate away from the cluttered shelving and ensure a better view of the target structure, particularly if it is obscured by the boxes in the foreground.
+
+### Step 14
+[Landmark]: white shelves, cardboard boxes, open door
+
+```python
+drone.move_right(20)
+```
+
+Intent: Bypassing obstacles to pursue the target black rack. The image shows a large white shelving unit with cardboard boxes and miscellaneous items cluttering its shelves. To the right side of the white shelves, partially visible behind the door, is a potential black target that seems industrial in design. The black components might indicate the presence of the black rack. Moving right will help bypass the white shelving and approach the black components to confirm and access the target black rack.
+
+Description: The image showcases a white shelving unit with numerous open compartments, some of which are filled with cardboard boxes and other items. To the right of the shelving unit, there is a partially visible door, behind which industrial-looking black components (possibly part of a black rack) are visible. The cluttered nature of the shelves makes it difficult to identify the target directly, but the black components located beyond the door suggest a potential black rack. Bypassing the white shelving unit to the right will allow a clearer view and access to this area for further verification.
+
+### Step 15
+[Landmark]: white shelving, books, black frame handle
+
+```python
+drone.move_forward(20)
+```
+
+Intent: Approaching the potential target. The current image shows a white shelving unit filled with books, which is characteristic of a typical bookshelf rather than a black rack. However, on the right side of the image, a black frame handle is visible. This could indicate part of the black rack, as it is distinct from the white shelving. Moving forward will help me get closer to verify whether this handle is connected to a larger black rack structure.
+
+Description: The image displays a white shelving unit with numerous books organized neatly on the shelves. To the right, attached to the white shelving, is a black frame that serves as a handle or mounting bracket. This black frame contrasts sharply with the white shelving, suggesting it might be part of the black rack I am seeking. Since the black frame is partially visible, moving forward will allow me to inspect whether it extends into a larger black rack structure, confirming its connection and purpose.
 
 ### Step 16
-[Landmark]: open cardboard box, bookshelf, black desk
+[Landmark]: bookshelf, books, green sleeve
 
 ```python
 drone.move_right(20)
 ```
 
-Intent: The "black rack" is not visible in the current view, which shows a white bookshelf filled with books. However, to the right of the bookshelf, there is an open cardboard box and a partial view of a black desk. Given that my teammate has reported approaching a black rack to the right, I will move right to verify if the target is nearby.
+Intent: Bypassing clutter to locate the potential black rack. The image predominantly shows a white bookshelf filled with various books, primarily technical and programming topics. To the left of the main bookshelf, there is a partially visible dark area resembling an industrial structure. Given that the bookshelf obstructs the view of potential black hardware, moving to the right will allow access to that dark area which might reveal the black rack.
 
-Description: The image shows a large white bookshelf containing numerous books, some labeled with topics in Chinese. To the left, there is an open cardboard box with various items visible, and a portion of a black desk is visible on the right side of the image. There are no immediate obstructions to the right, so I will move that direction to align with my teammate's position and potentially locate the black rack.
+Description: The image displays a white bookshelf filled with numerous books. On the left side, there is a dark vertical structure partially visible behind a green sleeve-like covering. This dark structure appears more industrial compared to the bookshelf, suggesting it could be the black rack I am searching for. Moving to the right will provide a clearer view of this dark structure and allow verification of whether it connects to a larger black rack system.
 
 ### Step 17
-[Landmark]: bookshelf, wall socket, black desk
+[Landmark]: bookshelf, books, green sleeve
 
 ```python
 drone.move_right(20)
 ```
 
-Intent: The image currently shows a white bookshelf filled with books, but no visible black rack. To the right of the bookshelf, there is a black desk and part of a wall socket. Given that my teammate has reported approaching a black rack that is visible to their right, I will move right to verify if the target black rack is nearby.
+Intent: Bypassing obstacles to approach the potential black rack. The image continues to show a white bookshelf filled with various books, but to the left behind the sleeve there is a dark structure that appears less orderly than bookshelves. This might indicate the black rack is partially obscured or located beyond the bookshelf. Moving to the right will allow me to bypass the bookshelf and inspect the dark area more closely.
 
-Description: The image shows a white bookshelf with multiple shelves filled with books, mostly technical titles (e.g., "Machine Learning," "Deep Learning"). The wall socket and a black desk are visible to the right. No black rack is in the current view, but based on my teammate's description and position, I will move right to possibly align with their view and locate the target.
+Description: The image displays a white bookshelf filled with different books organized in stacks. To the left of the bookshelf, there is a green sleeve-like covering over a dark region, which seems less orderly compared to the bookshelf. This dark region might be the black rack, potentially obscured by the bookshelf. By moving right, I aim to explore and verify the nature of this area and determine whether it leads to the black rack.
 
 ### Step 18
-[Landmark]: bookshelf, wall-mounted cabinet, black desk
+[Landmark]: bookshelf, Chinese technical books, shelf edge
 
 ```python
-drone.rotate_ccw(10)
+drone.move_right(20)
 ```
 
-Intent: The "black rack" is not visible in the current image, which is dominated by a white bookshelf filled with books. However, the black desk and part of the wall-mounted cabinet to the right suggest that the black rack could be nearby. I will rotate counterclockwise slightly to reorient my view and search for the black rack.
+Intent: Bypassing obstructions to approach the target. The image shows a typical bookshelf filled with Chinese technical books under the titles related to programming, algorithms, and technology. The cluttered nature of the books suggests this is likely a library or study area, not an industrial setting. To the right of this bookshelf, there appears to be an open space and a potential dark edge, which might lead to the black rack. Moving right will help bypass the bookshelf and explore this area thoroughly.
 
-Description: The image shows a prominent white bookshelf filled with books on various topics, many labeled in Chinese. To the far right, part of a black desk and a green mug are visible, along with the edge of a wall-mounted cabinet. There is no clear sight of the black rack in this view, but my teammate's intent and location suggest it is nearby, so I will rotate counterclockwise to realign my view toward the right side of the room.
+Description: The image displays a bookshelf with numerous books on topics such as algorithms, programming languages (e.g., Python, CSS), and digital skills. The bookshelf is densely packed, making it more consistent with a storage unit designed for books rather than a black rack designed for industrial use. To the right of this shelving unit, there appears to be a darker edge and an open space, indicating a potential transition to another area that might house the black rack. By moving right, I can navigate past the bookshelf and explore this darker region for further verification.
 
 ### Step 19
-[Landmark]: bookshelf, black chair, white wall
+[Landmark]: bookshelf, technical books, shelf edge
 
 ```python
 drone.move_right(20)
 ```
 
-Intent: The image shows a white bookshelf filled with books and no visible black rack. To the right of the bookshelf is a black chair, which may partially obstruct my view of a potential black rack behind it. Given that my teammate reports a black rack to their right and is moving back to adjust distance, I will move right slightly to explore the area and potentially locate the target.
+Intent: Bypassing clutter to search for the black rack. The image shows a bookshelf filled with technical books on topics such as algorithms, engineering, and programming. While this bookshelf is well-organized, it is unlikely to be the black rack we are searching for. To the right of this bookshelf, there appears to be an open space and potentially a darker area, which may lead to the black rack. By moving to the right, I can bypass the bookshelf and continue searching beyond this cluttered region.
 
-Description: The image shows a white bookshelf filled with books of various colors and topics. A black office chair is visible on the right side, and a plug socket is mounted on the wall directly ahead. No black rack is immediately visible, but my teammate has reported a target visible to their right. I will move right to check if the black rack is partially obscured by the chair or located to the far right of the image.
+Description: The image displays a white bookshelf containing numerous technical books, some in Chinese, with titles related to algorithms, optimization, and engineering (e.g., "Engineering Optimization" and "Linux"). The books are densely packed, indicating this is a storage unit for reference materials. To the right of the bookshelf, there is an open area with a lighter wall background, suggesting this might be a transition to another region or a passage where the black rack could be located. Moving right will help me explore this unexplored area systematically.
 
 ### Step 20
-[Landmark]: bookshelf, ladder-type rack, book end
+[Landmark]: bookshelf, technical manuals, shelf edge
 
 ```python
-drone.rotate_cw(90)
+drone.move_forward(20)
 ```
 
-Intent: Despite the extensive search, the "black rack" is not visible in the current image, which shows a white bookshelf and part of what appears to be a ladder-type rack to the right. Given the reminder to explore entirely new areas due to lack of target visibility, I will execute a large clockwise rotation of 90 degrees to shift my view entirely and explore a different section of the room.
+Intent: Approaching the potential target. The image shows a bookshelf filled with technical manuals and textbooks on engineering, optimization, and algorithms. While the shelf fill is dense, the black and industrial-looking spine of one book ("RAO Optimization") suggests a potential connection or misinterpretation of the target. Moving forward will allow a closer inspection of the objects on the shelf to verify whether this collection of technical books is merely sitting in front of or behind a hidden black rack.
 
-Description: The image displays a white bookshelf filled with books, mostly technical titles. To the right, a ladder-type rack holds books and some black objects, possibly office equipment. No clear black rack matching the description is visible in this view. My teammate is in the process of landing near a black rack, but I am currently not aligned with their view. I will rotate 90 degrees clockwise to access new areas and search for the target.
+Description: The image displays a bookshelf containing numerous technical books, some with bright colors and others in muted tones. The books are neatly arranged, indicating a structured storage setup, which contrasts with the loosely organized arrangement expected of a black rack. However, the industrial-looking text and spine of one book hint at the possibility of hidden objects behind the shelf. By moving forward, I can inspect this area more accurately and determine if the black rack is obscured by the bookshelf or if the books themselves are merely a visual distraction.
 
 ### Step 21
-[Landmark]: white bookshelf, black office chair, television
+[Landmark]: bookshelf, books, shelf end
 
 ```python
 drone.move_right(20)
 ```
 
-Intent: The image does not show the "black rack" currently, but it highlights a white bookshelf filled with books and a black office chair on the right. My teammate has reported a black rack nearby, which is likely to the right of the chair. I will move right slightly to get closer and verify if the target is visible.
+Intent: Bypassing the bookshelf to relocate potential black rack. The image reveals a bookshelf filled with technical books, focusing predominantly on books with themes about algorithms, engineering, and optimization (titles like "Optimization"). This area is typical for a library-like environment rather than one containing industrial equipment. To the right, there is visible cabinetry or wall, which appears smooth and lacks book stylistic details. Moving right will guide me away from this bookshelf and potentially reveal more search space or access a nearby area where the black rack could be located.
 
-Description: The image shows a white bookshelf with books of various colors and sizes. A black office chair is visible on the right side, positioned near a desk with a laptop open. There is no visible black rack in the current view, but my teammate has reported a target nearby, so I will move right to confirm if the black rack is partially obscured or just out of view.
+Description: The image displays a white bookshelf filled with various technical books focused on engineering and optimization. The design of the books’ spines (e.g., “Optimization” and “Engineering MATLAB”) indicates a structured storage area for reference materials. To the right, the shelving unit appears to end, transitioning into a solid wall or side of furniture. This suggests that the bookshelf is likely blocking a different segment of the room where the black rack might be positioned. By moving to the right, I can bypass the bookshelf and explore areas past the wall or near other visible cabinetry for more information on the location of the black rack.
 
 ### Step 22
-[Landmark]: office chairs, desk, monitors
+[Landmark]: bookshelf, books, shelf edge
 
 ```python
-drone.move_right(20)
+drone.move_left(20)
 ```
 
-Intent: The current image does not show the black rack, but it reveals multiple rolling office chairs and a desk with computer monitors. Given my teammate's report of locating a black rack near the person to the right, I will move right to verify if the target is visible in that direction.
+Intent: Adjusting to approach the black rack. The image shows a bookshelf filled with books primarily focusing on technical and optimization topics, which does not match the target description of an industrial black rack. To the right of the current view, there appears to be a smoother, untextured area that likely leads to a different zone in the room. Instead of moving right (as expected), I need to explore what is to the left since the immediate right appears constricted. Moving left allows me to bypass this bookshelf and potentially reach the hollow space or adjacent wall where the black rack might be hidden.
 
-Description: The image shows a bright office environment with reflective flooring. Two black office chairs are visible on the right, one occupied and the other empty. A desk holding multiple monitors is in the center, with one screen displaying text. My teammate is said to be approaching a black rack nearby, so I will move right slightly to align with their location and check for the target.
+Description: The image displays a bookshelf holding textbooks and reference materials, including a prominently visible book titled "Optimization" with a green cover. The shelf casts a shadow that suggests depth, indicating a larger room beyond. To the right of the image, there is a plain, unadorned wall, suggesting a lack of industrial features and objects. Moving left will help me navigate past this bookshelf and potentially access a different, less obstructed area where the black rack could be found.
 
 ### Step 23
-[Landmark]: office chairs, desk, monitors
+[Landmark]: bookshelf, optimization book, smooth wall
 
 ```python
-drone.move_forward(20)
+drone.move_left(20)
 ```
 
-Intent: The image shows an office worker seated at a desk with office chairs and computer monitors around. To the right of the person, there is a partial view of a potential black rack, consistent with my teammate's description. Given my teammate's intent to land near the black rack and their alignment, the target appears to be close. I will move forward to align with the target and confirm its presence.
+Intent: Redirecting to explore more valid areas. The image shows a bookshelf filled with various books, including "Optimization on MATLAB Resources," which appears to be structured for optimal readability rather than industrial use. The smooth, plain wall to the right of the bookshelf confirms that it is unlikely to be the location of a black rack. Given the previous exploration leading to similar cluttered storage areas, moving left will bypass this bookshelf and potentially reveal access to a zone where the black rack might be located.
 
-Description: The image shows a person sitting at a desk with multiple computer monitors displaying colorful screens. To the right of the person, there is a visible opening where a black rack might be. The rolling office chair and desk setup confirm we are in an office environment. My teammate is already approaching the target, so moving forward will help align my position with the black rack.
-
-### Step 24
-[Landmark]: office worker, black office chairs, black rack
-
-```python
-drone.move_right(20)
-```
-
-Intent: The black rack is visible to the right of the sitting worker, matching the description given. It is a shelving unit holding items like black office chairs, confirming it as the target. Given my current position, moving slightly to the right will align me better with the black rack and ensure I can land closer to it.
-
-Description: The image shows a seated person working at a desk with computers, surrounded by black office chairs. A large black shelving unit with multiple levels is visible to the right of the person, consistent with the "black rack" target. The open space around the office setup indicates no immediate obstructions, validating my teammate's claim that it is safe to land nearby. I will move to the right to align with the black rack.
-
-### Step 25
-[Landmark]: office chair, desk setup, black rack
-
-```python
-drone.move_right(20)
-```
-
-Intent: The image shows a seated individual working on a computer at a desk, with two office chairs nearby. To the right of the seated person, a shelving unit styled as a black rack is visible. This matches the description of the "black rack." I will move right slightly to align with this apparent target and verify if it is the correct black rack.
-
-Description: The image depicts an office environment with a person sitting on an office chair, facing multiple computer monitors. The desk setup holds various office supplies and a black shelving unit with multiple levels is visible to the right, holding office chairs and items. The visibility of this black rack and its attributes align with the target description, so I will move to the right to confirm its location.
-
-### Step 26
-[Landmark]: seated individual, black office chairs, black rack
-
-```python
-drone.move_right(10)
-```
-
-Intent: The image shows a seated individual working on a computer with black office chairs surrounding the desk. To the right, a black shelving unit is visible, consistent with the description of the "black rack." My teammate is already approaching and landing near this object based on its attributes, so I will move slightly to the right to align with my teammate and confirm this shelving unit as the target.
-
-Description: The image shows a person working at a desk with a computer monitor displaying content. There are multiple black office chairs in the scene, and to the right, a black rack with multiple levels is visible. This black rack appears to be holding office chairs and other equipment. Given my teammate's intent to land near this object, I will adjust my position by moving right to ensure alignment with the target for confirmation and landing preparation.
-
-### Step 27
-[Landmark]: seated individual, office chairs, black rack
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The image confirms the presence of the black rack, a multi-level shelving unit to the right of the seated individual. The rack holds electronic components and cables, which align with the target's description. Given that my teammate is already positioned near this area and identifying it as the target, moving forward will allow me to approach and land close to the rack, ensuring both drones are aligned for precise operations.
-
-Description: The image shows a person working at a desk surrounded by office chairs. To the right of the individual, a black rack is clearly visible. This shelving unit contains multiple levels, holding electronic parts and cables, indicating its use for storage. The presence of the office setup and the positioning of the rack match the described "black rack" target. I will move forward to align more closely with this target, as it matches the attributes of the black rack my teammate has identified.
-
-### Step 28
-[Landmark]: seated individual, office chairs, black rack
-
-```python
-drone.land()
-```
-
-**Intent:** The black rack is clearly visible in the current image. It is a multi-level shelving unit, matching the description of the target "black rack" with items that resemble electronic components or office equipment stored on its shelves. My teammate has already reached and confirmed it as the target, performing actions near it. Considering the clear visibility and proximity to the black rack, I will land now, as the target has been identified and verified.
-
-**Description:** The image shows a seated individual working on a computer surrounded by office chairs and equipment. To the right of this individual is the black rack, which is a multi-level shelf, with various objects placed on its levels, such as electronic components or components of office equipment. Given the detailed confirmation from my teammate and the system's feedback, landing is the appropriate next step, ensuring that I am positioned near the black rack.
+Description: The image displays a bookshelf with neatly organized technical books, including one with a prominent green spine titled "Optimization on MATLAB Resources." This type of shelving suggests a library-like environment rather than an industrial setting. In contrast, the wall to the right appears plain and smooth, lacking characteristic industrial features of a black rack. By moving left, I can circumvent this area and explore alternate routes that might lead to finding the hidden black rack.
 
