@@ -1,6 +1,7 @@
 from .basic import BasicDrone
 from tellopy import Tello
 from time import sleep
+import math
 
 import cv2
 import socket
@@ -159,18 +160,30 @@ class TelloPy(BasicDrone):
         drone = sender
         if event is drone.EVENT_FLIGHT_DATA:
             try:
-                # 1. 提取高度 ToF
+                import math # 引入数学库计算四元数
+                
+                # 1. 提取高度
                 tof_raw = getattr(data, 'height', 15)  
-                tof = tof_raw * 10  # 转换为 cm
+                tof = tof_raw * 10  
                 
-                # 2. 【核心大招】直接提取底层 MVO 机器视觉里程计的绝对坐标！
-                # MVO 会在无人机起飞时将当前位置设为 (0,0)，并在飞行中极其精准地追踪位移
+                # 2. 提取底层 MVO 绝对坐标
                 mvo = drone.log_data.mvo
-                px = getattr(mvo, 'pos_x', 0.0) # 绝对前向位移 (米)
-                py = getattr(mvo, 'pos_y', 0.0) # 绝对右向位移 (米)
+                px = getattr(mvo, 'pos_x', 0.0) 
+                py = getattr(mvo, 'pos_y', 0.0) 
                 
-                # 发送绝对坐标，而不是速度
-                self.telemetry_str = f"px:{px:.3f};py:{py:.3f};tof:{tof}"
+                # 3. 提取底层 IMU 四元数并计算绝对 Yaw
+                imu = drone.log_data.imu
+                q0 = getattr(imu, 'q0', 1.0) # 对应 w
+                q1 = getattr(imu, 'q1', 0.0) # 对应 x
+                q2 = getattr(imu, 'q2', 0.0) # 对应 y
+                q3 = getattr(imu, 'q3', 0.0) # 对应 z
+                
+                # 四元数转欧拉角 (Z轴偏航角) 公式
+                yaw_rad = math.atan2(2.0 * (q0 * q3 + q1 * q2), 1.0 - 2.0 * (q2 * q2 + q3 * q3))
+                yaw_deg = math.degrees(yaw_rad)
+                
+                # 发送全套物理状态给 Server
+                self.telemetry_str = f"px:{px:.3f};py:{py:.3f};tof:{tof};yaw:{yaw_deg:.2f}"
             except Exception as e:
                 self.telemetry_str = f"error:{e}"
 

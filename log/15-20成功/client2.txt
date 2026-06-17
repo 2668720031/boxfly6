@@ -1,0 +1,222 @@
+========== NEW INSTRUCTION: black rack ==========
+
+### Step 1
+[Landmark]: black rack, monitors, cardboard box
+
+```python
+drone.rotate_cw(30)
+```
+
+Intent: Searching for the target black rack. I am rotating clockwise to explore the right side of the room, as my teammate is covering the center area.
+
+Description: The image shows an office-like setting with multiple desks, computer monitors, and a visible black rack to the left. I need to confirm if this black rack is the target or continue searching.
+
+### Step 2
+[Landmark]: black rack, monitors, cardboard boxes
+
+```python
+drone.move_forward(20)
+```
+
+Intent: Approaching the target black rack. The target is visible and relatively clear in the image, so I am moving forward to get closer. 
+
+Description: The image shows a room with multiple monitors, cardboard boxes, and a black rack visible on the left side. The black rack appears to be the target based on the user's instructions, and it is partially obstructed by other objects but in clear view. I will continue to approach it.
+
+### Step 3
+[Landmark]: black rack, monitors, cardboard boxes, window
+
+```python
+drone.move_right(20)
+```
+
+Intent: Moving right to bypass the foreground obstacle (monitor) that partially occludes the black rack. The target is visible but not clearly accessible, so I am shifting right to find a better approach.
+
+Description: The image shows a cluttered office environment with monitors, cardboard boxes, and a black rack partially visible behind a monitor. To reach the target, I need to bypass the obstruction on the left side. After moving right, I will reposition to face the black rack directly.
+
+### Step 4
+[Landmark]: window, cardboard box, black rack
+
+```python
+drone.move_forward(20)
+```
+
+Intent: Moving forward to approach the black rack. The target (black rack) is visible but partially occluded by cardboard boxes in the foreground. I need to start moving forward to determine if I can bypass the obstacle and get a clearer view of the target.
+
+Description: The image shows a desk with multiple items, including monitors, a cardboard box labeled "SIGLENT," and a black rack on the right side. The black rack appears to be the target specified by the user, but it is obstructed by nearby objects. I will move forward to bypass these obstacles and get a better view of the black rack.
+
+### Step 5
+[Landmark]: black rack, monitors, SIGLENT box, window
+
+```python
+drone.rotate_cw(90)
+```
+
+Intent: Rotating to explore a new area. After five steps of searching, I haven't yet become confident that the target black rack is fully visible or in a clear state. Given the system reminder, it's time to perform a large-angle rotation (90° clockwise) to ensure full coverage and explore a completely different sector of the room.
+
+Description: The image shows a room with monitors, a SIGLENT box, and a cardboard box with some equipment. However, the black rack is not prominently visible or clearly identifiable in this frame. To avoid missing it, I'll perform a wide turn to search for the target in a new direction. My teammate is already approaching the left side, so this move will complement their efforts.
+
+### Step 6
+[Landmark]: black rack, monitors, SIGLENT box, window
+
+```python
+drone.move_right(20)
+```
+
+Intent: Moving right to improve visibility. The black rack is partially visible but obscured by monitors and cardboard boxes. By moving right, I aim to bypass these obstacles and get a clearer view of the target before proceeding forward.
+
+Description: The image shows a desk with monitors, a SIGLENT box, and other equipment. The black rack is visible but not directly in the center, indicating it might be obstructed by nearby objects. I need to reposition to bypass the obstructions and ensure a clear path to the black rack.
+
+### Step 7
+[Landmark]: monitor, shelf, cardboard box, equipment bag
+
+```python
+drone.rotate_cw(90)
+```
+
+**Intent:** Rotating to explore a new area. The current view only shows a monitor, shelves, and various items, but no clear sight of the black rack. Based on my teammate's suggestion, performing a large clockwise rotation (90°) is necessary to cover new areas and ensure full exploration of the room.
+
+**Description:** The image shows a monitor on the left, enclosed shelves with some equipment bags and a cardboard box, and miscellaneous items nearby. There is no visible black rack in this part of the room, and I need to pivot to search for it in a different direction. My teammate is actively navigating through potential obstacles, so exploring a new quadrant is crucial to efficient coverage.
+
+### Step 8
+[Landmark]: TV, shelf, boxes, backpack
+
+```python
+drone.move_left(20)
+```
+
+**Intent:** Moving left to find a clearer path. The visible shelves and items indicate that the black rack is not yet fully in view or might be obstructed. My teammate is close to the target, so I'm repositioning slightly to the left to explore a different angle and potentially find a clearer view of the black rack.
+
+**Description:** The image shows a room with a mounted TV to the left, shelves with items like boxes and a backpack, and a black bag visible on one of the shelves. The black rack that we're searching for is not prominently visible here. I'm moving left to bypass potential obstructions and locate a clearer path to the target.
+
+### Step 9
+[Landmark]: shelves, books, door, black bag
+
+```python
+drone.move_forward(20)
+```
+
+**Intent:** Moving forward to approach the black rack. In the current frame, shelves with books are prominently visible, but no clear evidence of the black rack can be seen. My intention is to cautiously move forward to narrow down the search area and potentially detect any hidden or partially obscured black racks in this section of the room.
+
+**Description:** The image shows shelves filled with books and what appears to be a door and a black bag on the right. While the shelves are prominent, no black rack is directly visible in this portion of the room. Given the teammate's observation of proximity, my goal is to carefully advance forward to either confirm the target's presence nearby or to move into an area where a clearer view may emerge.
+
+### Step 10
+[Landmark]: bookshelf, paper documents, cardboard box, black bag
+
+```python
+drone.rotate_ccw(30)
+```
+
+**Intent:** Rotating counterclockwise to explore adjacent areas. The current frame shows a bookshelf with books and paper documents, but no visible black rack. Given the teammate's finding of a centered black rack and the system reminder that I have searched extensively, I need to perform a large-angle rotation to ensure full coverage of the room and avoid blind spots.
+
+**Description:** The image displays a bookshelf stacked with books and some documents on the left shelf. There are no immediate indications of a black rack in this view. To broaden the search and potentially discover the target in another direction, I'm executing a 30-degree counterclockwise rotation. This should help me cover the space that my teammate might not have fully explored.
+
+### Step 11
+[Landmark]: envelope, clothing in drawer, books, cardboard box
+
+```python
+drone.move_forward(20)
+```
+
+**Intent:** Moving forward to inspect a visible black rectangular object. The image shows a bookshelf with books on the right, a cardboard box in the left corner, and an envelope hanging on the wall. Notably, there is a dark rectangular object attached to the wall below the envelope, resembling the "black rack" specified in the user's instructions. To verify if this is indeed the target, I'm moving towards it to get a closer view.
+
+**Description:** The image reveals a section of a room with a bookshelf containing books, a cardboard box, and stacked papers. The dark object hanging below the envelope on the wall appears to match the characteristics of the "black rack." To confirm, I will cautiously move forward without advancing too close to ensure safety and avoid any collisions. My teammate might be approaching separately, and I will align my actions with the current observation.
+
+### Step 12
+[Landmark]: cardboard box, white shelves, key (on door)
+
+```python
+drone.rotate_cw(90)
+```
+
+**Intent:** Rotating clockwise to explore new areas. The image shows a cardboard box labeled with Chinese characters ("工业计算机领航") on a white shelf, along with its hinges and a key visible in the door handle. However, this does not match the description of the "black rack" we are searching for. Given the lack of visibility of the black rack here, I am executing a 90-degree clockwise rotation to systematically broaden my search into adjacent areas and explore new sections of the room.
+
+**Description:** The image displays a neatly organized shelving unit with a cardboard box labeled "工业计算机领航" visible on one of the shelves. While this provides a clear landmark, it does not match the specified "black rack." To ensure full coverage and avoid blind spots, I will rotate clockwise based on the instructions and collaborate with my teammate to systematically search the room. The "industrial computer navigation" suggestion might be near a potential search area.
+
+### Step 13
+[Landmark]: cardboard box, white shelves, documents
+
+```python
+drone.move_left(20)
+```
+
+**Intent:** Moving left to explore a different section. The image shows a cardboard box labeled "工业计算机领航," some paper stacks, and empty shelves. However, these do not match the target "black rack" we are seeking. Since the teammate is already moving right, my strategy is to move left to systematically search a different quadrant of the room and ensure full coverage.
+
+**Description:** The image depicts a shelving unit with visible layers. A large cardboard box marked "工业计算机领航" is placed on one shelf, and a stack of documents is piled on another. These objects are clearly not the black rack we are searching for. Given the current state, I need to shift directions by moving left to assess a new area and discover whether the black rack might be located further away. This will help me avoid duplication of efforts with my teammate and assist in a comprehensive search of the room.
+
+### Step 14
+[Landmark]: bookshelf, green trash bin, black chair, surge protector
+
+```python
+drone.rotate_cw(10)
+```
+
+**Intent:** Rotating clockwise to verify the target. The image shows a bookshelf filled with books and learning materials, a green trash bin, and some cables near an electrical outlet. There is no visible black rack in this current view. To systematically cover the room, I am performing a small 10-degree clockwise rotation to check if the target appears in this adjacent direction while avoiding redundant searches with my teammate.
+
+**Description:** The image prominently displays a bookshelf with numerous books, a few of which are recognizable by their titles, such as "Machine Learning" and others related to computer science. A green trash bin sits nearby, along with a black chair and an AC adapter plugged into the outlet. No evidence of a black rack is visible here. This rotation will help me explore a new quadrant and ensure I don’t overlook any potential target areas.
+
+### Step 15
+[Landmark]: bookshelf, green trash bin, black chair, surge protector, white wall-mounted equipment
+
+```python
+drone.rotate_cw(90)
+```
+
+**Intent:** Rotating clockwise to explore a fresh area. The image currently shows a bookshelf filled with technical books about programming and machine learning, a green trash bin, and some white wall-mounted equipment. There is no visible black rack in this view. Since I have searched for 15 steps without success and the last search areas showed no clear target, I'm executing a 90-degree clockwise rotation to systematically cover a new quadrant of the room, ensuring I do not miss the target by staying in a blind spot.
+
+**Description:** The image displays a bookshelf with topics including "Machine Learning," "Python," and "Optimization," along with a few stacked books on the floor and a green trash bin. The wall in the background has white fixtures that resemble some industrial equipment, but nothing clearly resembles the specified "black rack." Given the lack of the target in my current field of view and the progress report indicating extensive searching, I must expand my exploration further by rotating to cover new angles of the room, ensuring that my teammate's actions are complemented effectively.
+
+### Step 16
+[Landmark]: bookshelf, books, black chair, white wall-mounted equipment
+
+```python
+drone.rotate_ccw(10)
+```
+
+**Intent:** Rotating counterclockwise slightly to refine the search. The current view shows a bookshelf filled with machine learning and programming books, a green trash bin, and some electronic equipment mounted on the wall. There is no clear sign of a black rack in this image. Given my current position and the teammate's reports of finding the target, I am performing a 10-degree counterclockwise rotation. This rotation will help me cover an adjacent sector and ensure that I do not miss the target due to overlooked angles or blind spots.
+
+**Description:** The image showcases a section of a cluttered office or workspace. The bookshelf in the foreground displays a variety of technical books, including notable titles like "Machine Learning" and "Python." To the right, there are stacks of books near the wall, a green trash bin, and some loose cables on the floor. Despite the detailed view, there is no visible "black rack." This rotation will allow me to verify if the black rack might be visible in a slightly different perspective.
+
+### Step 17
+[Landmark]: black rack, monitors, cardboard box, office chair
+
+```python
+drone.move_forward(20)
+```
+
+**Intent:** Moving forward to approach the black rack. In the image, the black rack is clearly visible and matches the description of the target. It is positioned centrally in the frame, with an industrial design and open shelves. Given the teammate's report of spotting the target, my goal is to cautiously move forward to align with the rack while maintaining safety. The black rack appears to be several meters away, so advancing will help me get closer for final verification and alignment before landing.
+
+**Description:** The image displays a tall black rack with multiple shelves, which appears to be the target we are searching for. The rack is positioned between a larger black chair on the right and a row of monitors against the wall. Boxes, cabling, and other office equipment are scattered around it, but the rack is distinctly visible and unobstructed. No other structures in the image share the size, shape, or industrial appearance of a "black rack," confirming that this is likely the correct target. Moving forward will allow me to center the target more precisely and prepare for alignment before landing.
+
+### Step 18
+[Landmark]: black rack, monitors, cardboard box, office chair
+
+```python
+drone.move_forward(20)
+```
+
+**Intent:** Moving forward to approach the black rack. In the image, the black rack is clearly visible and matches the description of the target. It is positioned centrally in the frame, with an industrial design and open shelves. Given my current position, I will cautiously move forward to align with the rack while maintaining safety. The black rack appears to be a few meters away, so advancing will help me get closer for final verification and alignment before landing.
+
+**Description:** The image displays a tall black rack with multiple shelves, which appears to be the target we are searching for. The rack is positioned between a larger black chair on the right and a row of monitors against the wall. Boxes, cabling, and other office equipment are scattered around it, but the rack is distinctly visible and unobstructed. No other structures in the image share the size, shape, or industrial appearance of a "black rack," confirming that this is likely the correct target. Moving forward will allow me to center the target more precisely and prepare for alignment before landing.
+
+### Step 19
+[Landmark]: black rack, monitors, cardboard box, office chair
+
+```python
+drone.rotate_cw(10)
+```
+
+**Intent:** Making a small clockwise rotation to ensure proper alignment with the black rack. The black rack is visible in the current image and matches the description. However, it is not perfectly centered in the frame, as it is slightly off to the left. A subtle 10-degree clockwise rotation will help me position the target more precisely in the center of the drone's field of view before proceeding with landing.
+
+**Description:** The image shows a tall black rack with multiple shelves on the left side of the frame. It is situated between a desk setup with monitors, some cabling, and office chairs. The rack is industrial in design and clearly matches the description of the target. However, it is not fully centered in the image. To ensure the drone is perfectly aligned for landing, I am making a small clockwise rotation to better position the black rack in the center of the frame. Once centered, I will be ready to move forward to approach the rack and prepare for landing.
+
+### Step 20
+[Landmark]: black rack, monitors, cardboard box, equipment on floor
+
+```python
+drone.land()
+```
+
+**Intent:** Landing on the target black rack. The image shows a large black rack matching the description of the target, standing tall with multiple shelves and electronic equipment stored on it. The rack is centered in the image and clearly visible. With both the shape and size of the black rack perfectly aligned with the user's instructions, and my altitude directly above the target, landing is now feasible and aligned with the mission goal.
+
+**Description:** The drone is in position above the black rack, which is equipped with shelves and some equipment arranged on them. The surrounding environment includes monitors, chairs, and a few cardboard boxes, all consistent with the target location. Given the absence of obstructions and the perfect alignment with the center of the target, it is safe and appropriate to land directly on or near the black rack. The system and teammate reports confirm the target identification, and it is time to complete the mission by executing the landing.
+

@@ -1,0 +1,420 @@
+========== NEW INSTRUCTION: black rack ==========
+
+### Step 1
+[Landmark]: server rack, monitors, chair, desk
+
+```python
+drone.rotate_cw(30)
+```
+
+Intent: Searching for the black rack target. My teammate is at the same relative yaw, so I will rotate the drone clockwise to cover a different area and avoid redundancy.
+
+Description: The image shows an office environment with multiple monitors, a chair, a desk, and what appears to be a server rack on the left side. I need to carefully verify that the server rack matches the target description before approaching.
+
+### Step 2
+[Landmark]: server rack, monitors, chair, desk
+
+```python
+drone.rotate_ccw(30)
+```
+
+Intent: Searching for the black rack target. The current view shows several monitors and desks, but they don't match the description of a large black rack. I will rotate counter-clockwise to explore the area further.
+
+Description: The image shows an office environment with multiple monitors, a chair, a desk, and a black object on the left side that might be a server rack. Due to the lack of clear landmarks and the visual similarity of objects, I need to verify the target's attributes before approaching.
+
+### Step 3
+[Landmark]: monitors, boxes, chair
+
+```python
+drone.move_backward(15)
+```
+
+Intent: I need to move backward to avoid getting too close to the desks and monitors. The image currently shows multiple monitors and boxes, but nothing resembles a black server rack. I'm ensuring I don't crash into objects while continuing to search.
+
+Description: The image shows a desk with monitors, a chair, and some boxes. None of these appear to be the large black rack I'm looking for. By moving backward, I can maintain a safe distance and continue scanning the area.
+
+### Step 4
+[Landmark]: black rack, monitors, chair, desk
+
+```python
+drone.rotate_ccw(10)
+```
+
+Intent: I have spotted a potential black rack on the left side of the image, but the target is not centered. I need to rotate the drone slightly counter-clockwise to ensure I am looking directly at the target before approaching it. My teammate is at the same yaw, so I will cover a different area by adjusting my orientation.
+
+Description: The image shows a large black server rack on the left side, which appears to match the target description. However, the rack is not centered in the image, so I will adjust my orientation to align the target with the center before proceeding. The environment also includes monitors, a desk, and a chair, but they are not relevant to my current goal.
+
+### Step 5
+[Landmark]: black rack, monitors, chairs, desk, server rack
+
+```python
+drone.rotate_ccw(10)
+```
+
+Intent: According to teammate's intent, the black rack is visible but slightly off-center. I will rotate the drone counter-clockwise slightly to ensure the target is centered for better alignment and to avoid any positioning ambiguity.
+
+Description: The image shows a large black server rack on the left side, along with multiple monitors, chairs, and a desk. The black rack matches the target description and appears to be the correct target based on size and shape. Since it's slightly off-center, I will rotate to align it perfectly before proceeding.
+
+### Step 6
+[Landmark]: black rack, monitors, chair, desk, server rack
+
+```python
+drone.move_forward(20)
+```
+
+Intent: I have a clear and unobstructed view of the black rack, which is approximately centered in the image. Since the rack fills less than 60% of the image, I will move forward to get closer to the target. My goal is to approach the rack safely and verify its attributes before landing.
+
+Description: The image shows a large black server rack on the left side, which matches the target description. The rack is not fully obstructed, and I can see multiple monitors, chairs, and desks in the foreground. I will move forward to confirm the target.
+
+### Step 7
+[Landmark]: black rack, monitors, chair, desk, server rack
+
+```python
+drone.rotate_ccw(10)
+```
+
+Intent: The black rack is visible but slightly off-center due to the obstruction from the cardboard box in the foreground. I will rotate counter-clockwise slightly to align the target with the center of the image for better visibility and orientation. This allows me to confirm whether the black rack is the correct target before approaching it.
+
+Description: The image shows a black rack, which appears to be a server rack, located behind a cardboard box on the left side. The rack is partially obstructed, making it clear that I need to rotate to adjust my view and properly center the target. I must ensure that the black rack is the correct target before moving forward.
+
+### Step 8
+[Landmark]: black rack, cardboard box, monitors, desk, server rack
+
+```python
+drone.move_right(20)
+```
+
+Intent: The black rack is partialy obstructed by a cardboard box in the foreground. I will move right to bypass this obstruction and get a clearer view of the target. This is a critical step to ensure the target is fully visible for identification and approach.
+
+Description: The image shows a black rack partially hidden behind a cardboard box. Monitors and desks are in the foreground, and the black rack is clearly distinguishable as a server rack, which matches the target description. The obstruction needs to be bypassed to confirm the target and avoid redundant actions by my teammate.
+
+### Step 9
+[Landmark]: black rack, cardboard box, monitors, desk, server rack
+
+```python
+drone.move_right(20)
+```
+
+Intent: The black rack is partially obstructed by a cardboard box in the foreground. I will move right to bypass this obstruction and gain a clearer view of the target. By moving laterally, I can ensure the black rack is fully visible for identification, avoiding the need for further obstruction evasion.
+
+Description: The image shows a large black server rack on the left, which is partially hidden behind a cardboard box labeled "ThinkPad". Monitors and desks are in the foreground, and the black rack is the target identified. The obstruction needs to be bypassed to confirm and approach the target confidently.
+
+### Step 10
+[Landmark]: black rack, cardboard box, computer monitors, office desk
+
+```python
+drone.move_right(20)
+```
+
+Intent: The black rack is partially obstructed by a cardboard box on the left side of the image. I will move to the right to bypass the obstruction and get a clearer view of the black rack, which matches the target description.
+
+Description: The image shows a black server rack on the left that appears to be partially covered by a cardboard box labeled "ThinkPad." There are several computer monitors and an office desk in the foreground, but the black rack is my focus. By moving right, I aim to position myself to ensure the black rack is fully visible for confirmation before approaching it.
+
+### Step 11
+[Landmark]: black rack, cardboard box, computer monitors, office desk
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black rack is visible on the far left side of the image and partially obstructed by a cardboard box in the foreground. I will move to the left to bypass the obstruction and get a clearer, unobstructed view of the black server rack. This will allow me to confirm it as the target before proceeding.
+
+Description: The image shows the black rack on the far left side, which matches the target description. However, a cardboard box partially obstructs my view. There are several computer monitors and office desks in the foreground. To avoid redundancy with my teammate, I will move left to clear the line of sight and focus on the server rack.
+
+### Step 12
+[Landmark]: black rack, monitors, open cardboard box, office desk
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black rack is visible on the left side of the image and partially obstructed by an open cardboard box. I will move left to bypass this obstruction and gain a clearer view of the black server rack. This will allow me to confirm it as the target before proceeding.
+
+Description: The image shows a black server rack on the left, obstructed by an open cardboard box. There are computer monitors and desks in the foreground. To avoid redundancy with my teammate, I will move left to clear the obstruction and focus on the server rack.
+
+### Step 13
+[Landmark]: black rack, open box, desk, computer monitors, window
+
+```python
+drone.rotate_ccw(10)
+```
+
+Intent: The black rack is on the left side of the image and partially obstructed by an open cardboard box. Since my teammate is moving to the right to bypass the obstruction, I will rotate counter-clockwise slightly to ensure I center and approach the black rack from a different angle. This avoids redundancy in our search efforts.
+
+Description: The image shows a black server rack on the left side, partially hidden behind an open cardboard box. Desks, computer monitors, and a window are also visible in the background. The black rack matches the description of the target. I will rotate to align the target directly in the center of the image for better visibility and orientation.
+
+### Step 14
+[Landmark]: black server rack, computer monitors, cardboard box, desk
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black server rack is clearly visible on the left side of the image and partially obstructed by an open cardboard box. I will move left to bypass the obstacle and get a clearer, more centered view of the target. This allows me to confirm that the black rack matches the target description before approaching it.
+
+Description: The black rack is on the left, and it appears to be a server rack, which matches the target description. The open cardboard box in front of it partially obstructs the view. The image also shows computer monitors, desks, and office furniture, but the focus is on the black rack. To avoid redundancy and help confirm the correct target, I will adjust my position by moving left.
+
+### Step 15
+[Landmark]: black server rack, monitors, cardboard box, office desk, window
+
+```python
+drone.move_right(20)
+```
+
+Intent: The black rack (server rack) is clearly visible on the left side of the image but is partially obstructed by a cardboard box. I will move right to bypass the obstruction and get a clearer view of the server rack. This will allow me to confirm that it matches the target description before approaching it.
+
+Description: The image shows a black rack on the left, which is partially obstructed by an open cardboard box. There are computer monitors, office desks, and a window in the background. The black rack appears to be the target, but I need to move laterally to ensure it is fully visible and centered in the image before proceeding.
+
+### Step 16
+[Landmark]: black server rack, cardboard box, monitors, desk
+
+```python
+drone.rotate_ccw(10)
+```
+
+Intent: The black rack (server rack) is clearly visible on the left side of the image and is partially obstructed by cardboard boxes. My teammate is already moving to the right to bypass the obstruction. I will rotate counter-clockwise slightly to center the black rack in the image and prepare for a closer approach. This ensures we are covering different angles and perspectives for better target verification.
+
+Description: The image shows a black server rack on the left side, which matches the target description. The server rack is partially blocked by a cardboard box in the foreground. Monitors and office equipment are visible in the background, but my focus is on the server rack. Since my teammate is moving to the right, I will adjust my orientation by rotating counter-clockwise to maintain efficient coordination and avoid redundancy.
+
+### Step 17
+[Landmark]: black rack, open cardboard box, monitors, office desk
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black rack (server rack) is on the left side of the image, partially obstructed by an open cardboard box. I will move left to bypass the obstruction and ensure I get a clearer, unobstructed view of the black rack. This will allow me to confirm that the server rack matches the target description before proceeding with alignment and approach.
+
+Description: The image shows a black server rack on the left, which is partially hidden by an open cardboard box labeled "ThinkPad." Monitors and office desks are in the foreground, but my focus is on the server rack. By moving left, I can bypass the obstruction and align the black rack properly for further actions.
+
+### Step 18
+[Landmark]: black server rack, cardboard box, monitors, office desk
+
+```python
+drone.move_right(20)
+```
+
+Intent: The black server rack is clearly visible on the left side of the image but partially obstructed by a cardboard box labeled "ThinkPad." To gain a clearer view, I will move to the right. This will help bypass the obstruction and ensure the target is centered for better alignment before proceeding with the approach.
+
+Description: The image shows a black server rack on the left, which matches the target description. The server rack is partially hidden behind a large open cardboard box and other office equipment such as monitors and desks. By moving right, I can create a clear path and observe the target more closely.
+
+### Step 19
+[Landmark]: black server rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black rack (server rack) is clearly visible on the left side of the image but is partially obstructed by a large open cardboard box labeled "ThinkPad." I will move left to bypass the obstruction and get a clearer view of the server rack. This will allow me to confirm that it matches the target description before approaching it.
+
+Description: The image shows a black server rack on the left side, which appears to be the target. The server rack is partially blocked by an open cardboard box in the foreground. There are also monitors and office desks in the foreground, but they do not obstruct the main target. I need to adjust my position to ensure the server rack is fully visible before I proceed further.
+
+### Step 20
+[Landmark]: black server rack, open cardboard boxes, monitors, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black server rack is clearly visible on the left side of the image but is partially obstructed by an open cardboard box ("ThinkPad" label) in the foreground. I will move left to bypass this obstruction and get a clearer, unobstructed view of the server rack. This will allow me to confirm the target and approach it safely.
+
+Description: The image shows a black server rack on the left, which is blocked by an open cardboard box. The server rack has multiple components and labeled cabinets, which match the target description. There are also monitors, office desks, and additional cardboard boxes in the foreground. The obstruction needs to be cleared to verify the target fully.
+
+### Step 21
+[Landmark]: black rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black server rack is clearly visible on the left side of the image but partially obstructed by an open cardboard box in the foreground. I will move left to bypass this obstruction and gain a clearer, unobstructed view of the black rack. This will allow me to confirm that the server rack matches the target description before approaching it.
+
+Description: The image shows a black server rack on the left side, surrounded by office equipment such as monitors, desks, and open cardboard boxes. The server rack is partially obscured by cardboard, but its structure, vents, and trays indicate that it is the target black rack. To verify the target fully, I need to clear the obstruction by moving left.
+
+### Step 22
+[Landmark]: black server rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black server rack is clearly visible on the left side of the image but is partially obstructed by an open cardboard box in the foreground. I will move left to bypass this obstruction and get a clearer, unobstructed view of the server rack. This will allow me to confirm that it matches the target description before approaching it.
+
+Description: The image shows a black server rack on the left side, which appears to be the target. The server rack is surrounded by office equipment, including monitors and open cardboard boxes. The black server rack has multiple components such as server trays, ventilation slots, and cables, which are characteristic of the target. To verify the target fully, I need to clear the obstruction by moving left.
+
+### Step 23
+[Landmark]: black server rack, open cardboard box, monitors, office desk, window
+
+```python
+drone.move_right(20)
+```
+
+Intent: The black server rack is visible on the left side of the image and is partially obstructed by an open cardboard box ("ThinkPad" label). My teammate is moving to the right to bypass the obstruction. To avoid redundancy and cover the area effectively, I will execute a different approach by moving left to clear the obstruction from a different path. This ensures we both approach the target without duplication and maintains spatial repulsion with my teammate.
+
+Description: The image shows a black server rack on the left side, which matches the target description. The server rack has multiple shelves, components, and labeled spaces, confirming it as the correct target. There are open cardboard boxes and office equipment in the foreground, including monitors and a desk. Since the obstruction is present, I will move left to bypass the cardboard box and ensure a clear path to the server rack, verifying it independently of my teammate.
+
+### Step 24
+[Landmark]: black server rack, open cardboard box, monitors, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+Intent: The black server rack is clearly visible on the left side of the image, but it is partially obstructed by an open cardboard box. I will move left to bypass the obstruction and gain a clearer, unobstructed view of the server rack. This aligns with my task of identifying and approaching the black rack. My teammate is moving to the right, so we are covering different paths to ensure full coverage and avoid redundancy.
+
+Description: The image shows a black server rack on the left side, which matches the target description. The server rack has multiple shelves, components, and ventilation openings, confirming it as the correct target. There are open cardboard boxes in the foreground, one of which partially obstructs the view of the server rack. To verify the target fully, I need to move left to clear the obstruction and focus on approaching the server rack.
+
+### Step 25
+[Landmark]: black rack, open cardboard box, monitor, server trays, window
+
+```python
+drone.move_forward(20)
+```
+
+Intent: The black rack is clearly visible in the center of the image and is not obstructed by any objects. The server rack has multiple trays, compartments, and ventilation openings, which align with the target description. Since the rack is fully in view and appears to match the target, I will move forward to get closer. Based on the size and clarity of the rack in the frame, it is not too close yet, so moving forward is appropriate.
+
+Description: The image shows a black server rack in the center, which is the target. There are no obstructions between the drone and the rack. The server rack is tall, with multiple shelves, cables, and a labeled space, confirming it as the black rack. The open cardboard box on the left does not obstruct the rack, allowing me to approach it directly.
+
+### Step 26
+[Landmark]: black server rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_right(20)
+```
+
+Intent: The black server rack is clearly visible and located on the right side of the image. It is partially obstructed by an open cardboard box in the foreground. Since my teammate is moving to the left, I will move right to bypass the obstruction from a different path. This ensures we both approach the target from different directions to avoid redundancy and confirm its location.
+
+Description: The image shows a black server rack in the right middle part of the frame, which matches the target description. The server rack has multiple shelves, ventilation slots, and appears to contain networking equipment. An open cardboard box in the foreground slightly blocks the view, so I will move right to gain an unobstructed view and approach the server rack more directly.
+
+### Step 27
+[Landmark]: black server rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_right(20)
+```
+
+Intent: The black server rack is clearly visible on the right side of the image and is partially obstructed by an open cardboard box in the foreground. My teammate is moving to the left to bypass the obstruction. To avoid redundancy and explore the target from a different path, I will move to the right. This will allow me to verify the server rack independently while ensuring spatial coverage with my teammate.
+
+Description: The image shows a black server rack on the right, which matches the target description. The server rack has multiple shelves, ventilation slots, and labeled sections, confirming it as the correct target. There are open cardboard boxes and office equipment in the foreground, with one cardboard box partially obstructing the view. By moving right, I can bypass the obstruction and confirm the server rack before approaching it.
+
+### Step 28
+[Landmark]: black rack, open cardboard boxes, monitor, office desk
+
+```python
+drone.move_right(20)
+```
+
+**Intent:** The black server rack is clearly visible in the center-right side of the image, partially obstructed by an open cardboard box. Given that my teammate is moving to the left to bypass the obstruction, I will move to the right to clear the path from a different angle. This ensures we cover the target area independently, avoiding redundancy and confirming the correct black server rack.
+
+**Description:** The image shows a black server rack with multiple shelves and ventilation slots, which matches the target description. The rack is partially obscured by an open cardboard box in the foreground, and a smaller desk or piece of equipment is on the left side, along with more open boxes. By moving right, I can bypass the obstruction and confirm the black server rack before approaching it.
+
+### Step 29
+[Landmark]: black server rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_forward(20)
+```
+
+**Intent:** The black server rack is clearly visible in the center of the image and is no longer obstructed by the open cardboard box directly in front of it. The server rack matches the target description, as it has multiple shelves, ventilation slots, and labeled sections. Since the obstruction has been bypassed and the rack is centered, I will move forward to get closer to the black server rack. The size of the rack in the frame indicates that it is not too close yet, so moving forward is appropriate.
+
+**Description:** The image shows a black server rack clearly positioned in the center, which matches the target description. The rack has multiple shelves, ventilation openings, and appears to contain networking equipment. The open cardboard box on the left side no longer obstructs the view of the server rack, allowing me to approach it directly.
+
+### Step 30
+[Landmark]: black server rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+**Intent:** The black server rack is clearly visible on the left side of the image, directly matching the target description. It is partially obstructed by an open cardboard box in the foreground, but there is a clear path to the left. To bypass this obstruction and ensure a better unobstructed view of the server rack, I will move to the left. This approach avoids redundancy with my teammate, who is moving to the right.
+
+**Description:** The image shows a black server rack on the left, which has multiple shelves, ventilation slots, and labeled sections. The rack is partially blocked by an open cardboard box labeled "ThinkStation," but the obstruction is minor and can be bypassed. The target is visible enough for identification, and moving left will provide a clearer view.
+
+### Step 31
+[Landmark]: black server rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+**Intent:** The black server rack is clearly visible in the center-right of the image, slightly obscured by an open cardboard box labeled "ThinkStation." The black rack matches the target description, as it has multiple shelves, ventilation slots, and labeled sections. Given that my teammate is moving to the right to bypass the obstruction, I will move to the left. This ensures we approach the target from different angles to verify it independently.
+
+**Description:** The image shows a black server rack in the center-right, which appears to be the target. The rack has multiple compartments and is labeled, confirming its identity as the correct target. An open cardboard box is partially blocking the view from the drone's current position. Moving left will allow me to bypass the box and ensure a clearer, unobstructed view of the server rack before approaching it.
+
+### Step 32
+[Landmark]: black server rack, open cardboard boxes, monitor, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+**Intent:** The black server rack is clearly visible in the center-right of the image, but it is partially obstructed by open cardboard boxes in the foreground. To bypass this obstruction and gain a clearer view of the black rack, I will move to the left. This approach ensures spatial diversity with my teammate, who is moving to the right to explore the right side and center the target.
+
+**Description:** The image shows a black server rack situated near the center-right, matching the specified target. The rack has multiple shelves, ventilation slots, and components, confirming its identification as the correct black rack. Open cardboard boxes labeled "ThinkStation" partly obscure the view but can be bypassed by adjusting my drone's position. By moving left, I will bypass the obstruction and approach the server rack directly, ensuring a clear path for verification and landing.
+
+### Step 33
+[Landmark]: black server rack, open cardboard boxes, monitor, office desk, window
+
+```python
+drone.move_left(20)
+```
+
+**Intent:** The black server rack is clearly visible on the right side of the image and is partially obstructed by open cardboard boxes in the foreground. My teammate is already moving to the right to bypass the obstruction. To ensure efficient collaboration and avoid redundancy, I will move to the left. This strategy allows both drones to verify the target from different angles and approaches.
+
+**Description:** The image shows a black server rack with multiple shelves, ventilation slots, and labeled sections, confirming it as the correct black rack. Several open cardboard boxes, including one labeled "ThinkStation," are scattered in the foreground, partially obstructing the view of the rack. By moving left, I can bypass the obstruction and approach the server rack directly, ensuring a clear line of sight before landing.
+
+### Step 34
+[Landmark]: black server rack, open cardboard box, monitor, office desk, window
+
+```python
+drone.move_forward(20)
+```
+
+**Intent:** The black server rack is clearly visible and centered in the image, with no significant obstructions blocking the view. The rack has multiple shelves, ventilation slots, and labeled sections, confirming it as the correct black rack. Since the target is visible, unobstructed, and sufficiently centered, I will move forward to get closer. The size of the black rack in the frame indicates it is not too close yet, so moving forward is appropriate.
+
+**Description:** The image shows a black server rack in the center-right, which matches the target description. The server rack has multiple compartments and a sticker labeled "RAC," confirming its identity. Open cardboard boxes are on the left, but they do not obstruct the path to the server rack. By moving forward, I can approach the target while maintaining a clear line of sight, ensuring I am in optimal position for landing.
+
+### Step 35
+[Landmark]: black rack, open cardboard box, power outlet, wall outlets, network cables, white blinder, black cable, server modular unit
+
+```python
+drone.move_forward(20)
+```
+
+**Intent:** The black rack (server rack) is clearly visible in the right half of the image. The open cardboard box partially obstructs the view from the opposite side, but the area in front of the black rack is clear and unobstructed. Since the black rack is already centered and in the frame, I will move forward to approach the target. The size of the rack in the frame indicates that I am not too close yet, so executing `move_forward(20)` is appropriate to get closer.
+
+**Description:** The image shows a black server rack with multiple compartments, ventilation slots, and labels confirming it as the correct target. To the left of the black rack are some open cardboard boxes, a black box labeled "Switchboard," and a wall outlet with some cables connected. The server rack is the primary focus, and there are no obstructions directly in front of it, making this a safe approach.
+
+### Step 36
+[Landmark]: black rack, cardboard box stack, power cable, obscured view
+
+```python
+drone.rotate_ccw(10)
+```
+
+**Intent:** The image is quite blurry and the visibility is significantly reduced, making it difficult to identify specific landmarks. There seems to be a black structure in the center, but the details are unclear. Given the lack of clear visibility and landmarks, I will rotate counter-clockwise slightly to adjust the drone's orientation and try to get a clearer, unobstructed view. This may help in identifying the target or new landmarks.
+
+**Description:** The image is blurry, with indistinct shapes and objects. A dark structure resembling the black rack is visible in the center, but its details, like ventilation slots or labels, are not clear. The blurry vision suggests that I may be too close or that there is an obstruction in the path. Rotating slightly may help improve the view and gain clarity.
+
+### Step 37
+[Landmark]: black rack, blurred equipment, obscured view
+
+```python
+drone.move_backward(15)
+```
+
+**Intent:** The image is heavily blurred, making it difficult to identify specific landmarks or details. The current view is not providing clear visibility of the black rack. Since the image is too close and blurry, I will move backward slightly to regain a clearer view of the surroundings. This can help in identifying the black rack or any obstructions more accurately.
+
+**Description:** The current frame is blurry, with some dark shapes and equipment visible. It is unclear whether the target black rack is within this frame due to the poor visibility. Moving backward will increase the distance and potentially improve the clarity of the image, allowing me to better identify the target or any obstructions.
+
+### Step 38
+[Landmark]: black rack, blurred vision, partial obstruction
+
+```python
+drone.move_backward(20)
+```
+
+**Intent:** The image is very blurry and partially obscured, making it difficult to identify specific landmarks or details. The black rack might be too close, causing the blurriness. I will move backward to increase the distance, which will likely improve visibility and help me identify the black rack more clearly. Once the image is clearer, I can determine the best course of action to approach the target accurately.
+
+**Description:** The current frame is extremely blurred, with a dark, rectangular shape that might be the black rack. However, due to the blurry nature of the image, it's difficult to identify any specific features like ventilation slots or labels. Moving backward will help create a sharper image, allowing me to confirm the target's identity and its position relative to any obstructions.
+

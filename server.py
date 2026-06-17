@@ -261,8 +261,7 @@ step_drone2 = 1
 
 def update_virtual_state(drone_id: int, llm_output: str):
     """
-    更新全局状态：提取地标、意图，并使用“混合里程计”保底推算虚拟的 X, Y, Z, Yaw 坐标。
-    这样即使物理底层的光流传感器返回 0，大模型的坐标系也依然能正常演进，维持多机防碰撞逻辑。
+    提取地标和意图。
     """
     state = drone_states[drone_id]
     
@@ -279,48 +278,6 @@ def update_virtual_state(drone_id: int, llm_output: str):
     intent_match = re.search(r'Intent:\s*(.+)', llm_output, re.IGNORECASE)
     if intent_match:
         state["intent"] = intent_match.group(1).strip()
-        
-    # ====== 3. 提取动作并执行“虚拟里程计 (Virtual Odometry)”推算 ======
-    action = "none"
-    val = 0
-    match = re.search(r'drone\.(\w+)\((.*?)\)', llm_output)
-    if match:
-        action = match.group(1)
-        val_str = match.group(2)
-        try:
-            val = int(val_str) if val_str else 0
-        except ValueError:
-            val = 0
-            
-    # 设定虚拟推算的比例系数 (假设 1点摇杆力度约等于 0.015 米/秒)
-    K_MOVE = 0.015 
-    K_ROT = 0.8    # 假设 1点力度旋转约等于 0.8 度
-    K_ALT = 0.01
-    
-    yaw_rad = math.radians(state['yaw'])
-    
-    # 基于动作类型，强行累加坐标 (保证坐标必变)
-    if action == "move_forward":
-        state['x'] += (val * K_MOVE) * math.sin(yaw_rad)
-        state['y'] += (val * K_MOVE) * math.cos(yaw_rad)
-    elif action == "move_backward":
-        state['x'] -= (val * K_MOVE) * math.sin(yaw_rad)
-        state['y'] -= (val * K_MOVE) * math.cos(yaw_rad)
-    elif action == "move_left":
-        state['x'] -= (val * K_MOVE) * math.cos(yaw_rad)
-        state['y'] += (val * K_MOVE) * math.sin(yaw_rad)
-    elif action == "move_right":
-        state['x'] += (val * K_MOVE) * math.cos(yaw_rad)
-        state['y'] -= (val * K_MOVE) * math.sin(yaw_rad)
-    elif action == "move_up":
-        state['z'] += (val * K_ALT)
-    elif action == "move_down":
-        state['z'] -= (val * K_ALT)
-    elif action == "rotate_cw":
-        state['yaw'] = (state['yaw'] + val * K_ROT) % 360
-    elif action == "rotate_ccw":
-        state['yaw'] = (state['yaw'] - val * K_ROT) % 360
-    # ===================================================================
         
     print(f"[Drone {drone_id} True State] Pos:(X:{state['x']:.2f}m, Y:{state['y']:.2f}m, Z:{state['z']:.2f}m, Yaw:{state['yaw']:.1f}°), Landmarks: {list(state['landmarks'])}, Intent: {state['intent']}")
 
@@ -495,7 +452,7 @@ def send_command(drone: TelloPyServer, output_text: str):
 #         cv2.destroyAllWindows()
 #         print("Video thread closed.")
 
-# ====== 修改为支持热插拔与单机显示的动态视频流 ======
+# 修改为支持热插拔与单机显示的动态视频流
 def video():
     cv2.namedWindow("Merged Drone Cameras", cv2.WINDOW_NORMAL)
 
@@ -536,7 +493,7 @@ def video():
             sleep(0.1)
 
     cv2.destroyAllWindows()
-# =======================================================
+
 
 
 def drone1_worker_loop():
@@ -757,7 +714,7 @@ def drone2_worker_loop():
 
 #     server_sock.close()
 
-# ====== 新增：处理真实的底层物理坐标反馈 (适配二进制模式) ======
+# 处理真实的底层物理坐标反馈，适配二进制模式
 def handle_client_telemetry(drone_id, conn):
     buffer = ""
     last_time = time()
@@ -785,33 +742,33 @@ def handle_client_telemetry(drone_id, conn):
                             except ValueError:
                                 pass 
                     
-                    # ====== 直接使用底层 MVO (机器视觉里程计) 的绝对坐标 ======
-                    if all(k in state_dict for k in ('px', 'py', 'tof')):
+                    # 接收底层 MVO 和 IMU 算出的状态
+                    if all(k in state_dict for k in ('px', 'py', 'tof', 'yaw')):
                         mvo_px = state_dict['px']
                         mvo_py = state_dict['py']
                         tof = state_dict['tof'] 
+                        imu_yaw = state_dict['yaw']
                         
                         state = drone_states[drone_id]
                         
-                        # 记录飞机在全局地图上的初始位置（为了兼容2号机初始在 X=1.0 的设定）
+                        # 记录初始偏差
                         if 'init_x' not in state:
                             state['init_x'] = state['x']
                             state['init_y'] = state['y']
+                            state['init_yaw'] = state['yaw'] - imu_yaw # 记录开机时的陀螺仪误差
                         
-                        # 【坐标系绝对映射】
-                        # Tello MVO 的 +X 是起飞时的正前方 (对应我们大模型全局地图的 +Y)
-                        # Tello MVO 的 +Y 是起飞时的正右方 (对应我们大模型全局地图的 +X)
+                        # 【坐标和朝向：绝对映射】
                         state['x'] = state['init_x'] + mvo_py
                         state['y'] = state['init_y'] + mvo_px
-                        
-                        # Z 轴绝对高度依然用 ToF 红外测距
                         state['z'] = tof / 100.0
-                    # =============================================================
+                        state['yaw'] = (state['init_yaw'] + imu_yaw) % 360
+                    # ==========================================================
                         
         except Exception as e:
             print(f"Telemetry lost for Drone {drone_id}: {e}")
             break
-# ========================================================
+
+
 
 def accept_connections(server_sock):
     global drone_1, drone_2, clients

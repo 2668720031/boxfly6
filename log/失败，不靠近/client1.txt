@@ -1,0 +1,343 @@
+========== NEW INSTRUCTION: black rack ==========
+
+### Step 1
+[Landmark]: server rack, chair, monitors, desk
+
+### Analysis:
+- **Target**: Black rack.
+- **Current View**: The image shows a black server rack on the right side of the frame.
+- **Obstructions**: There are no visible obstructions or foreground objects blocking the black rack.
+- **Rotation Needed**: The black rack is slightly off-center to the right.
+- **Drone Position**: At (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°).
+- **Teammate Position**: At (X:1.00, Y:0.00, Z:1.50, Yaw:0.0°) and is also searching for the same target.
+
+### Action:
+The black rack is visible but off-center. Since the target is clear and not obstructed, I will use a small rotational adjustment to center it. This aligns with the instruction to use `rotate_cw(10)` or `rotate_ccw(10)` for centering when the target is clear.
+
+```python
+drone.rotate_ccw(10)
+```
+
+### Intent:
+The black rack is visible but slightly off-center. I will rotate counter-clockwise slightly to center the target for better alignment.
+
+### Description:
+The current image shows a black server rack on the right side. There are no obstructions, and the target is clear. To align the target with the center of the frame, I will use a small counter-clockwise rotation. This ensures precise targeting for the landing procedure.
+
+### Coordination with Teammate:
+My teammate is searching the area at a similar yaw angle and in a nearby position. By rotating slightly to center the target, I avoid redundancy and ensure systematic coverage of the environment. If the target is not in the center after this adjustment, I will make further minor rotations to achieve precise alignment before proceeding.
+
+### Step 2
+[Landmark]: black rack, open box, monitor
+
+### Analysis:
+- **Target**: Black rack.
+- **Current View**: The image shows a black rack on the right side of the frame. It appears to be partially obstructed by an open cardboard box in the foreground.
+- **Obstructions**: The cardboard box is partially blocking the view of the black rack.
+- **Rotation Needed**: The black rack is partially visible but off-center and obstructed. A small adjustment is needed to bypass the obstruction and then center the target.
+- **Drone Position**: At (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°).
+- **Teammate Position**: At (X:1.00, Y:0.00, Z:1.50, Yaw:0.0°). The teammate has spotted a potential black rack on the left side of their image.
+
+### Action:
+Since the black rack is partially obstructed by the cardboard box, I will use `move_right(20)` to bypass the obstruction. After moving, I will rotate slightly to better align with the target. This follows the rule of physically bypassing obstacles when they partially block the target.
+
+```python
+drone.move_right(20)
+```
+
+### Intent:
+The black rack is partially obstructed by a cardboard box. I will move to the right to bypass the obstruction and adjust my position to get a clearer view of the target.
+
+### Description:
+The current image shows a black rack on the right side, partially blocked by an open cardboard box. Since the black rack is not fully visible, I am using a rightward movement to bypass the obstruction. This ensures better visibility of the target for subsequent centering and alignment.
+
+### Coordination with Teammate:
+My teammate has noted a potential black rack on the left side of their frame, which suggests multiple locations for the target. By moving to the right and bypassing the obstacle, I am systematically exploring a different quadrant of the room to avoid redundancy with the teammate's search. If the target is confirmed, I will center it and take further steps for approach or land.
+
+### Step 3
+[Landmark]: black rack, open box, server trays, power outlet
+
+### Analysis:
+- **Target**: Black rack.
+- **Current View**: The image shows a black rack on the right side of the frame. The rack is partially obstructed by an open cardboard box in the foreground.
+- **Obstructions**: The black rack is clearly visible but partially blocked by the open box.
+- **Rotation Needed**: The black rack is slightly off-center and obstructed. I will need to bypass the obstruction and then center the target.
+- **Drone Position**: At (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°).
+- **Teammate Status**: Drone 2 has a clear view of the black rack, approximately centered in its image, and is moving forward to get closer.
+
+### Action:
+Since the black rack is partially obstructed by a large open cardboard box, I will use `move_right(20)` to bypass the obstruction. After moving, I will adjust my position to get a clearer and more centered view of the rack.
+
+```python
+drone.move_right(20)
+```
+
+### Intent:
+The black rack is partially obstructed by an open cardboard box. I will move to the right to bypass the obstruction and adjust my position to get a clearer view of the target.
+
+### Description:
+The current image shows a black rack on the right side, partially blocked by an open cardboard box. Since the target is not fully visible, I am moving to the right to bypass the obstruction. This ensures better visibility of the black rack for subsequent centering and alignment.
+
+### Coordination with Teammate:
+My teammate has noted a clear view of the black rack, which is already centered and unobstructed. My goal is to bypass the obstruction and continue searching for any additional, potentially hidden black racks. After moving to the right, I will reorient myself to align with the target and determine whether it matches the description attributes before proceeding with approach or landing.
+
+### Step 4
+[Landmark]: black rack, cardboard box, server trays, wall outlets
+
+### Analysis:
+- **Target**: Black rack.
+- **Current View**: The image shows a black rack on the right side of the frame, partially obstructed by an open cardboard box in the foreground. The black rack also appears to be slightly off-center.
+- **Obstructions**: The black rack is partially obscured by the open cardboard box.
+- **Rotation Needed**: Since the black rack is slightly off-center and partially obstructed, I will first move to the right to bypass the obstruction, then recenter the black rack in the frame.
+- **Drone Position**: At (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°).
+- **Teammate Status**: Drone 2 is facing a similar scenario but has already noted the obstruction and is moving right to bypass it.
+
+### Action:
+Given that the black rack is partially obstructed and slightly off-center, I will use `move_right(20)` to bypass the cardboard box and adjust my position for a clearer view. This is consistent with the rule of physically bypassing obstacles when they partially block the target.
+
+```python
+drone.move_right(20)
+```
+
+### Intent:
+The black rack is partially obstructed by a cardboard box. I will move to the right to bypass this obstruction and adjust my position to get a clearer, more centered view of the target.
+
+### Description:
+The image currently shows a black rack on the right side, but it is partially blocked by an open cardboard box in the foreground. To ensure a clear and centered view of the black rack, I am moving to the right to bypass the obstruction. This will allow me to confirm the attributes of the rack and approach it safely.
+
+### Coordination with Teammate:
+My teammate has noted that the black rack is partially obstructed and is already moving right to bypass the same cardboard box. Since we are collaborating, we should continue exploring different angles (moving or rotating as necessary) to ensure we identify the correct target and avoid redundancy in overlapping areas. After bypassing the obstruction, I will recenter the black rack in my frame for closer inspection or approach.
+
+### Step 5
+[Landmark]: black rack, open cardboard box, server trays, office desk
+
+### Analysis:
+- **Target**: Black rack.
+- **Current View**: The image shows a black rack on the right side of the frame, standing upright. It fills a significant portion of the image but is partially obstructed by an open cardboard box in the foreground.
+- **Obstructions**: The target is partially blocked by the open cardboard box.
+- **Rotation Needed**: The black rack is slightly off-center and partially obstructed. Given the obstruction, it is necessary to bypass the open cardboard box to get a clearer view.
+- **Drone Position**: At (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°).
+- **Teammate Status**: Drone 2 has spotted the black rack on the left side of its image and is moving left to bypass a similar obstruction.
+- **System Reminder**: I have searched for 5 steps, and with potential redundancy or a blind spot, a large-angle rotation is warranted to explore new areas.
+
+### Action:
+Since the black rack is clearly visible on the right side but partially obstructed by a cardboard box, I will use `move_left(20)` to bypass the obstruction. After moving, I will recenter the target using rotational adjustments for better alignment.
+
+```python
+drone.move_left(20)
+```
+
+### Intent:
+The black rack is visible on the right side but partially obstructed by an open cardboard box. To clear the obstruction and ensure a clearer view, I will move left. After bypassing the box, I will adjust the drone’s orientation to center the black rack in the frame.
+
+### Description:
+The image shows a black rack on the right side, partially obstructed by an open cardboard box. This obstruction is preventing a full view of the target. I am executing a leftward movement to bypass the obstruction and gain a clearer perspective of the black rack.
+
+### Coordination with Teammate:
+My teammate has noted a similar obstruction on the left side of their image and is moving to bypass it. By moving left, I will systematically explore this side of the room while ensuring that I do not overlap with my teammate's trajectory. After bypassing the obstruction, I will rotate the drone to center the target and verify its attributes before approaching it. If necessary, I will rotate more widely to explore new areas, as suggested by the system reminder.
+
+### Step 6
+[Landmark]: black server rack, open cardboard box, monitor, office desk
+
+### Analysis:
+- **Target**: Black rack.
+- **Current View**: The image shows a large black server rack on the left side of the frame. It is partially obstructed by an open cardboard box in the foreground.
+- **Obstructions**: The black server rack is clearly visible but partially blocked by an open cardboard box.
+- **Rotation Needed**: The target is slightly off-center to the left and partially obstructed. Given the obstruction, I need to bypass it to get a clearer and centered view of the black server rack.
+- **Drone Position**: At (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°).
+- **Teammate Status**: Drone 2 has spotted the black rack on the left side, partially obstructed, and plans to move right to bypass the obstruction.
+- **System Reminder**: I have searched for 5 steps. Although the black rack is visible, I must ensure I am not overlapping with my teammate's exploration.
+
+### Action:
+Since the black server rack is partially obstructed by a cardboard box, I will use `move_left(20)` to bypass the obstruction and get a clearer view of the rack.
+
+```python
+drone.move_left(20)
+```
+
+### Intent:
+The black server rack is visible on the left side but partially blocked by an open cardboard box. To clear the obstruction and ensure a clearer view, I will move to the left. After bypassing the box, I will rotate the drone to center the black server rack in the frame for better alignment and inspection.
+
+### Description:
+The current image shows a large black server rack on the left side, partially obstructed by an open cardboard box. Since the target is visible but not fully accessible due to the obstruction, moving left will allow me to bypass the box and better align with the black server rack. This will ensure I can verify its attributes and approach it safely.
+
+### Coordination with Teammate:
+My teammate is moving right to bypass an obstruction on the left side. By moving left, I will ensure that I am exploring a different quadrant of the room and avoiding redundancy in our search patterns. If the obstruction is successfully bypassed, I will then center the black server rack and proceed with further actions, such as approaching or confirming the target.
+
+### Step 7
+### Image Analysis:
+The image shows a black server rack on the right side, which is partially obstructed by an open cardboard box labeled "ThinkPad." The black rack is identifiable by its tower-like structure with multiple shelves, consistent with the target description. There are no other significant landmarks or obstacles blocking the path to the target.
+
+### Current Situation:
+- **Drone 1's Status**: My current position is at (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°). The black rack is visible but partially obstructed by the cardboard box in the foreground.
+- **Teammate's Status**: Drone 2 has spotted the black server rack on the left side of its frame, partially obstructed by a "ThinkPad" box. It plans to move right to bypass the obstruction.
+- **Target Visibility**: The target (black rack) is clearly visible, but the partially open cardboard box blocks a portion of it.
+
+### Plan of Action:
+1. **Bypass Obstruction**: Since the black rack is partially obstructed by the cardboard box, I will move to the **right** to pass by the obstruction and get a clearer view of the target.
+2. **Center the Target**: After bypassing the obstruction, I will use `rotate_cw` or `rotate_ccw` to center the black rack in the frame.
+3. **Approach Safely**: Once the target is centered and unobstructed, I will move forward to get closer, ensuring the target remains centered.
+
+### Action:
+First, I will move to the right to bypass the obstruction. Since the obstruction is directly in front of the black rack, a rightward movement is necessary.
+
+```python
+drone.move_right(20)
+```
+
+### Intent:
+The black rack is clearly visible but partially obstructed by an open cardboard box. I will move to the right to bypass the obstruction and gain a clearer view of the target. After bypassing the obstruction, I will center the black rack in the frame for better alignment and approach.
+
+### Description:
+The current image shows a black server rack on the right side, partially obstructed by an open cardboard box labeled "ThinkPad." By moving to the right, I will bypass this obstruction and ensure a clearer view of the black rack. This will allow me to center the target and proceed with further actions, such as approaching it for landing.
+
+### Coordination with Teammate:
+My teammate is moving to the right to bypass a similar obstruction on the left side of their frame. By moving right, I ensure that I am not overlapping with my teammate’s search path. After bypassing the obstruction, I will center the black rack and proceed with the mission, adhering to the rules and avoiding redundancy.
+
+### Step 8
+### Image Analysis:
+The image shows a **black server rack** on the right side of the frame. The server rack is partially obstructed by an **open cardboard box** in the foreground. Additionally, there are visible cables and wall sockets near the server rack, confirming its industrial nature. The black tower-like structure aligns with the target description of a "black rack."
+
+### Current Situation:
+- **Drone 1's Status**: My current position is at (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°). The black server rack is partially obstructed by the cardboard box.
+- **Teammate's Status**: Drone 2 has spotted a black server rack on the left side of its frame and plans to move left to bypass an obstruction (an open cardboard box). This suggests there are multiple black racks in the environment, and we need to systematically identify and approach them.
+- **Target Visibility**: The black server rack is clearly visible but partially obstructed by the cardboard box. To proceed, it must be bypassed.
+
+### Plan of Action:
+1. **Bypass Obstruction**: Since the black server rack is partially obstructed by the open cardboard box, I will move **left** to pass by the obstruction and get a clearer and centered view of the target.
+2. **Center the Target**: After bypassing the obstruction, I will use `rotate_cw` or `rotate_ccw` to center the black server rack in the frame.
+3. **Approach Safely**: Once the target is centered and unobstructed, I will move forward to get closer, keeping the target centered.
+
+### Action:
+First, I will move to the left to bypass the obstruction. Since the obstruction is directly in front of the black server rack, a leftward movement is necessary.
+
+```python
+drone.move_left(20)
+```
+
+### Intent:
+The black server rack is clearly visible but partially obstructed by an open cardboard box. I will move to the left to bypass this obstruction and gain a clearer view of the target. After bypassing the obstruction, I will center the black server rack in the frame for better alignment and approach.
+
+### Description:
+The current image shows a black server rack on the right side, partially obstructed by an open cardboard box. The server rack is a tower-like structure with visible cables, consistent with the target description. By moving to the left, I will bypass the obstruction and ensure a clearer, unobstructed view of the black server rack. This will allow me to center the target and proceed with the mission.
+
+### Coordination with Teammate:
+My teammate is moving to the left to bypass a similar obstruction on the left side of their frame. By moving left, I ensure that I am not overlapping with my teammate’s search path. After bypassing the obstruction, I will center the black server rack and proceed with the mission, adhering to the rules and avoiding redundancy.
+
+### Final Notes:
+If the black server rack fills more than 60% of the frame after centering, I will land immediately. If it remains in view but partially obstructed after bypassing, I will reassess and try to adjust my position further.
+
+### Step 9
+### Image Analysis:
+The image shows a **black server rack** on the right side of the frame, partially obstructed by an **open cardboard box** in the foreground. The server rack appears to be a prominent object with multiple shelves/sections, consistent with the description of a "black rack." Near the server rack is a device with a cable connected to a wall socket, indicating this is an industrial or server environment.
+
+### Current Situation:
+- **Drone 1's Status**: My current position is at (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°). The black rack is visible but partially obstructed by the cardboard box.
+- **Teammate's Status**: Drone 2 has spotted a black server rack on the left side of its frame and plans to move left to bypass an obstruction. The teammate is avoiding redundancy by moving to the right, while I will handle the right side.
+- **Target Visibility**: The black server rack is clearly visible but partially blocked by the open cardboard box. 
+
+### Plan of Action:
+1. **Bypass the Obstruction**: Since the black server rack is partially obstructed by the open cardboard box, I will move **right** to bypass the obstruction, ensuring a clearer and centered view of the target.
+2. **Center the Target**: After bypassing the obstruction, I will use `rotate_cw` or `rotate_ccw` to center the black server rack in the frame.
+3. **Approach Safely**: Once the target is centered and unobstructed, I will move forward to get closer, ensuring the target remains centered.
+
+### Action:
+First, I will move to the right to bypass the obstruction. Since the obstruction is directly in front of the black server rack, a rightward movement is necessary.
+
+```python
+drone.move_right(20)
+```
+
+### Intent:
+The black server rack is clearly visible but partially obstructed by an open cardboard box. I will move to the right to bypass this obstruction and gain a clearer, unobstructed view of the target. After bypassing the obstruction, I will center the black server rack in the frame for better alignment and approach.
+
+### Description:
+The current image shows a black server rack on the right side, partially obstructed by an open cardboard box. The server rack is a multi-shelf structure with visible cables and a connected device, clearly matching the target description. By moving to the right, I will bypass the obstruction and ensure a clearer, unobstructed view of the black rack. This will allow me to center the target and proceed with the mission.
+
+### Coordination with Teammate:
+My teammate is moving left to bypass a similar obstruction on the left side of their frame. By moving right, I ensure that I am not overlapping with my teammate’s search path. After bypassing the obstruction, I will center the black server rack and proceed with the mission, adhering to the rules and avoiding redundancy.
+
+### Next Steps:
+- After moving right to bypass the obstruction, I will assess whether the target is fully visible and centered. If not, I will perform minor rotations (`rotate_cw` or `rotate_ccw`) to align with the target.
+- Once the black server rack is centered and unobstructed, I will move forward to get closer, ensuring the target remains centered in the frame. If the black rack fills more than 60% of the frame, I will land immediately. If the target obscures less than 60%, I will continue to approach.
+
+### Step 10
+### Image Analysis:
+The image shows a **black server rack** (tall black metal structure with shelves) on the left side of the frame, partially obscured by cables and other objects. At the center-right of the image, there is another **black server rack**, which is partially obscured by an **open cardboard box** positioned in the foreground. This confirms that we are focusing on the correct target—a black server rack.
+
+### Key Observations:
+1. **Black Rack Position**: The second black server rack is clearly visible in the center-right, with some parts obstructed by the open cardboard box.
+2. **Partial Obstruction**: The cardboard box partially blocks the view of the black rack, making it necessary to bypass this obstruction to get a clearer view.
+3. **Promise of Visibility**: Despite the obstruction, the structure and footprint of the target (black server rack) are recognizable.
+4. **Environmental Details**: The environment includes cables, another black rack on the left, and a wall socket in the center. These landmarks help confirm we are in the correct search space.
+
+### Current Situation:
+- **Drone 1's Status**: My current position is at (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°), and the target (black rack) is visibly centered but partially obstructed.
+- **Teammate's Status**: Drone 2 is at (X:1.00, Y:0.00, Z:1.50, Yaw:0.0°) and plans to bypass the obstruction from a different angle by moving left. This confirms we are working together to avoid redundancy.
+- **System Reminder**: I have searched for 10 steps, so I need to ensure quick and precise action to avoid getting stuck in blind spots.
+
+### Plan of Action:
+1. **Bypass Obstruction**: Since the black server rack is partially obstructed by the open cardboard box, I will move **right** to bypass the obstruction and gain a clearer view from a different angle.
+2. **Center the Target**: After bypassing the obstruction, I will use small rotational adjustments (`rotate_cw` or `rotate_ccw`) to ensure the black rack is perfectly centered in the frame.
+3. **Approach Safely**: Once the target is centered and unobstructed, I will move forward to get closer, keeping the black rack centered in the frame.
+
+### Action:
+To bypass the obstruction caused by the open cardboard box and get a clearer view of the black rack, I will move right:
+
+```python
+drone.move_right(20)
+```
+
+### Intent:
+The black server rack is clearly visible in the center-right of the image but partially obstructed by an open cardboard box. To clear the obstruction and ensure a clearer view, I will move to the right. After bypassing the box, I will center the black server rack in the frame for better alignment and inspection.
+
+### Description:
+The current image shows a black server rack on the center-right, partially obstructed by an open cardboard box. By moving to the right, I will bypass the obstruction and get a clearer, unobstructed view of the server rack. This will allow me to confirm that it matches the target description and proceed with the mission. My teammate has noted a similar scenario on the left and plans to move left, ensuring full coverage of the area.
+
+### Coordination with Teammate:
+My teammate is moving left to bypass the obstruction. By moving right, I ensure we are exploring the environment systematically without overlapping. After bypassing the obstruction, I will center the black rack and proceed with the mission, adhering to the rules and avoiding redundancy.
+
+### Next Steps:
+- After moving right, I will assess whether the target is fully visible and centered. If not, I will use `rotate_cw` or `rotate_ccw` to align with the server rack.
+- Once the black server rack is centered and unobstructed, I will move forward to get closer, ensuring the target remains centered in the frame.
+- If the black rack fills more than 60% of the frame, I will land immediately. Otherwise, I will continue to center and approach the target.
+
+### Step 11
+### Image Analysis:
+The image shows a **black server rack** to the right side of the frame, partially obscured by an **open cardboard box** in the foreground. The server rack is a tall, structured object with multiple sections, consistent with the description of a "black rack." The object exhibits characteristics typical of server hardware, such as cables and vents. To the left of the image is another black rack with visible shelves and cables, confirming this is an IT or server environment.
+
+### Key Observations:
+1. **Black Rack Position**: The black server rack is partially obstructed by the open cardboard box. It is positioned near the center-right side of the frame.
+2. **Obstruction**: The open cardboard box creates a partial obstruction, which needs to be bypassed to gain a clearer view of the target.
+3. **Environment Details**: The environment includes cables, shelving units, and wall sockets, aligning with the typical appearance of a server room or office space.
+
+### Current Situation:
+- **Drone 1's Status**: My current position is at (X:0.00, Y:0.00, Z:1.50, Yaw:0.0°). The black server rack is visible but partially obstructed.
+- **Teammate's Status**: Drone 2 is moving to the **right** to bypass the obstruction and center the black rack from a different angle. This ensures we explore the space systematically.
+- **Target Visibility**: The black server rack is visible but partially blocked by the cardboard box.
+
+### Plan of Action:
+1. **Bypass Obstruction**: Since the black server rack is partially obstructed by the open cardboard box, I will **move left** to bypass the obstruction and gain a clearer view from a different angle.
+2. **Center the Target**: After moving left, I will use `rotate_cw` or `rotate_ccw` to center the black rack in the frame.
+3. **Approach Safely**: Once the target is centered and unobstructed, I will move forward to get closer, ensuring the target remains centered.
+
+### Action:
+First, I will move left to bypass the obstruction:
+
+```python
+drone.move_left(20)
+```
+
+### Intent:
+The black server rack is clearly visible in the center-right of the frame but partially obstructed by an open cardboard box. To clear the obstruction and get a clearer view of the server rack, I will move to the left. After bypassing the box, I will center the black rack in the frame for better alignment and prepare to approach it.
+
+### Description:
+The current image shows a black server rack on the center-right, partially obstructed by an open cardboard box. By moving to the left, I will bypass the obstruction and get a clearer, unobstructed view of the server rack. This action ensures that I can confirm the target’s attributes and proceed with the mission.
+
+### Coordination with Teammate:
+My teammate is moving to the right to bypass the obstruction and center the target from their perspective. By moving left, I ensure spatial diversity and avoid redundancy. This coordinated approach helps us systematically cover the environment and identify the correct black server rack.
+
+### Next Steps:
+- After moving left, I will use small rotational adjustments (`rotate_cw` or `rotate_ccw`) to center the black server rack in the frame.
+- Once the target is fully centered and unobstructed, I will move forward to get closer, keeping the black rack within the center of the frame. If the server rack fills more than 60% of the frame, indicating I am too close, I will land immediately. Otherwise, I will continue to approach and center the target carefully.
+
