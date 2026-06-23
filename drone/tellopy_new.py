@@ -29,9 +29,21 @@ class TelloPy(BasicDrone):
         # global server_video_port, server_ip
         self.server_video_port = kwargs.get('server_video_port', None)
         self.server_ip = kwargs.get('server_ip', None)
+        
+        # ===== 新增：初始化物理状态变量 =====
+        self.mvo_px = 0.0
+        self.mvo_py = 0.0
+        self.imu_yaw = 0.0
+        self.tof = 0.0
+
+        # ===== 关键修复：订阅两个事件 =====
         self.drone.subscribe(
             self.drone.EVENT_FLIGHT_DATA,
-            self._move_handler)
+            self._flight_data_handler)
+            
+        self.drone.subscribe(
+            self.drone.EVENT_LOG_DATA,
+            self._log_data_handler)
 
         # video part
         self.drone.start_video()
@@ -48,10 +60,6 @@ class TelloPy(BasicDrone):
         sleep(self.time_sleep)
 
         self.telemetry_str = "" # <--- 新增：用于临时存放解析好的飞行数据
-
-
-
-
 
         self.video_thread = threading.Thread(
             None, self._video_thread, daemon=True
@@ -156,37 +164,31 @@ class TelloPy(BasicDrone):
     #     if event is drone.EVENT_FLIGHT_DATA:
     #         pass
 
-    def _move_handler(self, event, sender, data, **args):
-        drone = sender
-        if event is drone.EVENT_FLIGHT_DATA:
-            try:
-                import math # 引入数学库计算四元数
-                
-                # 1. 提取高度
-                tof_raw = getattr(data, 'height', 15)  
-                tof = tof_raw * 10  
-                
-                # 2. 提取底层 MVO 绝对坐标
-                mvo = drone.log_data.mvo
-                px = getattr(mvo, 'pos_x', 0.0) 
-                py = getattr(mvo, 'pos_y', 0.0) 
-                
-                # 3. 提取底层 IMU 四元数并计算绝对 Yaw
-                imu = drone.log_data.imu
-                q0 = getattr(imu, 'q0', 1.0) # 对应 w
-                q1 = getattr(imu, 'q1', 0.0) # 对应 x
-                q2 = getattr(imu, 'q2', 0.0) # 对应 y
-                q3 = getattr(imu, 'q3', 0.0) # 对应 z
+    def _flight_data_handler(self, event, sender, data, **args):
+        try:
+            # 基础数据里的 height 精度较低，乘以 10 转换为厘米或毫米标准
+            self.tof = getattr(data, 'height', self.tof / 10.0) * 10.0
+        except Exception:
+            pass
+
+    def _log_data_handler(self, event, sender, data, **args):
+        try:
+            # 这里的 data 是 LogData 对象，内部包含了 mvo 和 imu
+            if hasattr(data, 'mvo'):
+                self.mvo_px = getattr(data.mvo, 'pos_x', self.mvo_px)
+                self.mvo_py = getattr(data.mvo, 'pos_y', self.mvo_py)
+            
+            if hasattr(data, 'imu'):
+                q0 = getattr(data.imu, 'q0', 1.0) # 对应 w，默认值为 1.0 表示无旋转
+                q1 = getattr(data.imu, 'q1', 0.0) # 对应 x
+                q2 = getattr(data.imu, 'q2', 0.0) # 对应 y
+                q3 = getattr(data.imu, 'q3', 0.0) # 对应 z
                 
                 # 四元数转欧拉角 (Z轴偏航角) 公式
                 yaw_rad = math.atan2(2.0 * (q0 * q3 + q1 * q2), 1.0 - 2.0 * (q2 * q2 + q3 * q3))
-                yaw_deg = math.degrees(yaw_rad)
-                
-                # 发送全套物理状态给 Server
-                self.telemetry_str = f"px:{px:.3f};py:{py:.3f};tof:{tof};yaw:{yaw_deg:.2f}"
-            except Exception as e:
-                self.telemetry_str = f"error:{e}"
-
+                self.imu_yaw = math.degrees(yaw_rad)
+        except Exception as e:
+            pass
 
     # video part
 

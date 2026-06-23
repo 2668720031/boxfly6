@@ -55,7 +55,7 @@ clients = []
 # ser
 client = OpenAI(
     api_key='EMPTY',
-    base_url='http://10.113.182.7:8001/v1',
+    base_url='http://10.113.182.9:8001/v1',
 )
 
 answer=[

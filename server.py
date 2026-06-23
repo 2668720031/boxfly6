@@ -35,7 +35,7 @@ if not os.path.exists(LOG_DIR):
 CLIENT1_LOG_FILE = os.path.join(LOG_DIR, 'client1.txt')
 CLIENT2_LOG_FILE = os.path.join(LOG_DIR, 'client2.txt')
 
-# ====== 新增：自动保存 Server 控制台日志到 server_console.txt ======
+# ====== 自动保存 Server 控制台日志到 server_console.txt ======
 class ServerLogger(object):
     def __init__(self, filename=os.path.join(LOG_DIR, 'server_console.txt')):
         self.terminal = sys.stdout
@@ -51,7 +51,7 @@ class ServerLogger(object):
         self.terminal.flush()
         self.log.flush()
 
-    # ====== 新增：修复 uvicorn/gradio 的 isatty 报错 ======
+    # ====== 修复 uvicorn/gradio 的 isatty 报错 ======
     def isatty(self):
         if hasattr(self.terminal, 'isatty'):
             return self.terminal.isatty()
@@ -86,7 +86,7 @@ clients = []
 # ser
 client = OpenAI(
     api_key='EMPTY',
-    base_url='http://10.113.182.7:8001/v1',
+    base_url='http://10.113.182.9:8001/v1',
 )
 
 answer=[
@@ -131,14 +131,17 @@ Description: The image shows a drone in the bottom part of the image. The drone 
 current_action=0
 
 # --- 多机协作全局状态板 ---
+# ====== 修改：增加 base_x 和 base_y 作为相对起飞原点 ======
 drone_states = {
     1: { # 对应 drone_1
-        "x": 0.0, "y": 0.0, "z": 1.5, "yaw": 0.0, # 虚拟物理坐标 (单位:米, 角度:度)
+        "base_x": 0.0, "base_y": 0.0,             # 物理基准坐标
+        "x": 0.0, "y": 0.0, "z": 1.5, "yaw": 0.0, # 实时更新的物理坐标
         "landmarks": set(),                       # 已经搜索过的地标集合
         "intent": ""
     },
     2: { # 对应 drone_2
-        "x": 1.0, "y": 0.0, "z": 1.5, "yaw": 0.0, # 假设起飞时 drone_2 在 drone_1 右侧 1.0 米处
+        "base_x": 1.0, "base_y": 0.0,             # 假设起飞时 drone_2 在 drone_1 右侧 1.0 米处
+        "x": 1.0, "y": 0.0, "z": 1.5, "yaw": 0.0, 
         "landmarks": set(),
         "intent": ""
     }
@@ -153,115 +156,10 @@ step_drone1 = 1
 step_drone2 = 1
 # =======================================================
 
-# def update_virtual_state(drone_id: int, llm_output: str):
-#     """
-#     从大模型的输出中提取地标和动作，更新全局状态 (drone_states)
-#     """
-#     state = drone_states[drone_id]
-    
-#     # 1. 提取地标 (匹配 [Landmark]: 后面的内容，忽略大小写)
-#     landmark_match = re.search(r'\[Landmark\]:\s*(.+)', llm_output, re.IGNORECASE)
-#     if landmark_match:
-#         items = landmark_match.group(1).split(',')
-#         for item in items:
-#             cleaned_item = item.strip().lower()
-#             if cleaned_item and cleaned_item != 'none':
-#                 state["landmarks"].add(cleaned_item)
-                
-#     # 2. 提取动作并推算坐标 (匹配 drone.xxx(val) 格式)
-#     action_match = re.search(r'drone\.([a-z_]+)\((\d+)\)', llm_output)
-#     if not action_match:
-#         return
-        
-#     action = action_match.group(1)
-#     try:
-#         val = int(action_match.group(2))
-#     except ValueError:
-#         val = 0
-        
-#     yaw_rad = math.radians(state["yaw"])
-    
-#     # 线性映射系数假设 (具体准确的数值还未确定)
-#     K_MOVE = 0.01  # 假设 1点油门力度 = 1厘米 (0.01米)
-#     K_ROT = 1.5    # 假设 1点油门力度 = 1.5度旋转
-#     K_ALT = 0.01   # 高度系数
-    
-#     if action == "move_forward":
-#         state["x"] += (val * K_MOVE) * math.sin(yaw_rad)
-#         state["y"] += (val * K_MOVE) * math.cos(yaw_rad)
-#     elif action == "move_backward":
-#         state["x"] -= (val * K_MOVE) * math.sin(yaw_rad)
-#         state["y"] -= (val * K_MOVE) * math.cos(yaw_rad)
-#     elif action == "move_left":
-#         state["x"] -= (val * K_MOVE) * math.cos(yaw_rad)
-#         state["y"] += (val * K_MOVE) * math.sin(yaw_rad)
-#     elif action == "move_right":
-#         state["x"] += (val * K_MOVE) * math.cos(yaw_rad)
-#         state["y"] -= (val * K_MOVE) * math.sin(yaw_rad)
-#     elif action == "move_up":
-#         state["z"] += (val * K_ALT)
-#     elif action == "move_down":
-#         state["z"] -= (val * K_ALT)
-#     elif action == "rotate_cw":
-#         state["yaw"] = (state["yaw"] + val * K_ROT) % 360
-#     elif action == "rotate_ccw":
-#         state["yaw"] = (state["yaw"] - val * K_ROT) % 360
-        
-#     # ====== 新增：提取意图并更新到全局状态 ======
-#     intent_match = re.search(r'Intent:\s*(.+)', llm_output, re.IGNORECASE)
-#     if intent_match:
-#         # 取第一句话或者限制长度，这里直接取完整的一行
-#         state["intent"] = intent_match.group(1).strip()
-#     # ==========================================
-    
-#     print(f"[Drone {drone_id} State] Pos:(X:{state['x']:.2f}, Y:{state['y']:.2f}, Z:{state['z']:.2f}, Yaw:{state['yaw']:.1f}°), Landmarks: {list(state['landmarks'])}, Intent: {state['intent']}")
-# # ----------------------------------------
-
-# def update_virtual_state(drone_id: int, llm_output: str):
-#     """
-#     大模型现在负责输出其意图、地标，并更新全局的虚拟偏航角 (Yaw)。
-#     X, Y, Z 的位置更新依然由物理光流引擎在后台处理。
-#     """
-#     state = drone_states[drone_id]
-    
-#     # 1. 提取地标
-#     landmark_match = re.search(r'\[Landmark\]:\s*(.+)', llm_output, re.IGNORECASE)
-#     if landmark_match:
-#         items = landmark_match.group(1).split(',')
-#         for item in items:
-#             cleaned_item = item.strip().lower()
-#             if cleaned_item and cleaned_item != 'none':
-#                 state["landmarks"].add(cleaned_item)
-                
-#     # 2. 提取意图
-#     intent_match = re.search(r'Intent:\s*(.+)', llm_output, re.IGNORECASE)
-#     if intent_match:
-#         state["intent"] = intent_match.group(1).strip()
-        
-#     # ====== 提取动作并更新虚拟 Yaw ======
-#     action = "none"
-#     val = 0
-#     match = re.search(r'drone\.(\w+)\((.*?)\)', llm_output)
-#     if match:
-#         action = match.group(1)
-#         val_str = match.group(2)
-#         try:
-#             val = int(val_str) if val_str else 0
-#         except ValueError:
-#             val = 0
-            
-#     K_ROT = 1.0  # 旋转系数
-#     if action == "rotate_cw":
-#         state["yaw"] = (state["yaw"] + val * K_ROT) % 360
-#     elif action == "rotate_ccw":
-#         state["yaw"] = (state["yaw"] - val * K_ROT) % 360
-#     # ===================================================
-        
-#     print(f"[Drone {drone_id} True State] Pos:(X:{state['x']:.2f}, Y:{state['y']:.2f}, Z:{state['z']:.2f}, Yaw:{state['yaw']:.1f}°), Landmarks: {list(state['landmarks'])}, Intent: {state['intent']}")
-
+# ====== 完全交给物理反馈，不再通过大模型动作更新 Yaw ======
 def update_virtual_state(drone_id: int, llm_output: str):
     """
-    提取地标和意图。
+    提取地标和意图。物理坐标(X, Y, Z, Yaw)已完全由底层MVO和IMU接管，大模型不再推算！
     """
     state = drone_states[drone_id]
     
@@ -280,6 +178,7 @@ def update_virtual_state(drone_id: int, llm_output: str):
         state["intent"] = intent_match.group(1).strip()
         
     print(f"[Drone {drone_id} True State] Pos:(X:{state['x']:.2f}m, Y:{state['y']:.2f}m, Z:{state['z']:.2f}m, Yaw:{state['yaw']:.1f}°), Landmarks: {list(state['landmarks'])}, Intent: {state['intent']}")
+
 
 def ask(messages):
     start_time = time()
@@ -393,12 +292,6 @@ def process_instruction(instruction):
         is_drone2_stop = False
 
 
-# def send_command(drone: TelloPyServer, output_text: str):
-
-#     # instructions = process_instruction()
-#     # clients[drone_id].sendall(output_text.encode())
-#     drone.socket.sendall(output_text.encode())
-
 # ====== 修改点 2 ======
 def send_command(drone: TelloPyServer, output_text: str):
     if drone is None or drone.socket is None:
@@ -412,45 +305,6 @@ def send_command(drone: TelloPyServer, output_text: str):
     except Exception as e:
         print(f"{e}")
 
-
-# def video():
-#     global drone_1, drone_2, first_frame_flag
-#     print("Video thread started.")
-
-#     # Create the window once outside the loop
-#     cv2.namedWindow("Merged Drone Cameras", cv2.WINDOW_NORMAL)
-
-#     try:
-#         while True:
-#             # 1. ALWAYS run waitKey to keep the OS happy and process window events
-#             # This is what prevents the "Not Responding" popup.
-#             if cv2.waitKey(1) & 0xFF == ord('q'):
-#                 break
-
-#             if drone_1 is None or drone_2 is None:
-#                 sleep(1)
-#                 continue
-
-#             try:
-#                 img_1 = drone_1.current_image
-#                 img_2 = drone_2.current_image
-
-#                 if img_1 is None or img_2 is None:
-#                     continue
-
-#                 img_merged = np.hstack((img_1, img_2))
-#                 img_resize_merged = cv2.resize(img_merged, (0, 0), fx=0.8, fy=0.8)
-#                 cv2.imshow("Merged Drone Cameras", img_resize_merged)
-
-#             except Exception as e:
-#                 print(f"Frame processing error: {e}")
-#                 # We don't 'break' here, we just wait for the next frame
-
-#     except Exception as e:
-#         print(f"Thread error: {e}")
-#     finally:
-#         cv2.destroyAllWindows()
-#         print("Video thread closed.")
 
 # 修改为支持热插拔与单机显示的动态视频流
 def video():
@@ -495,7 +349,6 @@ def video():
     cv2.destroyAllWindows()
 
 
-
 def drone1_worker_loop():
     global drone_1, drone1_messages, is_drone1_stop, current_instruction, step_drone1
     is_first_message = True
@@ -523,13 +376,14 @@ def drone1_worker_loop():
         state_1 = drone_states[1]
         state_2 = drone_states[2]
         
+        # 修复了使用 .copy() 防止多线程报错
         info_2 = (
             f"\n\n[MY STATUS] Drone 1 is at relative pos (X:{state_1['x']:.2f}, Y:{state_1['y']:.2f}, Z:{state_1['z']:.2f}, Yaw:{state_1['yaw']:.1f}°)."
-            f"\n[TEAMMATE STATUS] Drone 2 is at relative pos (X:{state_2['x']:.2f}, Y:{state_2['y']:.2f}, Z:{state_2['z']:.2f}, Yaw:{state_2['yaw']:.1f}°). Landmarks found: {list(state_2['landmarks'])}."
+            f"\n[TEAMMATE STATUS] Drone 2 is at relative pos (X:{state_2['x']:.2f}, Y:{state_2['y']:.2f}, Z:{state_2['z']:.2f}, Yaw:{state_2['yaw']:.1f}°). Landmarks found: {list(state_2['landmarks'].copy())}."
             f"\n[TEAMMATE INTENT]: {state_2['intent']}"
         )
 
-        # 10步动态唤醒机制(Drone 1)
+        # 5步动态唤醒机制(Drone 1)
         if step_drone1 % 5 == 0:
             info_2 += f"\n\n[SYSTEM REMINDER]: You have searched for {step_drone1} steps. If you still have not found the target '{current_instruction}', you might be stuck in a blind spot. Please immediately execute a large-angle rotation (e.g., rotate_cw(90) or rotate_ccw(120)) to explore entirely new areas!"
         
@@ -587,13 +441,14 @@ def drone2_worker_loop():
         state_1 = drone_states[1]
         state_2 = drone_states[2]
         
+        # 修复了使用 .copy() 防止多线程报错
         info_1 = (
             f"\n\n[MY STATUS] Drone 2 is at relative pos (X:{state_2['x']:.2f}, Y:{state_2['y']:.2f}, Z:{state_2['z']:.2f}, Yaw:{state_2['yaw']:.1f}°)."
-            f"\n[TEAMMATE STATUS] Drone 1 is at relative pos (X:{state_1['x']:.2f}, Y:{state_1['y']:.2f}, Z:{state_1['z']:.2f}, Yaw:{state_1['yaw']:.1f}°). Landmarks found: {list(state_1['landmarks'])}."
+            f"\n[TEAMMATE STATUS] Drone 1 is at relative pos (X:{state_1['x']:.2f}, Y:{state_1['y']:.2f}, Z:{state_1['z']:.2f}, Yaw:{state_1['yaw']:.1f}°). Landmarks found: {list(state_1['landmarks'].copy())}."
             f"\n[TEAMMATE INTENT]: {state_1['intent']}"
         )
 
-        # 10步动态唤醒机制 (Drone 2)
+        # 5步动态唤醒机制 (Drone 2)
         if step_drone2 % 5 == 0:
             info_1 += f"\n\n[SYSTEM REMINDER]: You have searched for {step_drone2} steps. If you still have not found the target '{current_instruction}', you might be stuck in a blind spot. Please immediately execute a large-angle rotation (e.g., rotate_cw(90) or rotate_ccw(120)) to explore entirely new areas!"
 
@@ -625,100 +480,9 @@ def drone2_worker_loop():
             is_first_message = False
 
 
-# def main():
-#     global drone_1, drone_2
-#     server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-#     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-#     server_sock.bind((SERVER_IP, SERVER_PORT))
-#     server_sock.listen(2)
-#     print(f"Server listening on {SERVER_IP}:{SERVER_PORT}")
-#     print(f"Waiting for drones to connect")
-
-#     # threading.Thread(target=accept_clients, args=(server_sock,), daemon=True).start()
-#     # send_command()
-#     while len(clients) < 2:
-#         # server_sock.settimeout(20)
-#         conn, addr = server_sock.accept()
-#         print(f"Client connected from {addr}")
-#         if addr[0] == "10.113.163.114":
-#             drone_1 = TelloPyServer(f"{addr[0]}:{addr[1]}", 'orin_1', conn, 5001, SERVER_IP)
-#             print("Server drone for orin_1 created.")
-
-#         # todo: orin_2 ip
-#         elif addr[0] == "10.113.163.121":
-#             drone_2 = TelloPyServer(f"{addr[0]}:{addr[1]}", 'orin_2', conn, 5002, SERVER_IP)
-#             print("Server drone for orin_2 created.")
-#         clients.append((conn, addr))
-
-
-#     print("All drones connected, Starting video ")
-#     video_thread = Thread(target=video, daemon=True)
-#     video_thread.start()
-#     # UI launcher on server
-#     # with gr.Blocks() as ui:
-#     #     gr.Interface(
-#     #         process_instruction,
-#     #         'textbox',
-#     #         None
-#     #     )
-#     #     gr.Textbox(
-#     #         label="Assistant Message List",
-#     #         value=get_last_assistant_message,
-#     #         every=1,
-#     #     )
-#     with gr.Blocks() as ui:
-#         gr.Markdown("# Drone Command Center")
-
-#         with gr.Row():
-#             # Input area
-#             instruction_input = gr.Textbox(label="Instruction", placeholder="Enter command...")
-
-#         with gr.Row():
-#             submit_btn = gr.Button("Submit", variant="primary")
-#             clear_btn = gr.Button("Clear")
-
-#         with gr.Row():
-#             # Two output textboxes side-by-side
-#             drone1_out = gr.Textbox(
-#                 label="Drone 1 Messages",
-#                 value=lambda: get_drone_messages(1),
-#                 every=1,
-#                 lines=10
-#             )
-#             drone2_out = gr.Textbox(
-#                 label="Drone 2 Messages",
-#                 value=lambda: get_drone_messages(2),
-#                 every=1,
-#                 lines=10
-#             )
-
-#         # Link the submit button to your processing function
-#         # Note: process_instruction must exist in your scope
-#         submit_btn.click(
-#             fn=process_instruction,
-#             inputs=instruction_input,
-#             outputs=None
-#         )
-
-#     ui.launch()
-
-#     drones = [drone_1, drone_2]
-
-#     # Exit Logic
-#     for drone in drones:
-#         # drone.socket.sendall("shutdown".encode())
-#         drone.socket.close()
-
-#         # del drone
-
-#     server_sock.close()
-
-# 处理真实的底层物理坐标反馈，适配二进制模式
+# ====== 重构：完全依赖物理坐标的解析与映射 ======
 def handle_client_telemetry(drone_id, conn):
     buffer = ""
-    last_time = time()
-    
     while True:
         try:
             data = conn.recv(4096).decode('utf-8')
@@ -742,7 +506,7 @@ def handle_client_telemetry(drone_id, conn):
                             except ValueError:
                                 pass 
                     
-                    # 接收底层 MVO 和 IMU 算出的状态
+                    # 接收 Client 传来的 px, py, tof, yaw
                     if all(k in state_dict for k in ('px', 'py', 'tof', 'yaw')):
                         mvo_px = state_dict['px']
                         mvo_py = state_dict['py']
@@ -751,24 +515,28 @@ def handle_client_telemetry(drone_id, conn):
                         
                         state = drone_states[drone_id]
                         
-                        # 记录初始偏差
-                        if 'init_x' not in state:
-                            state['init_x'] = state['x']
-                            state['init_y'] = state['y']
-                            state['init_yaw'] = state['yaw'] - imu_yaw # 记录开机时的陀螺仪误差
+                        # 记录飞机第一次连上时的误差偏移量 (Offset)
+                        if 'mvo_offset_x' not in state:
+                            state['mvo_offset_x'] = mvo_px
+                            state['mvo_offset_y'] = mvo_py
+                            state['init_yaw'] = state['yaw'] - imu_yaw 
                         
-                        # 【坐标和朝向：绝对映射】
-                        state['x'] = state['init_x'] + mvo_py
-                        state['y'] = state['init_y'] + mvo_px
+                        # 计算相对于起飞点的纯位移 (Delta)
+                        # 在 Tello 的光流坐标系中：通常 px 对应前后，py 对应左右
+                        # 在你的全局坐标中，如果想让左右等同于 X，前后等同于 Y，可以直接对调映射
+                        delta_x = mvo_py - state['mvo_offset_y'] 
+                        delta_y = mvo_px - state['mvo_offset_x'] 
+                        
+                        # 加上全局设定的基准点 (base_x, base_y)，得到最终的全局坐标
+                        state['x'] = state['base_x'] + delta_x
+                        state['y'] = state['base_y'] + delta_y
                         state['z'] = tof / 100.0
                         state['yaw'] = (state['init_yaw'] + imu_yaw) % 360
-                    # ==========================================================
                         
         except Exception as e:
             print(f"Telemetry lost for Drone {drone_id}: {e}")
             break
-
-
+# ==========================================================
 
 def accept_connections(server_sock):
     global drone_1, drone_2, clients
@@ -782,7 +550,7 @@ def accept_connections(server_sock):
                 drone_1 = TelloPyServer(f"{addr[0]}:{addr[1]}", 'orin_1', conn, 5001, SERVER_IP)
                 print("Server drone for orin_1 created.")
 
-                # --- 新增：启动 1 号机的物理数据接收线程 ---
+                # --- 启动 1 号机的物理数据接收线程 ---
                 threading.Thread(target=handle_client_telemetry, args=(1, conn), daemon=True).start()
                 # ----------------------------------------
 
@@ -795,7 +563,7 @@ def accept_connections(server_sock):
                 drone_2 = TelloPyServer(f"{addr[0]}:{addr[1]}", 'orin_2', conn, 5002, SERVER_IP)
                 print("Server drone for orin_2 created.")
 
-                # --- 新增：启动 2 号机的物理数据接收线程 ---
+                # --- 启动 2 号机的物理数据接收线程 ---
                 threading.Thread(target=handle_client_telemetry, args=(2, conn), daemon=True).start()
                 # ----------------------------------------
 

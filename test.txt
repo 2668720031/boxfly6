@@ -1,0 +1,29 @@
+(camera) orin@ubuntu:~/BoxFly$ python test_import.py
+=========================================
+当前使用的 Python 解释器路径: /home/orin/ssd/miniconda3/envs/camera/bin/python
+当前使用的 Python 版本: 3.10.19
+当前 sys.path 搜索路径:
+ - /home/orin/BoxFly
+ - /usr/lib/python3.10/dist-packages
+ - /home/orin/BoxFly
+ - /home/orin/ssd/miniconda3/envs/camera/lib/python310.zip
+ - /home/orin/ssd/miniconda3/envs/camera/lib/python3.10
+ - /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/lib-dynload
+ - /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages
+=========================================
+
+>>> 测试 1: 导入 tellopy 基础包
+[成功] 成功导入 tellopy!
+       实际加载的 tellopy 路径是: /home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/tellopy/__init__.py
+
+>>> 测试 2: 尝试直接导入 LogData (你报错的那行代码)
+[失败] 直接导入失败。报错: cannot import name 'LogData' from 'tellopy._internal.protocol' (/home/orin/ssd/miniconda3/envs/camera/lib/python3.10/site-packages/tellopy/_internal/protocol.py)
+
+>>> 测试 3: 尝试导入 protocol 模块本身并检查内容
+[成功] 成功导入 protocol 模块!
+[失败] protocol 模块被找到了，但里面没有名为 'LogData' 的类。
+       当前 protocol 模块里可用的类和函数有:
+        ['BytesIO', 'DownloadedFile', 'EXPOSURE_CMD', 'FLIGHT_MSG', 'FLIP_CMD', 'FlightData', 'FlipBack', 'FlipBackLeft', 'FlipBackRight', 'FlipForwardLeft', 'FlipForwardRight', 'FlipFront', 'FlipLeft', 'FlipRight', 'LAND_CMD', 'LIGHT_MSG', 'LOG_MSG', 'PALM_LAND_CMD', 'Packet', 'SET_ALT_LIMIT_CMD', 'START_OF_PACKET', 'STICK_CMD', 'TAKEOFF_CMD', 'TAKE_PICTURE_COMMAND', 'TELLO_CMD_FILE_COMPLETE', 'TELLO_CMD_FILE_DATA', 'TELLO_CMD_FILE_SIZE', 'TIME_CMD', 'VIDEO_ENCODER_RATE_CMD', 'VIDEO_MODE_CMD', 'VIDEO_RATE_QUERY', 'VIDEO_START_CMD', 'VideoData', 'WIFI_MSG', 'byte', 'byte_to_hexstring', 'crc', 'datetime', 'int16', 'le16', 'show_exception', 'sys', 'traceback', 'uint16']
+
+=========================================
+

@@ -1,0 +1,54 @@
+在 Orin AGX (Ubuntu 系统) 上，最方便、最标准的下载方式就是直接使用 `git clone` 命令从 GitHub 拉取最新的开发者源码。
+
+请在你的 Orin AGX 终端里，依次执行以下 5 步命令。这套流程会帮你**一键下载最新源码并完成替换**：
+
+### 1. 激活环境并卸载旧版
+
+首先确保你在 `camera` 环境中，并把旧版删干净：
+
+```bash
+conda activate camera
+pip uninstall tellopy -y
+
+```
+
+### 2. 回到你的项目根目录
+
+```bash
+cd ~/BoxFly
+
+```
+
+### 3. 一键下载最新版源码
+
+使用 `git` 直接克隆官方最新的代码库（这个库里就包含了带有 `LogData` 的完整版）：
+
+```bash
+git clone https://github.com/hanyazou/TelloPy.git
+
+```
+
+*(这会在你的 `BoxFly` 目录下生成一个新的 `TelloPy` 文件夹)*
+
+### 4. 进入新文件夹并安装
+
+进入刚刚下载好的文件夹，并以开发者模式安装它：
+
+```bash
+cd TelloPy
+pip install -e .
+
+```
+
+### 5. 验证是否成功
+
+回到外层目录，运行我们之前写的测试脚本：
+
+```bash
+cd ~/BoxFly
+python test_import.py
+
+```
+
+**只要测试脚本里打印出 `[成功] 成功直接导入 LogData 类!`，就说明最新版已经完美安装了！** > **💡 终极提醒：**
+

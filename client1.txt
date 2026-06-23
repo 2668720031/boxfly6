@@ -1,189 +1,101 @@
 ========== NEW INSTRUCTION: black rack ==========
 
 ### Step 1
-[Landmark]: bookshelf
-
-```python
-drone.rotate_cw(30)
-```
-
-Intent: The bookshelf is in view, but I'm not sure if it's the black rack target. I'll rotate the drone to confirm it and explore surrounding areas, ensuring full coverage.
-
-Description: The image shows a bookshelf filled with various books and materials. I'm comparing this with my teammate's status to avoid duplicate exploration. The current view suggests I might be near the target, but I need to confirm its identity and ensure it matches the strict attributes of a black rack. Rotating the drone will help verify this.
-
-### Step 2
 [Landmark]: bookshelf, books
 
 ```python
-drone.move_right(20)
+drone.move_forward(20)
 ```
 
-Intent: The visible object is a bookshelf, which does not match the attributes of a black rack. I will move right to avoid duplicate exploration and find a new area with potential targets.
+Intent: The target is identified as a "black rack," which is the bookshelf in the image. The bookshelf is partially visible and clear, so moving forward will help me approach it and confirm if it is the correct target. My immediate goal is to get closer to the bookshelf to ensure it matches the description of the black rack.
 
-Description: The image shows a bookshelf densely packed with books. While visually distinct, this does not align with the physical attributes of the target black rack. My teammate is exploring to the right, so I will move in the opposite direction to ensure我们都使用空间上更协调的探索。
+Description: The image shows a bookshelf filled with books on the left side. The bookshelf appears to be made of a dark material, likely matching the description of a black rack. The rest of the wall is plain white, and there are no other significant objects or landmarks visible. I am moving forward to get a better view and confirm if this is the correct target.
+
+### Step 2
+[Landmark]: bookshelf, books, wall-mounted device
+
+```python
+drone.move_forward(20)
+```
+
+Intent: The bookshelf in this image is a strong candidate for the "black rack" target. It meets the description as a tall, dark structure filled with books and other materials. There are no obstacles obstructing the view, so I will move forward to get closer for confirmation.
+
+Description: The image shows a large bookshelf with multiple shelves, stacked with books of various colors and sizes. The bookshelf itself is dark-colored, and its structure matches the description of the target "black rack." No significant obstacles are present, and the bookshelf is positioned prominently in the view. Moving forward will help me confirm that this is indeed the correct target.
 
 ### Step 3
 [Landmark]: bookshelf, books
 
 ```python
-drone.rotate_cw(30)
+drone.rotate_cw(10)
 ```
 
-Intent: The bookshelf in view is not the black rack target. My teammate is searching to the right, so I will turn the drone clockwise to explore an uncharted area and locate the target black rack.
+Intent: The black rack target is partially visible on the left side of the frame. Since the bookshelf is a strong candidate for the target but is not fully centered, I will rotate the drone slightly clockwise (10°) to better align it in the center of the view for confirmation.
 
-Description: The image shows a bookshelf filled with books, which does not match the attributes of the target black rack. I need to search further to find the rack. Avoiding redundant searches by moving in a different direction is crucial.
+Description: The image shows a portion of a bookshelf filled with books. The structure of the bookshelf matches the description of the "black rack," and it is partially visible in the current frame. The bookshelf appears to be dark in color, and the spines of the books are clearly visible. Rotating the drone slightly will help me ensure a better view of the entire bookshelf to confirm if this is indeed the target.
 
 ### Step 4
-[Landmark]: bookshelf, socket, trash can
+[Landmark]: bookshelf, books, white wal
 
 ```python
-drone.rotate_cw(30)
+drone.rotate_ccw(10)
 ```
 
-Intent: The visible bookshelf does not meet the attributes of a black rack target. With my teammate exploring in a different direction, I'll rotate clockwise to cover new areas and locate the black rack.
+Intent: The bookshelf is fully visible and matches the description of the "black rack." It is filled with books and accounts for a significant portion of the image, confirming it is the correct target. However, I need to rotate counterclockwise slightly (10°) to ensure the bookshelf is centered in the frame before moving closer.
 
-Description: The image shows a bookshelf stocked with books, a wall socket, and a teal trash can. While visually large, the bookshelf lacks the industrial structure of a black rack. I must continue exploring to identify the correct target.
+Description: The image shows a large bookshelf filled with books of various colors and sizes. The bookshelf is dark in color, matching the description of the black rack. The books are neatly arranged on multiple shelves, and the structure of the bookshelf is clearly visible. Since the bookshelf occupies a considerable portion of the image, I will rotate slightly to center it before proceeding with the final approach.
 
 ### Step 5
-[Landmark]: wall-mounted appliance, black chair, air conditioning unit
+[Landmark]: bookshelf, books, wall crack
 
 ```python
-drone.rotate_cw(90)
+drone.rotate_ccw(30)
 ```
 
-Intent: The current view shows a wall-mounted appliance, a black chair, and an air conditioning unit. None of these match the description of a black rack. Based on the system reminder, I have been searching for 5 steps without success, so I will execute a large-angle rotation (rotate_cw(90)) to explore entirely new areas.
+Intent: The bookshelf is visible on the left side of the frame, matching the "black rack" description. However, it is not fully centered in the image, and I am approaching the limit of consistent search steps. To avoid getting stuck in a blind spot, I will execute a large-angle rotation of 30° counterclockwise. This will allow me to reposition and evaluate the bookshelf from a different perspective, ensuring thorough confirmation.
 
-Description: The image depicts an empty wall with a black chair and an air conditioning unit mounted on it. These do not match the target description of a black rack. I must continue searching systematically to find the correct target.
+Description: The image shows a bookshelf with books on the left side. The bookshelf structure is dark and filled with books of various colors, which matches the description of the black rack. However, the current view is slightly distorted due to proximity, placing the bookshelf mainly on the left side of the frame. Rotating 30° counterclockwise will help me center the bookshelf and ensure it is indeed the correct target.
 
 ### Step 6
-[Landmark]: black chair, green trash can, person holding drone
+[Landmark]: bookshelf, books, wall crack
 
 ```python
-drone.move_forward(30)
+drone.rotate_ccw(30)
 ```
 
-Intent: The image currently shows a black chair, a green trash can, and a person holding the drone. None of these match the description of a black rack. However, the drone is at a low altitude, making it a suitable time to move forward and potentially explore a new area. I am moving forward to search for the black rack while being mindful of the teammate's exploration area.
+Intent: The bookshelf is prominently visible on the left side of the frame, and it matches the description of the "black rack." However, the bookshelf is not yet centered in the image, and since my search steps are nearing a blind-spot threshold, I will perform a 30° counterclockwise rotation to reposition the view. This will help ensure I have a clear, centered view of the bookshelf before I approach it to confirm if it is the correct target.
 
-Description: The image depicts an indoor environment with a black chair and a green trash can in view. A person is standing near the center, holding the drone. This does not appear to be the black rack we are searching for. I will move forward to explore other areas further ahead.
+Description: The image prominently displays a bookshelf filled with books, which matches the description of the black rack. The books are of various colors, and the shelf structure is dark. However, the bookshelf is mostly on the left side of the frame. Executing a 30° counterclockwise rotation will help center the bookshelf and provide a more stable view for confirmation.
 
 ### Step 7
-[Landmark]: black rack, monitor, cables
+[Landmark]: bookshelf, books
 
 ```python
 drone.move_forward(20)
 ```
 
-Intent: The black rack, which appears to be an industrial shelving unit, is now clearly visible on the left side of the image. It matches the attributes of the black rack target: a large, black, multi-tiered structure commonly used for electronics or equipment storage. I am moving forward to approach the target safely.
+Intent: The bookshelf is clearly visible and matches the description of the "black rack." It is filled with books of various colors, neatly arranged on multiple shelves. The bookshelf is centered in the frame, and I am at an optimal distance to approach it for confirmation of the target. Moving forward (20) will help me get closer to the bookshelf and ensure it is indeed the correct target.
 
-Description: The image shows a black rack with several tiers, containing various electronic devices, cables, and equipment. This object matches the characteristics of the target black rack we are searching for. As it is partially visible and not occupying more than 60% of the image, I will move forward to confirm and approach the target.
+Description: The image shows a bookshelf filled with books. The bookshelf itself has a dark structure, making it well-aligned with the description of the black rack. The books exhibit a variety of colors and sizes, and the bookshelf is positioned prominently in the image. No significant obstacles are present, and the bookshelf is now well-centered in the frame, confirming its potential as the correct target. Moving forward will aid in further confirming the identity of the target.
 
 ### Step 8
-[Landmark]: black rack, boxes, cables
+[Landmark]: bookshelf, books
 
 ```python
-drone.rotate_ccw(10)
+drone.move_forward(20)
 ```
 
-Intent: The black rack, which matches the description of the target (multi-tiered, black, industrial shelving), is visible in the image. However, it is not centered yet. I am rotating counterclockwise slightly to ensure it is perfectly aligned in the midpoint of the view before approaching.
+Intent: The bookshelf is prominently visible in the center of the image and matches the description of the "black rack." It has multiple shelves filled with books of various colors and titles, including technical and academic literature. The black shelf structure confirms it as the correct target. I will move forward (20) to approach the bookshelf, ensuring that I have a clear path toward it and can land on or near it to complete the mission.
 
-Description: The image shows a black rack with multiple shelves containing electronic equipment, cables, and devices. This clearly matches the target description of a black rack. Since it is not centered, I'll first rotate the drone to align it properly before moving forward.
+Description: The image displays a bookshelf filled with books on multiple shelves. The bookshelf is predominantly black, which matches the description of the target "black rack." The books are neatly arranged, with some titles visible, such as "Machine Learning" and "Engineering Optimization." The bookshelf is centered in the frame, and there are no visible obstacles preventing approach. Moving forward will enable me to further confirm and approach the correct target.
 
 ### Step 9
-[Landmark]: black rack, cables, cardboard boxes
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is clearly visible and matches the attributes of the target specified by the user. It is a large, industrial shelving unit filled with equipment and cables, which is consistent with the description of a black rack. The rack is not too close yet, so I am moving forward to approach it safely.
-
-Description: The image shows a prominent black server rack with multiple levels, each holding electronic equipment and cables. This matches the target description perfectly. As the target is centered and not occupying more than 60% of the image, I will move forward to get closer and prepare for landing, ensuring the target is still visible and clear.
-
-### Step 10
-[Landmark]: black rack, monitor, cables
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is clearly visible and matches the attributes of the target described. It is a multi-tiered industrial shelving unit filled with electronic equipment, cables, and devices. Since the black rack is centered in the image and not too close yet, I will move forward to approach it safely.
-
-Description: The image shows a black rack with multiple shelves holding electronic components, including servers, monitors, and cables. This is consistent with the target description of a black rack. As the target is centered and has not yet reached a size that occupies more than 60% of the image, I will move forward to get closer and confirm the target before landing.
-
-### Step 11
-[Landmark]: black rack, monitors, cables
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is clearly visible, occupying a significant portion of the image. It matches the description of the target as a multi-tiered industrial shelving unit with electronic components. Since the rack is centered, I will move forward to approach it safely and prepare for landing.
-
-Description: The image shows a large black server rack with multiple shelves containing electronic equipment, such as monitors, cables, and networking devices. This perfectly aligns with the target description of a black rack. As the target is centered and not too close yet, I will move forward to close the distance.
-
-### Step 12
-[Landmark]: black rack, monitors, cables
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is clearly visible and matches the attributes of the target described. It is a multi-tiered, industrial-sized rack holding electronic equipment. Since the target is centered and not too close yet, I will move forward to approach it safely and continue aligning for landing.
-
-Description: The image shows a black rack with multiple shelves, each filled with electronic devices, cables, and monitors. This perfectly matches the target description of a black rack. As the rack is positioned centrally in the view and does not occupy more than 60% of the image, I will move forward to get closer. I will continue adjusting my approach until the target is centered and ready for the final approach.
-
-### Step 13
-[Landmark]: black rack, screens, network cables
-
-```python
-drone.rotate_ccw(10)
-```
-
-Intent: The black rack is clearly visible in the image, matching the target description of a multi-tiered, industrial shelving unit filled with electronic components, network equipment, and cables. However, the rack is slightly off-center to the right. I will rotate counterclockwise slightly to ensure it is perfectly aligned and centered in the view before continuing to approach.
-
-Description: The black rack is prominently displayed in the image. It has multiple shelves holding a variety of electronic devices, screens, and cables, which perfectly match the description of a black rack. Since the target is partially aligned but not yet centered, I will rotate slightly to ensure it is directly in the midpoint of the image before moving forward. This aligns with the requirement to center the target before proceeding.
-
-### Step 14
-[Landmark]: black rack, monitors, cables
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is clearly visible in the image, matching the description of the target. It is a multi-tiered industrial shelving unit with multiple electronic components and cables on each level. Since the black rack is centered and not occupying more than 60% of the image, I will move forward to get closer while maintaining alignment.
-
-Description: The image shows a black rack with several shelves holding various electronic equipment, including monitors, servers, and network devices. This perfectly matches the target description of a black rack. As the rack is centered and not too close, I will continue moving forward to approach it safely and prepare for landing.
-
-### Step 15
-[Landmark]: black rack, monitors, cables
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is clearly visible and matches the attributes of the target. It is a multi-tiered industrial shelving unit containing electronic components such as monitors, servers, and cables. Since the target is centered and not too close yet, I will move forward to approach it safely.
-
-Description: The image shows a black rack with multiple shelves filled with electronics. This perfectly aligns with the target description of a black rack. As the target is centered and does not occupy more than 60% of the image, I will move forward to get closer, ensuring the drone maintains alignment before finalizing the approach.
-
-### Step 16
-[Landmark]: black rack, monitors, cables
-
-```python
-drone.move_forward(20)
-```
-
-Intent: The black rack is clearly visible and matches the target description perfectly. It is a multi-tiered industrial shelving unit filled with electronic components, including monitors, cables, and network devices. The rack is centered in the image, and it does not occupy more than 60% of the view, so it is safe to move forward.
-
-Description: The image shows a black rack with multiple shelves holding electronic equipment such as servers, networking devices, and monitors. The cables and devices on the rack align with the attributes of the target. Since the rack is already centered and not too close, I will move forward to approach it safely.
-
-### Step 17
-[Landmark]: black rack, monitors, cables, server equipment
+[Landmark]: bookshelf, books, shelf edges, text labels on books
 
 ```python
 drone.land()
 ```
 
-Intent: The black rack is clearly visible and fills a significant portion of the image. It has multiple shelves holding electronic components such as monitors, cables, and server equipment. Since the target is centered and occupies more than 60% of the image, it is safe to conclude that we are at the correct location. I will land the drone to complete the mission.
+Intent: The bookshelf is now fully centered in the frame and accounts for a significant portion of the image, confirming it as the "black rack" target. The shelf edges are clearly visible, and the books on each shelf align perfectly with the description. Since the bookshelf is now directly in front and centered, there is no need to move further. Executing `land()` will allow me to complete the mission successfully as the target is fully identified and in the correct position.
 
-Description: The image shows a black rack with several shelves containing electronic equipment. The rack includes network cards, servers, and monitors, matching the physical attributes of the black rack described in the target. Given its size and central position in the view, the drone is now positioned above the correct target, and landing is the appropriate next step.
+Description: The image shows a well-lit bookshelf packed with books on multiple shelves. Books such as "Machine Learning" (Murphy), "The Elements of Statistical Learning," and "Engineering Optimization" are clearly visible. The bookshelf has a dark gray metallic frame, matching the description of a "black rack." The books are neatly arranged, showcasing their titles and authors. The framing of the image indicates that the drone is centered perfectly with the target, and landing on or near the bookshelf will successfully complete the mission.
 
