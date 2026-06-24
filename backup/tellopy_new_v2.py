@@ -194,8 +194,8 @@ class TelloPy(BasicDrone):
 
     def _video_handler(self, event, sender, data):
         if self.print_flag:
-            # print("Video Frame")
-            # print(self.server_ip, self.server_video_port)
+            print("Video Frame")
+            print(self.server_ip, self.server_video_port)
             self.print_flag = False
         # print(data)
         # print(type(event), type(sender), type(data))
@@ -209,7 +209,7 @@ class TelloPy(BasicDrone):
             #     ssrc=self.rtp_ssrc,
             #     payload=data
             # )
-            # print(self.server_ip, self.server_video_port)
+            print(self.server_ip, self.server_video_port)
             self.video_loopback.sendto(data, (self.server_ip, self.server_video_port))
             # self.video_loopback.sendto(packet.serialize(), (self.server_ip, self.server_video_port))
 

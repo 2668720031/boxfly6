@@ -1,0 +1,101 @@
+========== NEW INSTRUCTION: black rack ==========
+
+### Step 1
+[Landmark]: bookshelf, books
+
+```python
+drone.move_forward(20)
+```
+
+Intent: The target is identified as a "black rack," which is the bookshelf in the image. The bookshelf is partially visible and clear, so moving forward will help me approach it and confirm if it is the correct target. My immediate goal is to get closer to the bookshelf to ensure it matches the description of the black rack.
+
+Description: The image shows a bookshelf filled with books on the left side. The bookshelf appears to be made of a dark material, likely matching the description of a black rack. The rest of the wall is plain white, and there are no other significant objects or landmarks visible. I am moving forward to get a better view and confirm if this is the correct target.
+
+### Step 2
+[Landmark]: bookshelf, books, wall-mounted device
+
+```python
+drone.move_forward(20)
+```
+
+Intent: The bookshelf in this image is a strong candidate for the "black rack" target. It meets the description as a tall, dark structure filled with books and other materials. There are no obstacles obstructing the view, so I will move forward to get closer for confirmation.
+
+Description: The image shows a large bookshelf with multiple shelves, stacked with books of various colors and sizes. The bookshelf itself is dark-colored, and its structure matches the description of the target "black rack." No significant obstacles are present, and the bookshelf is positioned prominently in the view. Moving forward will help me confirm that this is indeed the correct target.
+
+### Step 3
+[Landmark]: bookshelf, books
+
+```python
+drone.rotate_cw(10)
+```
+
+Intent: The black rack target is partially visible on the left side of the frame. Since the bookshelf is a strong candidate for the target but is not fully centered, I will rotate the drone slightly clockwise (10°) to better align it in the center of the view for confirmation.
+
+Description: The image shows a portion of a bookshelf filled with books. The structure of the bookshelf matches the description of the "black rack," and it is partially visible in the current frame. The bookshelf appears to be dark in color, and the spines of the books are clearly visible. Rotating the drone slightly will help me ensure a better view of the entire bookshelf to confirm if this is indeed the target.
+
+### Step 4
+[Landmark]: bookshelf, books, white wal
+
+```python
+drone.rotate_ccw(10)
+```
+
+Intent: The bookshelf is fully visible and matches the description of the "black rack." It is filled with books and accounts for a significant portion of the image, confirming it is the correct target. However, I need to rotate counterclockwise slightly (10°) to ensure the bookshelf is centered in the frame before moving closer.
+
+Description: The image shows a large bookshelf filled with books of various colors and sizes. The bookshelf is dark in color, matching the description of the black rack. The books are neatly arranged on multiple shelves, and the structure of the bookshelf is clearly visible. Since the bookshelf occupies a considerable portion of the image, I will rotate slightly to center it before proceeding with the final approach.
+
+### Step 5
+[Landmark]: bookshelf, books, wall crack
+
+```python
+drone.rotate_ccw(30)
+```
+
+Intent: The bookshelf is visible on the left side of the frame, matching the "black rack" description. However, it is not fully centered in the image, and I am approaching the limit of consistent search steps. To avoid getting stuck in a blind spot, I will execute a large-angle rotation of 30° counterclockwise. This will allow me to reposition and evaluate the bookshelf from a different perspective, ensuring thorough confirmation.
+
+Description: The image shows a bookshelf with books on the left side. The bookshelf structure is dark and filled with books of various colors, which matches the description of the black rack. However, the current view is slightly distorted due to proximity, placing the bookshelf mainly on the left side of the frame. Rotating 30° counterclockwise will help me center the bookshelf and ensure it is indeed the correct target.
+
+### Step 6
+[Landmark]: bookshelf, books, wall crack
+
+```python
+drone.rotate_ccw(30)
+```
+
+Intent: The bookshelf is prominently visible on the left side of the frame, and it matches the description of the "black rack." However, the bookshelf is not yet centered in the image, and since my search steps are nearing a blind-spot threshold, I will perform a 30° counterclockwise rotation to reposition the view. This will help ensure I have a clear, centered view of the bookshelf before I approach it to confirm if it is the correct target.
+
+Description: The image prominently displays a bookshelf filled with books, which matches the description of the black rack. The books are of various colors, and the shelf structure is dark. However, the bookshelf is mostly on the left side of the frame. Executing a 30° counterclockwise rotation will help center the bookshelf and provide a more stable view for confirmation.
+
+### Step 7
+[Landmark]: bookshelf, books
+
+```python
+drone.move_forward(20)
+```
+
+Intent: The bookshelf is clearly visible and matches the description of the "black rack." It is filled with books of various colors, neatly arranged on multiple shelves. The bookshelf is centered in the frame, and I am at an optimal distance to approach it for confirmation of the target. Moving forward (20) will help me get closer to the bookshelf and ensure it is indeed the correct target.
+
+Description: The image shows a bookshelf filled with books. The bookshelf itself has a dark structure, making it well-aligned with the description of the black rack. The books exhibit a variety of colors and sizes, and the bookshelf is positioned prominently in the image. No significant obstacles are present, and the bookshelf is now well-centered in the frame, confirming its potential as the correct target. Moving forward will aid in further confirming the identity of the target.
+
+### Step 8
+[Landmark]: bookshelf, books
+
+```python
+drone.move_forward(20)
+```
+
+Intent: The bookshelf is prominently visible in the center of the image and matches the description of the "black rack." It has multiple shelves filled with books of various colors and titles, including technical and academic literature. The black shelf structure confirms it as the correct target. I will move forward (20) to approach the bookshelf, ensuring that I have a clear path toward it and can land on or near it to complete the mission.
+
+Description: The image displays a bookshelf filled with books on multiple shelves. The bookshelf is predominantly black, which matches the description of the target "black rack." The books are neatly arranged, with some titles visible, such as "Machine Learning" and "Engineering Optimization." The bookshelf is centered in the frame, and there are no visible obstacles preventing approach. Moving forward will enable me to further confirm and approach the correct target.
+
+### Step 9
+[Landmark]: bookshelf, books, shelf edges, text labels on books
+
+```python
+drone.land()
+```
+
+Intent: The bookshelf is now fully centered in the frame and accounts for a significant portion of the image, confirming it as the "black rack" target. The shelf edges are clearly visible, and the books on each shelf align perfectly with the description. Since the bookshelf is now directly in front and centered, there is no need to move further. Executing `land()` will allow me to complete the mission successfully as the target is fully identified and in the correct position.
+
+Description: The image shows a well-lit bookshelf packed with books on multiple shelves. Books such as "Machine Learning" (Murphy), "The Elements of Statistical Learning," and "Engineering Optimization" are clearly visible. The bookshelf has a dark gray metallic frame, matching the description of a "black rack." The books are neatly arranged, showcasing their titles and authors. The framing of the image indicates that the drone is centered perfectly with the target, and landing on or near the bookshelf will successfully complete the mission.
+
