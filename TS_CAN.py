@@ -45,12 +45,12 @@ class TSM(nn.Module):
 class TSCAN(nn.Module):
 
     def __init__(self, in_channels=3, nb_filters1=32, nb_filters2=64, kernel_size=3, dropout_rate1=0.25,
-                 dropout_rate2=0.5, pool_size=(2, 2), nb_dense=128, frame_depth=20, img_size=36):
+                 dropout_rate2=0.5, pool_size=(2, 2), nb_dense=128, frame_depth=20, img_size=72):
         """Definition of TS_CAN.
         Args:
           in_channels: the number of input channel. Default: 3
           frame_depth: the number of frame (window size) used in temport shift. Default: 20
-          img_size: height/width of each frame. Default: 36.
+          img_size: height/width of each frame. Default: 72.
         Returns:
           TS_CAN model.
         """

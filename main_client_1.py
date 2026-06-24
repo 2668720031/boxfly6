@@ -71,7 +71,7 @@ def calculate_bpm(signal_buffer, fps=30.0):
     return peak_freq * 60.0
 
 class DroneRPPG:
-    def __init__(self, frame_length=10, image_size=36, model_path="model/UBFC-rPPG_TSCAN.pth"):
+    def __init__(self, frame_length=10, image_size=72, model_path="model/UBFC-rPPG_TSCAN.pth"):
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.frame_length = frame_length
         self.image_size = image_size
@@ -281,7 +281,7 @@ def rppg_worker(sock, drone_obj):
     print(f"[*] rPPG Worker 启动，进入全透视 Debug 模式")
     print(f"[*] =======================================\n")
     
-    rppg = DroneRPPG(frame_length=10, image_size=36)
+    rppg = DroneRPPG(frame_length=10, image_size=72)
     pulse_buffer = deque(maxlen=150) 
     last_calc_time = time()
     

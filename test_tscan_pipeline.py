@@ -4,6 +4,7 @@ import numpy as np
 from collections import deque
 import time
 
+
 try:
     from TS_CAN import TSCAN
 except Exception as e:
@@ -51,7 +52,7 @@ class DroneRPPG:
         concat_frames = np.transpose(concat_frames, (0, 3, 1, 2))
         
         input_tensor = torch.tensor(concat_frames, dtype=torch.float32).contiguous().to(self.device)
-            
+
         with torch.no_grad():
             start_time = time.time()
             output = self.model(input_tensor) 

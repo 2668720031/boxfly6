@@ -7,7 +7,6 @@ Server listening on [1;92m10.113.163.114[0m:[1;36m9000[0m
 Waiting for drones to connect[33m...[0m [1m([0mGradio UI is starting[1m)[0m
 * Running on local URL:  http://127.0.0.1:7860
 * To create a public link, set `share=True` in `launch()`.
-Client connected from [1m([0m[32m'10.113.163.114'[0m, [1;36m48940[0m[1m)[0m
-Sleep for 7s for video stream preparationServer drone for orin_1 created.
-
-Keyboard interruption in main thread... closing server.
+Client connected from [1m([0m[32m'10.113.163.114'[0m, [1;36m36562[0m[1m)[0m
+Sleep for 7s for video stream preparation
+Server drone for orin_1 created.
